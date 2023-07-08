@@ -1,0 +1,134 @@
+body{
+    background-color: #EDE6DB;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    background-color: #1A3C40;
+    height: 60px;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+
+nav ul{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.NavOpcionPrin{
+    padding: 30px 0 0 0;
+    font-size: 20px;
+}
+
+nav ul li{
+    height: 50px; 
+    vertical-align: middle;
+    color: #EDE6DB;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+
+nav .dropdown{
+    position: absolute;
+    width: fit-content;
+    background-color: #1b373a;
+    margin-top: -200px;
+    opacity: 50;
+}
+
+nav ul li:hover .dropdown{
+    z-index: 10;
+    opacity: 1;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    height: fit-content;
+    font-size: 15px;
+}
+
+nav ul .dropdown li{
+    margin: 0;
+    width: 100%;
+} 
+
+nav ul .dropdown li a{
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+header a{   
+    text-decoration: none;
+    color: #EDE6DB;
+}
+
+nav a:hover{
+    color: #ff8a00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#demostrativo1{
+    vertical-align: middle;
+    height: 600px;
+    font-size: 12pt;
+    font-weight: 500;
+    color: #1A3C40;
+
+}
+#demostrativo2{
+    vertical-align: middle;
+    
+    height: 600px;
+    font-size: 12pt;
+    font-weight: 500;
+    color: #1A3C40;
+
+}
+footer{
+    height: 400px;
+    background-color: #1D5C63;
+}
