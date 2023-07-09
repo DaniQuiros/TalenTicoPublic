@@ -1,19 +1,22 @@
-/*-------------------NAV BAR--------------------------*/
 
+:root {
+--gable-green: #1A3C40;
+--deep-Sea-green: #1D5C63;
+--beetle-green: #417D7A;
+--elf-green: #128F8B;
+--eggshell: #EDE6DB;
 
-header a, li, ul{
-    color: #EDE6DB;
-    text-decoration: none;
-    
 }
 
 body{
-    background-color: #EDE6DB;
+    background-color: var(--eggshell);
     font-family: 'Quicksand', sans-serif;
 }
 
-header{
-    background-color: #1A3C40;
+/*-------------------NAV BAR--------------------------*/
+
+header {
+    background-color: var(--gable-green);
     height: 60px;
     padding: 20px 40px 20px 40px;
     display: flex;
@@ -21,6 +24,11 @@ header{
     align-items: center;
 }
 
+header a, li, ul{
+    color: var(--eggshell);
+    text-decoration: none;
+    
+}
 
 nav{
     font-size: 20px;
@@ -113,8 +121,8 @@ footer a{
     text-decoration: none;
 }
 
-footer a:hover{
-    color: #54a39f;
+nav a:hover{
+    color: var(--elf-green);
 }
 
 
