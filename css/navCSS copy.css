@@ -1,0 +1,142 @@
+*{
+    color: #EDE6DB;
+    text-decoration: none;
+}
+
+body{
+    background-color: #EDE6DB;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    background-color: #1A3C40;
+    height: 60px;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div {
+  /*border: red 1px solid;*/
+}
+
+nav{
+    font-size: 20px;
+    font-weight: bold;
+    
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+nav a:hover{
+    color: #ff8a00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cls-navPane{
+    padding: 18px 0 ;
+    text-align: center;
+    width: 33.33333%; 
+}
+
+.cls-navPane:hover{
+    background-color: #295f66;
+    transition: 0.1s;
+}
+
+
+.cls-dropdown{
+    position: relative;
+    background-color: #295f66;
+    opacity: 1;
+    text-align: left;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    
+
+}
+.cls-dropdown a {
+    padding: 15px 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.cls-navPane:hover .cls-dropdown{
+    
+    z-index: 10;
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 15px;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ESTA PARTE me mató*/
+
+
+
+
+
+.cls-dropdown2-enabler:hover{
+    background-color: #fff;
+    transition: 0.1s;
+}
+
+
+.cls-dropdown2{
+    position: absolute;
+    background-color: #295f66;
+    opacity: 1;
+    text-align: left;
+    padding: 10px 15px;
+    display: block;
+    left: 100%;
+
+}
+
+.cls-dropdown2 a {
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.cls-dropdown2-enabler:hover .cls-dropdown2{
+    z-index: 10;
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 15px;
+    visibility: visible;
+}
