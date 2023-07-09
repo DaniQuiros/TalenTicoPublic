@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
-
-    <link rel="stylesheet" href="./navCSS copy.css">
+    <link rel="stylesheet" href="./copia 2.css">
     
 </head>
 <body>
@@ -21,49 +20,50 @@
         </div>
 
         <nav>
-            <div class="cls-navPane" >
-                <a href="">
-                    <img src="./dropdown-icon.png" alt="" height="15px">
-                    Empleos
-                </a>
-                <div class="cls-dropdown">
-                    <a href="">Filtrar Empleos</a> 
-                </div>
-            </div>
-            <div class="cls-navPane">
-                <a href="">
-                    <img src="./dropdown-icon.png" alt="" height="15px">
-                    Mi Perfil
-                </a>
-                <div class="cls-dropdown">
-                
-                    <a href="">Mis Aplicaciones</a> 
-                    <a id ="cls-dropdown2-enabler" href="">
-                        Modificar Perfil
+            <ul id="navPane">
+                <li class="nav-level1">
+                    <a href="">
                         <img src="./dropdown-icon.png" alt="" height="15px">
-                    </a> 
-                    <ul class="cls-dropdown2">
-                        <a href="">Modificar Informacion</a>
-                        <a href="">Cambiar Foto</a>
-                        <a href="">Actualizar Curriculum</a>
-                        <a href="">Desactivar Cuenta</a>                        
+                        Empleos
+                    </a>
+
+                    <ul class="nav-level2">
+                        <li class="nav-level1">
+                            <a href="">Filtrar Empleos</a> 
+                        </li>
+                        
                     </ul>
+                </li>
+                <li class="nav-level1">
+                    <a href="">
+                        <img src="./dropdown-icon.png" alt="" height="15px">
+                        Mi Perfil
+                    </a>
 
-
-
-                    <a href="">Cerrar Sesion</a> 
-                    
-                </div>
-                
-
-                
-            </div>
-            <div class="cls-navPane" >
-                <a href="">
+                    <ul class="nav-level2">
+                        <a href="">Mis Aplicaciones</a> 
+                        <li class="nav-level1">
+                            <a href="">
+                                Modificar Perfil
+                                <img src="./dropdown-icon.png" alt="" height="15px">
+                            </a> 
+                            <ul class="nav-level2">
+                                <li><a href="">Modificar Informacion</a></li>
+                                <li><a href="">Cambiar Foto</a></li>
+                                <li><a href="">Actualizar Curriculum</a></li>
+                                <li><a href="">Desactivar Cuenta</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+                <li class="nav-level1">
+                    <a href="">
                     <img src="./Notifications.png" alt="" height="15px">
                     Notificaciones
                 </a>
-            </div>
+                </li>
+            </ul>
         
         </nav>
     </header>
