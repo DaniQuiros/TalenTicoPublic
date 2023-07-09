@@ -1,15 +1,23 @@
+:root {
+    --gable-green: #1A3C40;
+    --deep-Sea-green: #1D5C63;
+    --beetle-green: #417D7A;
+    --elf-green: #128F8B;
+    --eggshell: #EDE6DB;
+    
+    }
 *{
-    color: #EDE6DB;
+    color: var(--eggshell);
     text-decoration: none;
 }
 
 body{
-    background-color: #EDE6DB;
+    background-color: var(--eggshell);
     font-family: 'Quicksand', sans-serif;
 }
 
 header{
-    background-color: #1A3C40;
+    background-color: var(--gable-green);
     height: 60px;
     padding: 20px 40px 20px 40px;
     display: flex;
@@ -47,14 +55,14 @@ nav a:hover{
 }
 
 .cls-navPane:hover{
-    background-color: #295f66;
+    background-color: var(--beetle-green);
     transition: 0.1s;
 }
 
 
 .cls-dropdown{
     position: relative;
-    background-color: #295f66;
+    background-color: var(--beetle-green);
     opacity: 1;
     text-align: left;
     padding: 10px 15px;
@@ -105,7 +113,7 @@ nav a:hover{
 
 .cls-dropdown2{
     position: absolute;
-    background-color: #295f66;
+    background-color: var(--beetle-green);
     opacity: 1;
     text-align: left;
     padding: 10px 15px;
