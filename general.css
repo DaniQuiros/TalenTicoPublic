@@ -1,3 +1,12 @@
+/*-------------------NAV BAR--------------------------*/
+
+
+header a, li, ul{
+    color: #EDE6DB;
+    text-decoration: none;
+    
+}
+
 body{
     background-color: #EDE6DB;
     font-family: 'Quicksand', sans-serif;
@@ -12,76 +21,101 @@ header{
     align-items: center;
 }
 
-nav{
-    width: 20%;
-    height: 100%;
-    float: right;
-}
 
-nav ul{
-    height: 60px;
+nav{
+    font-size: 20px;
+    font-weight: bold;
+    
+    height: 100%;
+    
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    width: 30%;
+    justify-content: space-evenly;
+    /*border: purple 1px solid;*/
+    
 }
 
-.NavOpcionPrin{
-    padding: 30px 0 0 0;
-    font-size: 20px;
+nav a:hover{
+    color: #54a39f;
 }
 
-nav ul li{
-    height: 50px; 
-    vertical-align: middle;
-    color: #EDE6DB;
-    font-weight: bold;
-    flex-direction: column;
+.cls-navPane{
+    padding: 18px 0 ;
+    text-align: center;
+    width: 33.3333%;
+    
 }
 
 
-nav .dropdown{
-    position: absolute;
-    width: fit-content;
-    background-color: #1b373a;
-    margin-top: -200px;
-    opacity: 50;
-}
-
-nav ul li:hover .dropdown{
-    z-index: 10;
+.cls-dropdown{
+    position: relative;
+    background-color: #1A3C40;
     opacity: 1;
-    margin-top: 5px;
+    text-align: left;
+    padding: 10px 15px;
     display: flex;
     flex-direction: column;
-    vertical-align: bottom;
-    height: fit-content;
-    font-size: 15px;
+    visibility: hidden;
+
 }
-
-nav ul .dropdown li{
-    margin: 0;
-    width: 100%;
-} 
-
-nav ul .dropdown li a{
+.cls-dropdown a {
     padding: 15px 20px;
     display: inline-block;
     width: 100%;
 }
 
-header a{   
-    text-decoration: none;
+.cls-navPane:hover .cls-dropdown{
+    transition: 0.2s;
+    z-index: 10;
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 15px;
+    visibility: visible;
+}
+
+
+
+#logo-notificaciones{
+    
+    margin-top: -2px;
+}
+
+
+/*-------------------Footer--------------------------*/
+
+
+
+
+footer{
+    
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1D5C63;
+}
+footer ul {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    margin: 84px 116px 0px 116px;
+    
+}
+footer ul li{
+    margin: 5px 0px;
+}
+footer a{
     color: #EDE6DB;
+    text-decoration: none;
 }
 
-nav a:hover{
-    color: #ff8a00;
+footer a:hover{
+    color: #54a39f;
 }
-
-
-
-
 
 
 
@@ -127,8 +161,4 @@ nav a:hover{
     font-weight: 500;
     color: #1A3C40;
 
-}
-footer{
-    height: 400px;
-    background-color: #1D5C63;
 }
