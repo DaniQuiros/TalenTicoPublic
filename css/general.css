@@ -13,83 +13,11 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-/*-------------------NAV BAR--------------------------*/
-
-header {
-    background-color: var(--gable-green);
-    height: 60px;
-    padding: 20px 40px 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a, li, ul{
-    color: var(--eggshell);
-    text-decoration: none;
-    
-}
-
-nav{
-    font-size: 20px;
-    font-weight: bold;
-    
-    height: 100%;
-    
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    justify-content: space-evenly;
-    /*border: purple 1px solid;*/
-    
-}
-
-nav a:hover{
-    color: #54a39f;
-}
-
-.cls-navPane{
-    padding: 18px 0 ;
-    text-align: center;
-    width: 33.3333%;
-    
-}
-
-
-.cls-dropdown{
-    position: relative;
-    background-color: #1A3C40;
-    opacity: 1;
-    text-align: left;
-    padding: 10px 15px;
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-
-}
-.cls-dropdown a {
-    padding: 15px 20px;
-    display: inline-block;
-    width: 100%;
-}
-
-.cls-navPane:hover .cls-dropdown{
-    transition: 0.2s;
-    z-index: 10;
-    opacity: 100%;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    font-size: 15px;
-    visibility: visible;
-}
+/*-------------------NAV BAR trasladada a su css correspondiente--------------------------*/
 
 
 
-#logo-notificaciones{
-    
-    margin-top: -2px;
-}
+
 
 
 /*-------------------Footer--------------------------*/
@@ -124,33 +52,6 @@ footer a{
 nav a:hover{
     color: var(--elf-green);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #demostrativo1{
