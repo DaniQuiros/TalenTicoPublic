@@ -5,6 +5,11 @@
 --beetle-green: #417D7A;
 --elf-green: #128F8B;
 --eggshell: #EDE6DB;
+<<<<<<< HEAD
+=======
+--buttonHover: #295f66;
+
+>>>>>>> 0ce75db (9/7/2023)
 }
 
 body{
@@ -12,6 +17,7 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+<<<<<<< HEAD
 /*-------------------Footer--------------------------*/
 
 footer{
@@ -61,3 +67,5 @@ footer a:hover {
     color: #1A3C40;
 
 }
+=======
+>>>>>>> 0ce75db (9/7/2023)

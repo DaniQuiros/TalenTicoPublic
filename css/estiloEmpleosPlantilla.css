@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.div-empleo-informacion-container{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: var(--elf-green);
+    height: 90%;
+    width: 90%;   
+    color: var(--gable-green);
+}
+
+
+#logo-empresa{
+    height: 300px;
+}
+.div-empleo-nombre{
+    background-color: var(--eggshell);
+    margin: 50px 25px 50px 50px;
+    border-radius: 20px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 80px 0;
+    
+}
+.div-empleo-nombre h1{
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.div-empleo-general-info{
+    background-color: var(--eggshell);
+    margin: 50px 50px 50px 25px;
+    border-radius: 20px;
+    width: 80%;
+    
+    
+    
+}
+.div-empleo-general-info h1{
+    margin-top: 20px;
+    margin-left: 40px;
+    padding-bottom: 5px;
+    width: fit-content;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+}
+.div-empleo-general-info h2{
+    margin-top: 20px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.div-empleo-general-info ul{
+    margin-top: 20px;
+}
+
+.div-empleo-general-info li{
+    margin-left: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    list-style-type: disc;
+}
+
+.div-empleo-general-info p{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+
+.btn-Empleo{
+    background-color: var(--gable-green);
+    color: var(--eggshell);
+    padding: 15px 30px;
+    border-radius: 20px;
+    float: right;
+    margin: 40px 60px 40px 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-Empleo:hover{
+    background-color: var(--buttonHover);
+}
+
+
+
