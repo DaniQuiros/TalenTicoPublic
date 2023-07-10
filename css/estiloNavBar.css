@@ -6,7 +6,7 @@
     --eggshell: #EDE6DB;
     
     }
-
+    
 .header-logo {
     max-height: 100%;
 }
@@ -73,5 +73,10 @@ header{
     padding: 0px 40px;
     box-sizing: border-box;
     color: var(--eggshell);
-    font-weight:900;
+    font-weight:700;
+}
+
+.login-information form {
+    display: flex;
+    flex-direction: column;
 }

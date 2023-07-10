@@ -13,17 +13,7 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-/*-------------------NAV BAR trasladada a su css correspondiente--------------------------*/
-
-
-
-
-
-
 /*-------------------Footer--------------------------*/
-
-
-
 
 footer{
     
@@ -47,10 +37,6 @@ footer ul li{
 footer a{
     color: #EDE6DB;
     text-decoration: none;
-}
-
-nav a:hover{
-    color: var(--elf-green);
 }
 
 

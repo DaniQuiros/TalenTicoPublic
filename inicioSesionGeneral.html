@@ -4,22 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoginLanding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/estiloInicioSesionGeneral.css">
+    <link rel="stylesheet" href="./css/general.css">
 </head>
-<body>
-</head>
-<body>
+<body>  
     <header>
-        <img id="div-logo" class="header-logo" src="./media/TalenTicoNavBar.svg" alt="">
-        <nav> 
-            <ul>
-                <li><a href="#">Sobre el proyecto</a></li>
-                <li><a href="#">Empleos</a></li>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-        </header>
-    
+        <a class="header-logo" href="/">
+            <img id="logo" src="./media/TalenTicoNavBar.svg" height="60" alt="">
+        </a>
+    <nav>
+        <ul>
+            <li class="navbar-option">
+                <a href="#">Sobre el Proyecto</a>
+            </li>
+            <li class="navbar-option">
+                <a href="#">Empleos</a>
+            </li>
+            <li class="navbar-option">
+                <a href="#">Registrarse</a>
+            </li>
+            <li class="navbar-option">
+                <a href="#">Iniciar Sesión</a>
+            </li>
+    </ul>
+    </nav>
+    </header>
+<div class="marquee">
+<div class="marquee-description-container">
+    <h1 class="marquee-slogan">Demuestra tu talento, encuentra tu futuro.</h1>
+    <div class="login-container">
+        <div class="login-information">
+            <form action="submit">
+                <label for="e-mail">Correo electrónico: </label>
+                <input type="email" id="email" placeholder="ex: johndoe@email.com" name="nombre" required>
+                <label for="e-mail">Contraseña: </label>
+                <input type="password" id="password" placeholder="*****" required>
+                <a href="#">Olvido su contraseña</a>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="marquee-img-container">
+    <img id= "marquee-img" src="./media/homePageLogIn.svg">
+</div>
+</div>
+
 </body>
 </html>

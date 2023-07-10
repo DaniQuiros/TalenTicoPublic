@@ -1,0 +1,33 @@
+.marquee{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    min-height: calc(100vh - 80px);
+}
+
+.marquee-img-container{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.marquee-description-container{
+    padding: 40px;
+}
+
+.marquee-slogan{
+    font-size: 60px;
+    color: var(--deep-Sea-green);
+    margin-bottom: 20px;
+}
+
+.login-container{
+    background-color: white;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    padding: 20px;
+    flex-wrap: wrap;
+}
