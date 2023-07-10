@@ -74,6 +74,7 @@ header{
     box-sizing: border-box;
     color: var(--eggshell);
     font-weight:700;
+    font-size: 20px;
 }
 
 .login-information form {
