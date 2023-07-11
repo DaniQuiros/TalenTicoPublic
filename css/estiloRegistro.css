@@ -1,0 +1,218 @@
+
+
+.marquee{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    min-height: calc(100vh - 80px);
+}
+
+.marquee--project {
+    background-color: var(--deep-Sea-green);
+}
+
+.marquee-img-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.marquee-description-container{
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.marquee-heading{
+    font-size: 55px;
+    color: var(--deep-Sea-green);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.marquee-heading--project{
+    color: var(--eggshell);
+}
+
+.login-container{
+    background-color: white;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.login-information{
+    align-items: start;
+    padding: 40px;
+}
+
+.login-information label{ 
+    margin-bottom: 10px;
+    
+}
+.login-information input, .login-information a{ 
+    margin-bottom: 20px;
+    
+}
+.login-information button{
+    -webkit-appearance: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid var(--deep-Sea-green);
+    background-color: var(--deep-Sea-green);
+    color: var(--eggshell);
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Quicksand, arial
+}
+
+.login-information button:hover{
+    background-color: var(--beetle-green);
+    border-color: var(--beetle-green);
+    color: white;
+}
+
+.login-information a{
+    text-decoration: none;
+    color: var(--gable-green);
+    text-align: center;
+}
+
+.login-information a:hover{
+    text-decoration: underline;
+    color: var(--elf-green);
+    text-align: center;
+}
+
+.login-information form{
+    font-size: 20px;
+    color: var(--deep-Sea-green);
+    font-weight: 500;
+}
+
+.login-information input{
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: var(--eggshell);
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
+}
+
+.login-information input:focus{
+    border: 2px solid var(--elf-green);
+    outline: none;
+    box-shadow: 0 0 0 0 white, 0 0 0 1px var(--gable-green), 0 10px 15px -3px rgba(26, 60, 64, .1), 0 4px 6px -4px rgba(26, 60, 64, .1);
+
+}
+
+
+
+.project-info-container{
+    background-color: var(--eggshell);
+    min-height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    padding: 40px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+
+/*-------------------image login--------------------------*/
+svg#freepik_stories-people-search:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-people-search.animated #freepik--Clouds--inject-9 {
+    animation: 2.9s 1 forwards ease-out slideDown, 1.5s Infinite linear floating;
+    animation-delay: 0s, 2.9s;
+}
+
+svg#freepik_stories-people-search.animated #freepik--magnifying-glass--inject-9 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) zoomIn, 1.5s Infinite linear wind;
+    animation-delay: 0s, 1s;
+}
+
+svg#freepik_stories-people-search.animated #freepik--Character--inject-9 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideRight;
+    animation-delay: 0s;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes wind {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(1deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
