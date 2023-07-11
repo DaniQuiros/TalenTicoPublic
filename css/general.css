@@ -1,13 +1,14 @@
 
 :root {
---gable-green: #1A3C40;
---deep-Sea-green: #1D5C63;
---beetle-green: #417D7A;
---elf-green: #128F8B;
+--white: #FFFF;
 --eggshell: #EDE6DB;
+--elf-green: #128F8B;
+--beetle-green: #417D7A;
 --buttonHover: #295f66;
-
-}
+--deep-Sea-green: #1D5C63;
+--gable-green: #1A3C40;
+--chili-pepper: #990000;
+}   
 
 body{
     background-color: var(--eggshell);
