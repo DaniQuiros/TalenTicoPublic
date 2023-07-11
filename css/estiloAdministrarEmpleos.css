@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.div-empleos-container{
+    
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--beetle-green);
+    height: 90%;
+    width: 100%;   
+    color: var(--gable-green);
+    flex-wrap: wrap;
+    max-width: fit-content;
+}
+.div-trabajos-actuales{
+    
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+
+
