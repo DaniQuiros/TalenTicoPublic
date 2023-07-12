@@ -30,6 +30,7 @@ main {
     color: var(--gable-green);
     flex-wrap: wrap;
     max-width: fit-content;
+    box-shadow: 5px 5px 20px 1px var(--gable-green);
 }
 
 
