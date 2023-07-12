@@ -191,6 +191,9 @@ main {
 .btn-Empleo:hover{
     background-color: var(--buttonHover);
 }
+.btn-Empleo-Reclutador:hover{
+    background-color: var(--buttonHover);
+}
 
 #email{
     font-size: 18px;
