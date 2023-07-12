@@ -15,27 +15,240 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: fit-content;
+    width: 100%;
 }
 
 
 .div-empleos-container{
-    
+    align-items: center;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    justify-content: center;
+    border-radius: 15px;
     background-color: var(--beetle-green);
-    height: 90%;
-    width: 100%;   
+    margin: 3.5% 0%;
+    width: 90%;   
     color: var(--gable-green);
     flex-wrap: wrap;
-    max-width: fit-content;
+    box-shadow: 5px 5px 20px 1px var(--gable-green);
 }
-.div-trabajos-actuales{
+
+.div-empleos-actuales, .div-candidatos{
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    max-height: fit-content;
+}
+.div-empleos-actuales{
+    margin: 3% 2% 1.5% 2%;
+} 
+
+.div-candidatos{
+    margin: 1.5% 2% 3% 2%;
+}
+
+.div-empleos-actuales-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+
+.div-empleos-actuales h1, .div-candidatos h1{
+    margin-top: 1%;
+    margin-left: 40px;
+    padding-bottom: 5px;
+    width: fit-content;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+    margin-bottom: 1%;
+}
+
+.div-empleos-container table{
+    width: 95%;
+    margin-bottom: 2%;
+}
+
+.div-empleos-actuales-tabla, .div-candidatos-actuales-tabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/*--------------------TD Decoration---------------------------*/
+
+
+
+
+
+.tbl-head{
+    background-color: var(--gable-green);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 1% 1%;
+    font-weight: bold;
+}
+.tbl-head-left{
+    background-color: var(--gable-green);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1% 1%;
+    font-weight: bold;
+}
+
+.tbl-head-right{
+    background-color: var(--gable-green);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1% 1%;
+    font-weight: bold;
+}
+
+
+
+.tbl-row-1{
+    background-color: var(--white-table-variation);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.tbl-row-1-left{
+    background-color: var(--white-table-variation);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.tbl-row-1-right{
+    background-color: var(--white-table-variation);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.tbl-row-2{
+    background-color: var(--eggshell);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+.tbl-row-2-left{
+    background-color: var(--eggshell);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.tbl-row-2-right{
+    background-color: var(--eggshell);
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+
+td a{
+    text-decoration: none;
+    color: var(--gable-green);
+}
+td a:hover{
+    text-decoration: underline;
+    color: var(--deep-Sea-green);
+}
+
+
+
+
+
+
+
+/*---------------Botones------------*/
+
+
+
+#btn-anadir-empleo{
+    margin-top: 0.7%;
+    margin-right: 3%;
+    margin-bottom: 0.5%;
+}
+
+button{
+    background-color: var(--gable-green);
+    color: white;
+    padding: 1.5% 2%;
+    border-radius: 15px;
     
-    width: 100%;
-    height: 50%;
-    background-color: white;
+    margin: 2% 3% 2% 3%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--buttonHover);
 }
 
+.btn-eliminar{
+    background-color: var(--chili-pepper);
+    color: white;
+    padding: 1.5% 2%;
+    border-radius: 15px;
+    margin: 2% 3% 2% 3%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
 
+.btn-eliminar:hover{
+    background-color: var(--buttonEliminarHover);
+}
