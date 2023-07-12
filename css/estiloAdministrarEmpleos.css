@@ -93,10 +93,10 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-
-
+.div-candidatos-actuales-tabla table{
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+}
 
 
 .div-button-siguiente{
@@ -108,13 +108,7 @@ main {
 }
 
 
-
-
-
 /*--------------------TD Decoration---------------------------*/
-
-
-
 
 
 .tbl-head{
@@ -269,13 +263,6 @@ td a:hover{
     text-decoration: underline;
     color: var(--deep-Sea-green);
 }
-
-
-
-
-
-
-
 
 
 /*---------------Botones------------*/
