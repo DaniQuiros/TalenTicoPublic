@@ -32,9 +32,7 @@ header{
 max-height: 100%;
 }
 
-
 header li {
-    /*list-style: none;*/
     display: inline;
     padding: 0 20px;
 }
@@ -52,6 +50,7 @@ header a:hover{
     color: var(--color-deep-aqua-300)
 }
 .slogan{
+    color: var(--color-deep-aqua-200);
     font-size: 120px;
     margin-bottom: 20px;
     padding: 20px
