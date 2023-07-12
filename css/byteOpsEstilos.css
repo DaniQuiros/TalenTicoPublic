@@ -1,5 +1,4 @@
 
-
 :root {
     --color-black: #0D0D0D;
     --color-charcoal-grey:#3C4048;
@@ -15,8 +14,6 @@
     --color-deep-aqua-800: #082b3b;
     --color-deep-aqua-900: #04161e;
 }
-
-
 body{
     font-family: 'Quicksand', sans-serif;
 }
@@ -35,10 +32,7 @@ header{
 max-height: 100%;
 }
 
-#img{
-    margin-left: 20px;
-    font-size: 40px;
-}
+
 header li {
     /*list-style: none;*/
     display: inline;
@@ -48,16 +42,21 @@ header li {
 header a {
     text-decoration: none;
     font-size: 18px;
-    font-weight: lighter;
-    color: #0D0D0D;
+    font-weight: 600;
+    color: var(--color-deep-aqua-500);
 
 }
 
 header a:hover{
     text-decoration: underline;
-    color: var(--color-grey-cloud)
+    color: var(--color-deep-aqua-300)
 }
+.slogan{
+    font-size: 120px;
+    margin-bottom: 20px;
+    padding: 20px
 
+}
 .marquee{
     width: 100%;
     min-height: 100vh;
@@ -72,129 +71,21 @@ header a:hover{
     max-width: 100%;
 }
 
-.marquee-heading{
-    
+.team-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-form{
-    align-items: flex-start;
-    background-color: var(--color-white);
-    border-radius: 5px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-size: 40px;
-    height: 487px;
-    justify-content: center;
-    padding: 46px 37px; 
-    width: 1051px;
-}
-
-form label {
-    margin-bottom: 8px;
-}
-
-form input {
-    width: 100%;
-    padding: 4px 8px;
-    min-height: 50px;
-    max-width: 633px;
-    margin-bottom: 31px;
-    font-size: 20px;
-
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 700px;
-    padding: 49px 0px 76px;
-    background-color: var(--color-black)
-    
-}
-
-.form-section h1{
-    text-align: center;
-    padding-bottom: 50px;
-    font-size: 32px ;
-    color: var(--color-white);
-}
-
-.products-section h1{
-    width: 100%;
-    max-width: 1440px;
+.team-heading{
+    font-size: 60px;
+    color: var(--deep-Sea-green);
     margin-bottom: 20px;
-    text-align: center;
-    background-color: var(--color-black);
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    font-size: 80px;
-    font-weight: bold;
-    border-radius: 6px;
-
-}
-
-.products-section{
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    background-color: var(--color-red);
 }
 
 
-#products{
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
 
-#products td{
-    text-align: center;
-    font-size: 24px;
-}
 
-#products th{
-    font-size: 32px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: var(--color-black);
-    color: var(--color-white);
-}
-
-#products td{
-    border-top: 2px solid var(--color-black)
-}
-
-#products tr:hover{
-    background-color: var(--color-white);
-    color: var(--color-black)
-}
-
-.products-section img {
-    max-width: 100% ;
-}
-
-.products-info{
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
 
 footer {
     min-height: 441px;
