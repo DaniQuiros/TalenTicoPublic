@@ -47,139 +47,150 @@
     <main>
         <div class="div-empleos-container">
 
-            <div class="div-empleos-actuales">
-                <div class="div-empleos-actuales-head">
-                    <h1>Empleos Creados</h1>    
-                    <a id="btn-anadir-empleo" href="#"><button>Añadir Empleo</button></a>
+            <div class="div-empleos-creados">
+                <div class="div-empleos-creados-content">
+                    <div class="div-empleos-creados-head">
+                        <h1>Empleos Creados</h1>    
+                        <a id="btn-anadir-empleo" href="#"><button>Añadir Empleo</button></a>
+                    </div>
+    
+                    <div class="div-empleos-creados-tabla">
+                        <table>
+                            <tr>
+                                <th class="tbl-head-left">Puesto</th>
+                                <th class="tbl-head">Tipo</th>
+                                <th class="tbl-head">Invitaciones</th>
+                                <th class="tbl-head">Candidatos actuales</th>
+                                <th class="tbl-head-right">Acciones</th>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="tbl-row-1">Público</td>
+                                <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">20</a></td>
+                                <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">4</a></td>
+                                <td class="tbl-row-1-right">
+                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                                    <button class="btn-eliminar" type="button">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-2-left"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="tbl-row-2">Privado</td>
+                                <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">15</a></td>
+                                <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">6</a></td>
+                                <td class="tbl-row-2-right"  >
+                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                                    <button class="btn-eliminar" type="button">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Software Arquitect</a></td>
+                                <td class="tbl-row-1">Privado</td>
+                                <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">10</a></td>
+                                <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">8</a></td>
+                                <td class="tbl-row-1-right">
+                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                                    <button class="btn-eliminar" type="button">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-2-left" ><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
+                                <td class="tbl-row-2">Público</td>
+                                <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">5</a></td>
+                                <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">2</a></td>
+                                <td class="tbl-row-2-right" id="td-esquina-inferior-derecha">
+                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                                    <button class="btn-eliminar" type="button">Eliminar</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="div-empleos-actuales-tabla">
-                    <table>
-                        <tr>
-                            <td class="tbl-head-left">Puesto</td>
-                            <td class="tbl-head">Tipo</td>
-                            <td class="tbl-head">Invitaciones</td>
-                            <td class="tbl-head">Candidatos actuales</td>
-                            <td class="tbl-head-right">Acciones</td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                            <td class="tbl-row-1">Público</td>
-                            <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">20</a></td>
-                            <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">4</a></td>
-                            <td class="tbl-row-1-right">
-                                <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
-                                <button class="btn-eliminar" type="button">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-2-left"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                            <td class="tbl-row-2">Privado</td>
-                            <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">15</a></td>
-                            <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">6</a></td>
-                            <td class="tbl-row-2-right"  >
-                                <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
-                                <button class="btn-eliminar" type="button">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Software Arquitect</a></td>
-                            <td class="tbl-row-1">Privado</td>
-                            <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">10</a></td>
-                            <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">8</a></td>
-                            <td class="tbl-row-1-right">
-                                <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
-                                <button class="btn-eliminar" type="button">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-2-left" ><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                            <td class="tbl-row-2">Público</td>
-                            <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">5</a></td>
-                            <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">2</a></td>
-                            <td class="tbl-row-2-right" id="td-esquina-inferior-derecha">
-                                <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
-                                <button class="btn-eliminar" type="button">Eliminar</button>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="div-button-siguiente-empleos">
+                    <button id="btn-siguiente-empleos">Siguiente</button>
                 </div>
             </div>
 
 
             <div class="div-candidatos">
+                <div class="div-candidatos-content">
+                    
                     <h1>Candidatos actuales</h1>    
-                <div class="div-candidatos-actuales-tabla">
-                    <table>
-                        <tr>
-                            <td class="tbl-head-left">Candidato</td>
-                            <td class="tbl-head">Puesto</td>
-                            <td class="tbl-head">Estado</td>
-                            <td class="tbl-head-right">Acciones</td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-1-left">Maikol Carballo</td>
-                            <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                            <td class="tbl-row-1">Enviada</td>
-                            <td class="tbl-row-1-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-2-left">Daniela Quiros</td>
-                            <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                            <td class="tbl-row-2">En revisión</td>
-                            <td class="tbl-row-2-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-1-left">Victor Vargas</td>
-                            <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                            <td class="tbl-row-1">Aceptada</td>
-                            <td class="tbl-row-1-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-2-left">Jose Chaverri</td>
-                            <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                            <td class="tbl-row-2">Denegada</td>
-                            <td class="tbl-row-2-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-1-left">Jovan Brenes</td>
-                            <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                            <td class="tbl-row-1">Denegada</td>
-                            <td class="tbl-row-1-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tbl-row-2-left">Limberth Vasquez</td>
-                            <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                            <td class="tbl-row-2">Aceptada</td>
-                            <td class="tbl-row-2-right">
-                                <a href="./estadoAplicacion.html">
-                                    <button type="button">Editar</button>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="div-candidatos-actuales-tabla">
+                        <table>
+                            <tr>
+                                <th class="tbl-head-left">Candidatos</th>
+                                <th class="tbl-head">Puesto</th>
+                                <th class="tbl-head">Estado</th>
+                                <th class="tbl-head-right-candidato">Acciones</th>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-1-left">Maikol Carballo</td>
+                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="tbl-row-1">Enviada</td>
+                                <td class="tbl-row-1-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-2-left">Daniela Quiros</td>
+                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="tbl-row-2">En revisión</td>
+                                <td class="tbl-row-2-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-1-left">Victor Vargas</td>
+                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="tbl-row-1">Aceptada</td>
+                                <td class="tbl-row-1-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-2-left">Jose Chaverri</td>
+                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
+                                <td class="tbl-row-2">Denegada</td>
+                                <td class="tbl-row-2-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-1-left">Jovan Brenes</td>
+                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="tbl-row-1">Denegada</td>
+                                <td class="tbl-row-1-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tbl-row-2-left">Limberth Vasquez</td>
+                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="tbl-row-2">Aceptada</td>
+                                <td class="tbl-row-2-right-candidato">
+                                    <a href="./estadoAplicacion.html">
+                                        <button type="button">Editar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>    
+                <div class="div-button-siguiente-candidatos">
+                    <button>Siguiente</button>
                 </div>
-            </div>
         </div>
     </main>
 
