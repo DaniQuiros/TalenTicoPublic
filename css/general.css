@@ -11,13 +11,13 @@
 --chili-pepper: #990000;
 --buttonEliminarHover: #650000;
 
---font-size-h1: 3.5rem;
---font-size-h2: 3.25rem;
---font-size-h3: 3rem;
---font-size-h4: 2.75rem;
---font-size-h5: 2.5rem;
---font-size-h6: 2.25rem;
---font-size-h7: 2rem;
+--font-size-h1: 30px;
+--font-size-h2: 25px;
+--font-size-h3: 20px;
+--font-size-h4: 15px;
+--font-size-h5: 12px;
+--font-size-h6: 10px;
+
 }
 
 body{
@@ -53,22 +53,4 @@ footer a{
 footer a:hover {
     text-decoration: underline;
     color: var(--eggshell);
-}
-
-
-#demostrativo1{
-    vertical-align: middle;
-    height: 600px;
-    font-size: 12pt;
-    font-weight: 500;
-    color: #1A3C40;
-
-}
-#demostrativo2{
-    vertical-align: middle;
-    
-    height: 600px;
-    font-size: 12pt;
-    font-weight: 500;
-    color: #1A3C40;
 }
