@@ -1,0 +1,45 @@
+
+.div-empleos-container{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    background-color: var(--beetle-green);
+    width: 90%;   
+    color: var(--gable-green);
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 20px 1px var(--beetle-green);
+    height: 90%;
+}
+
+.div-empleos{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    height: 90%;
+    padding: 30px 30px;
+    width: 90%;
+}
+.div-empleos-filter{
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+
+.div-empleos h1{
+    
+    margin-left: 40px;
+    padding-bottom: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+    margin-bottom: 30px;
+}
