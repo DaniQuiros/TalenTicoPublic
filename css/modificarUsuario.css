@@ -89,8 +89,9 @@ main {
 }
 
 #botones{
-  
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
 label {
@@ -123,15 +124,11 @@ input, select{
   width: 120px;
   height: 50px;
   font-size: 18px;
-  margin: 20px 125px;
-  bottom: 80px;
-  left: 160px;
   background-color: var(--gable-green);
   color: #EDE6DB;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  
 }
 
 #btnGuardar:hover{
@@ -153,10 +150,10 @@ input, select{
 }
 
 #seccionEstudios{
-  height: 50%;
-  padding: 20px 14px;
   box-sizing: border-box;
+  height: 50%;
   margin: 0;
+  padding: 20px 14px;
   width: 100%;
 }
 
@@ -190,9 +187,10 @@ input, select{
 
 
 #seccionExperiencia{
+  box-sizing: border-box;
   height: 50%;
+  padding: 20px 14px;
   width: 100%;
-  margin-left: 14px;
 }
 
 .tablaDeInformacion{
@@ -218,37 +216,6 @@ input, select{
 
 .tablaDeInformacion tr:hover{
   background-color: #DDE6ED;
-}
-
-button{
-  background-color: var(--gable-green);
-  color: white;
-  padding: 1.5% 2%;
-  border-radius: 5px;
-  margin: 2% 3% 2% 3%;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bolder;
-  font-size: 12px;
-  cursor: pointer;
-}
-button:hover{
-  background-color: #DDE6ED;
-}
-
-.btnEliminar{
-  background-color: rgba(255, 0, 0, 0.863);
-  color: white;
-  padding: 1.5% 2%;
-  border-radius: 5px;
-  margin: 2% 3% 2% 3%;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bolder;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.btnEliminar:hover{
-  background-color: rgba(182, 9, 9, 0.863);
 }
 
 /*-------------------Validaciones--------------------------*/
