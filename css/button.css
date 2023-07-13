@@ -1,0 +1,23 @@
+.talentico-button {
+  background-color: var(--gable-green);
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 10px 14px;
+  padding: 8px 10px;
+}
+
+.talentico-button:hover {
+  background-color: var(--buttonHover);
+}
+
+.talentico-button--red {
+  background-color: var(--chili-pepper);
+}
+
+.talentico-button--red:hover {
+  background-color: var(--buttonEliminarHover);
+}
