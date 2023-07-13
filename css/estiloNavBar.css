@@ -42,6 +42,16 @@ nav ul li:hover {
     border-radius: 3px;
 }
 
+nav .notification-list li:hover{
+    background-color: var(--eggshell);
+}
+nav .notification-list li:hover a{
+    color: var(--elf-green);
+}
+nav .notification-list li:hover::after{
+    background-color: var(--elf-green);
+}
+
 .notification{
     position: relative;
     padding-left: 24px;
