@@ -1,4 +1,10 @@
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .div-empleos-container{
     align-items: center;
     display: flex;
