@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Candidatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/estiloNavBar.css">
+    
+</head>
+<header>
+    <a class="header-logo" href="/">
+    <img id="logo" src="./Imagenes/Logo.jpeg" height="60" alt="">
+    </a>
+    <nav>
+        <ul>
+            <li class="navbar-option">
+                <a href="#">Empleos</a>
+            </li>
+            <li class="navbar-option">
+                <a href="#">Mi Perfil</a>
+                <div class="navbar-submenu">
+                    <ul>
+                        <li class="navbar-option">
+                            <a href="#">Mis Aplicaciones</a>
+                        </li>
+                        <li class="navbar-option">
+                            <a href="#">Modificar Perfil</a>
+                        </li>
+                        <li class="navbar-option">
+                            <a href="#">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar-option">
+                <a href="#">Notificaciones</a>
+
+            </li>
+    </ul>
+    </nav>
+</header>
+<body>
+    <form action="formulario">
+        <h1>Busqueda de candidatos</h1>
+        <ul>
+             <label for="Profesion">Profesión:</label>
+             <input type="Profesion" id="Profesion" placeholder="Ingrese la profesión"required> 
+        </ul>
+        
+        <ul>
+            <label for="gradoAcademico">Grado Academico:</label>
+            <input type="gradoAcademico" id="gradoAcademico" placeholder="Ingrese el grado academico"required>
+        </ul>
+
+        <ul>
+            <label for="añosExperiencia">Años de experiencia:</label>
+            <input type="añosExperiencia" id="añosExperiencia" placeholder="Ingrese los años de experiencia"required>
+        </ul>
+           
+        <ul>
+            <label for="bandaSalarial">Banda salarial:</label>
+            <input type="bandaSalarial" id="bandaSalarial" placeholder="Ingrese el salario"required>
+        </ul>
+
+        <button id="btn-submit" type="button">Enviar</button>
+        <button id="btn-cancelar" type="cancelar">Cancelar</button>
+    </form>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre el producto</a></li>
+                <li><a href="#">Empleos</a></li>
+                <li><a href="#">Registrarse</a></li>
+            </ul> 
+        </nav>
+        <p>Creado por ByteOps</p>
+    </footer>
+    
+</body>
+</html>
