@@ -11,7 +11,14 @@
 --chili-pepper: #990000;
 --buttonEliminarHover: #650000;
 
-}   
+--font-size-h1: 3.5rem;
+--font-size-h2: 3.25rem;
+--font-size-h3: 3rem;
+--font-size-h4: 2.75rem;
+--font-size-h5: 2.5rem;
+--font-size-h6: 2.25rem;
+--font-size-h7: 2rem;
+}
 
 body{
     background-color: var(--eggshell);
@@ -21,7 +28,6 @@ body{
 /*-------------------Footer--------------------------*/
 
 footer{
-    
     height: 300px;
     display: flex;
     justify-content: space-between;
@@ -65,5 +71,4 @@ footer a:hover {
     font-size: 12pt;
     font-weight: 500;
     color: #1A3C40;
-
 }
