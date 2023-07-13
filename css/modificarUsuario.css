@@ -1,0 +1,257 @@
+
+
+#logo-notificaciones{
+  margin-top: -2px;
+}
+
+
+/*-------------------Main--------------------------*/
+
+main {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/*-------------------Seccion foto e información basica--------------------------*/
+
+#informacionPerfil {
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  justify-content: space-around;
+  margin: 1% 0;
+  width: 30%;
+}
+
+#introPerfil{  
+  display: flex;
+  
+  width: 100%;
+  height: 25%;
+  margin-top: 0%;
+}
+
+#fotoPerfil{
+  border-radius: 50%;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.informacionPerfil{
+  font-size: 24px;
+  flex-direction: column;
+  color: var(--gable-green);
+  font-family: 'Quicksand', sans-serif;
+}
+
+#descripcionGral{
+  font-size: 14px;
+  width: 75%;
+}
+
+#descripcionUsuario{
+  
+  font-size: 10px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.iconoLapiz {
+  color: var(--gable-green); /* Cambia el color a tu preferencia */
+  font-size: 16px; /* Cambia el tamaño a tu preferencia */
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 0%;
+}
+
+.iconoLapiz{
+  text-decoration: underline;
+}
+
+#descripcionUsuario{
+  margin-top: 5%;
+}
+
+#datosUsuario {
+  
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+#botones{
+  
+  display: flex;
+}
+
+label {
+  display: block;
+  color: var(--gable-green);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 10px 10px 10px;
+}
+
+input, select{
+  width: 50%;
+  height: 22px;
+  margin: 0px 0px 15px 30px;
+  border: none;
+  border: solid 1px var(--gable-green);;
+  border-radius: 5px;
+}
+
+#slctGenero{
+  width: 50%;
+  height: 30px;
+  margin: 0px 0px 15px 30px;
+  border: none;
+  border: solid 1px var(--gable-green);;
+  border-radius: 5px;
+}
+
+#btnGuardar, #btnCancelar{
+  width: 120px;
+  height: 50px;
+  font-size: 18px;
+  margin: 20px 125px;
+  bottom: 80px;
+  left: 160px;
+  background-color: var(--gable-green);
+  color: #EDE6DB;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+#btnGuardar:hover{
+  color: #54a39f;
+}
+
+#btnCancelar:hover{
+  color: #54a39f;
+}
+
+/*-------------------Seccion Estudios/Experiencia--------------------------*/
+
+#modificarEstudiosLaboralPersonal {
+  width: 70%;
+  height: 900px;
+  margin: 1% 0;
+  background-color: white;
+  border-radius: 15px; 
+}
+
+#seccionEstudios{
+  height: 50%;
+  padding: 20px 14px;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+#tableBorderLeft{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#tableBorderRigth{
+  background-color: var(--gable-green);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  width: 40%;
+}
+
+.tableHead{
+  background-color: var(--gable-green);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+
+#seccionExperiencia{
+  height: 50%;
+  width: 100%;
+  margin-left: 14px;
+}
+
+.tablaDeInformacion{
+  border-spacing: 0;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.tablaDeInformacion th{
+  
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--gable-green);
+  height: 20px;
+  padding-top: 5px;
+  color:#DDE6ED;
+}
+
+.tablaDeInformacion td{
+  text-align: center;
+  color: var(--gable-green);
+}
+
+.tablaDeInformacion tr:hover{
+  background-color: #DDE6ED;
+}
+
+button{
+  background-color: var(--gable-green);
+  color: white;
+  padding: 1.5% 2%;
+  border-radius: 5px;
+  margin: 2% 3% 2% 3%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #DDE6ED;
+}
+
+.btnEliminar{
+  background-color: rgba(255, 0, 0, 0.863);
+  color: white;
+  padding: 1.5% 2%;
+  border-radius: 5px;
+  margin: 2% 3% 2% 3%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btnEliminar:hover{
+  background-color: rgba(182, 9, 9, 0.863);
+}
+
+/*-------------------Validaciones--------------------------*/
+.error {
+  border: 3px solid crimson;
+}

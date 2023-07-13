@@ -1,0 +1,53 @@
+.talentico-table {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.talentico-th {
+  background-color: var(--gable-green);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.talentico-th:first-child {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 30%;
+}
+
+.talentico-th:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 40%;
+}
+
+.talentico-td {
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.talentico-td:first-child {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.talentico-td:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.talentico-tr:nth-child(odd) {
+  background-color: var(--eggshell);
+}
+
+.talentico-tr:nth-child(even) {
+  background-color: var(--white-table-variation);
+}
+
