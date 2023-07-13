@@ -43,13 +43,13 @@ nav ul li:hover {
 }
 
 nav .notification-list li:hover{
-    background-color: var(--eggshell);
+    background-color: var(--white);
 }
 nav .notification-list li:hover a{
-    color: var(--elf-green);
+    color: var(--gable-green);
 }
 nav .notification-list li:hover::after{
-    background-color: var(--elf-green);
+    background-color: var(--gable-green);
 }
 
 .notification{
