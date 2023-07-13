@@ -16,52 +16,34 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
-}
-h1{
-    height: 100%;
 }
 
-
-.div-candidatos{
-    align-items: start;
+.div-candidatos-invitaciones{
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     border-radius: 15px;
     background-color: var(--beetle-green);
-    margin: 3.5% 0%;
-    width: 90%;   
+    width: 90%;  
+    height: 90%;  
     color: var(--gable-green);
     flex-wrap: wrap;
     box-shadow: 5px 5px 20px 1px var(--beetle-green);
-    height: 90%;
+    
 }
 
-.div-candidatos, .div-candidatos{
+.div-candidatos, .div-invitaciones{
     background-color: var(--white);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 40%;
     height: 90%;
-
-}
-.div-candidatos{
-    width: 55%;
-}
-.div-candidatos{
-    width: 37%;
-    
+    padding: 0 30px;
 }
 
-.div-candidatos{
-    margin: 3% 2% 1.5% 2%;
-} 
-
-.div-candidatos{
-    margin: 3% 2% 1.5% 2%;
-}
 
 .div-candidatos-head{
     display: flex;
@@ -71,35 +53,17 @@ h1{
 }
 
 
-.div-candidatos h1, .div-candidatos h1{
+.div-candidatos h1, .div-invitaciones h1{
     margin-top: 30px;
     margin-left: 40px;
     padding-bottom: 5px;
     width: fit-content;
     height: fit-content;
-    font-size: 25px;
+    font-size: var(--font-size-h1);
     font-weight: bold;
     border-bottom: 3px solid var(--gable-green);
     margin-bottom: 30px;
 }
-
-
-.div-candidatos table{
-    width: 95%;
-    margin-bottom: 2%;
-}
-
-.div-candidatos-tabla, .div-candidatos-actuales-tabla{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.div-candidatos-actuales-tabla table{
-    margin-left: 3.5%;
-    margin-right: 3.5%;
-}
-
 
 .div-button-siguiente{
     height: 10%;
@@ -109,36 +73,6 @@ h1{
     float: right;
 }
 
-
-/*--------------------TD Decoration---------------------------*/
-
-
-/*---------------Botones------------*/
-
-
-
-button{
-    background-color: var(--gable-green);
-    color: white;
-    padding: 1.5% 2%;
-    border-radius: 5px;
-    margin: 2% 3% 2% 3%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
-    font-size: 15px;
-    cursor: pointer;
-}
-button:hover{
-    background-color: var(--buttonHover);
-}
-
-
-
-
-.div-button-siguiente-candidatos button{
-    padding: 0.5% 1%;
-    font-size: 12px;
-    float: right;
-    margin-bottom: 20px;
-    margin-right: 20px;
+#btn-anadir-empleo{
+    margin-top: 20000px;
 }

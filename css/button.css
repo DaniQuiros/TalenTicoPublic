@@ -6,7 +6,7 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   font-weight: bolder;
-  margin: 10px 14px;
+  margin: 5px 7px;
   padding: 8px 10px;
 }
 
@@ -14,7 +14,7 @@
   background-color: var(--buttonHover);
 }
 
-.talentico-button--red {
+.talentico-button--red{
   background-color: var(--chili-pepper);
 }
 

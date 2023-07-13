@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/estiloAdministrarEmpleosReclutador.css">
     
 </head>
@@ -54,50 +56,55 @@
                     </div>
     
                     <div class="div-empleos-creados-tabla">
-                        <table>
+                        <table class="talentico-table">
                             <tr>
-                                <th class="tbl-head-left">Puesto</th>
-                                <th class="tbl-head">Tipo</th>
-                                <th class="tbl-head">Invitaciones</th>
-                                <th class="tbl-head">Candidatos actuales</th>
-                                <th class="tbl-head-right">Acciones</th>
+                                <th class="talentico-th">Puesto</th>
+                                <th class="talentico-th">Tipo</th>
+                                <th class="talentico-th">Invitaciones</th>
+                                <th class="talentico-th">Candidatos actuales</th>
+                                <th class="talentico-th">Acciones</th>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="tbl-row-1">Público</td>
-                                <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">20</a></td>
-                                <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">4</a></td>
-                                <td class="tbl-row-1-right">
-                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tbl-row-2-left"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="tbl-row-2">Privado</td>
-                                <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">15</a></td>
-                                <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">6</a></td>
-                                <td class="tbl-row-2-right"  >
-                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="talentico-td">Público</td>
+                                <td class="talentico-td">20</td>
+                                <td class="talentico-td">4</td>
+                                <td class="talentico-td">
+                                    <a href="./listaCandidatosEmpleoReclutador.html"><button class="talentico-button" type="button">Candidatos</button></a>
+                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
                                     
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-1-left"><a href="./empleosPlantillaReclutador.html">Software Arquitect</a></td>
-                                <td class="tbl-row-1">Privado</td>
-                                <td class="tbl-row-1"><a href="./listaInvitacionesEmpleo.html">10</a></td>
-                                <td class="tbl-row-1"><a href="./listaCandidatosEmpleo.html">8</a></td>
-                                <td class="tbl-row-1-right">
-                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="talentico-td">Privado</td>
+                                <td class="talentico-td">15</td>
+                                <td class="talentico-td">6</td>
+                                <td class="talentico-td" >
+                                    <a href="./listaCandidatosEmpleoReclutador.html"><button class="talentico-button" type="button">Candidatos</button></a>
+                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
                                     
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-2-left" ><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                                <td class="tbl-row-2">Público</td>
-                                <td class="tbl-row-2"><a href="./listaInvitacionesEmpleo.html">5</a></td>
-                                <td class="tbl-row-2"><a href="./listaCandidatosEmpleo.html">2</a></td>
-                                <td class="tbl-row-2-right" id="td-esquina-inferior-derecha">
-                                    <a href="./empleosPlantillaReclutador.html#email"><button type="button">Invitar Candidatos</button></a>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Arquitect</a></td>
+                                <td class="talentico-td">Privado</td>
+                                <td class="talentico-td">10</td>
+                                <td class="talentico-td">8</td>
+                                <td class="talentico-td">
+                                    <a href="./listaCandidatosEmpleoReclutador.html"><button class="talentico-button" type="button">Candidatos</button></a>
+                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td" ><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
+                                <td class="talentico-td">Público</td>
+                                <td class="talentico-td">5</td>
+                                <td class="talentico-td">2</td>
+                                <td class="talentico-td" id="td-esquina-inferior-derecha">
+                                    <a href="./listaCandidatosEmpleoReclutador.html"><button class="talentico-button" type="button">Candidatos</button></a>
+                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
                                     
                                 </td>
                             </tr>
@@ -105,8 +112,8 @@
                     </div>
                 </div>
 
-                <div class="div-button-siguiente-empleos">
-                    <button id="btn-siguiente-empleos">Siguiente</button>
+                <div class="div-button-siguiente">
+                    <button class="talentico-button">Siguiente</button>
                 </div>
             </div>
 
@@ -116,49 +123,47 @@
                     
                     <h1>Candidatos actuales</h1>    
                     <div class="div-candidatos-actuales-tabla">
-                        <table>
+                        <table class="talentico-table">
                             <tr>
-                                <th class="tbl-head-left">Candidatos</th>
-                                <th class="tbl-head">Puesto</th>
-                                <th class="tbl-head-right">Estado</th>
+                                <th class="talentico-th">Candidatos</th>
+                                <th class="talentico-th">Puesto</th>
+                                <th class="talentico-th">Estado</th>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-1-left">Maikol Carballo</td>
-                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="tbl-row-1-right-candidato">Enviada</td>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Maikol Carballo</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="talentico-td">Enviada</td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-2-left">Daniela Quiros</td>
-                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="tbl-row-2-right-candidato">En revisión</td>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Daniela Quiros</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="talentico-td">En revisión</td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-1-left">Victor Vargas</td>
-                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="tbl-row-1-right-candidato">Aceptada</td>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Victor Vargas</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
+                                <td class="talentico-td">Aceptada</td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-2-left">Jose Chaverri</td>
-                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                                <td class="tbl-row-2-right-candidato">Denegada</td>
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Jose Chaverri</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
+                                <td class="talentico-td">Denegada</td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-1-left">Jovan Brenes</td>
-                                <td class="tbl-row-1"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="tbl-row-1-right-candidato">Denegada</td>
-
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Jovan Brenes</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="talentico-td">Denegada</td>
                             </tr>
-                            <tr>
-                                <td class="tbl-row-2-left">Limberth Vasquez</td>
-                                <td class="tbl-row-2"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="tbl-row-2-right-candidato">Aceptada</td>
-
+                            <tr class="talentico-tr">
+                                <td class="talentico-td">Limberth Vasquez</td>
+                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
+                                <td class="talentico-td">Aceptada</td>
                             </tr>
                         </table>    
                     </div>
                 </div>    
-                <div class="div-button-siguiente-candidatos">
-                    <button>Siguiente</button>
+                <div class="div-button-siguiente">
+                    <button class="talentico-button">Siguiente</button>
                 </div>
             </div>
         </div>
