@@ -144,7 +144,7 @@ main {
     border-bottom-right-radius: 10px;
     padding: 5px 10px;
     font-weight: bold;
-    width: 40%;
+    width: 30%;
 }
 .tbl-head-right-candidato{
     background-color: var(--gable-green);
@@ -161,6 +161,7 @@ main {
 .div-candidatos-actuales-tabla th{
     padding: 15px 10px;
 }
+
 
 
 
@@ -205,6 +206,7 @@ main {
     border-bottom-right-radius: 10px;
     font-size: 15px;
     font-weight: 500;
+    
 }
 
 
@@ -238,6 +240,7 @@ main {
     border-bottom-right-radius: 10px;
     font-size: 15px;
     font-weight: 500;
+
 }
 .tbl-row-2-right-candidato{
     background-color: var(--eggshell);
@@ -291,21 +294,6 @@ button:hover{
     background-color: var(--buttonHover);
 }
 
-.btn-eliminar{
-    background-color: var(--chili-pepper);
-    color: white;
-    padding: 1.5% 2%;
-    border-radius: 5px;
-    margin: 2% 3% 2% 3%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.btn-eliminar:hover{
-    background-color: var(--buttonEliminarHover);
-}
 
 .div-button-siguiente-empleos button{
     padding: 0.5% 1%;
@@ -320,4 +308,9 @@ button:hover{
     float: right;
     margin-bottom: 20px;
     margin-right: 20px;
+}
+
+
+.div-candidatos-actuales-tabla table td{
+    padding: 14px;
 }
