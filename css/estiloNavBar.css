@@ -35,11 +35,32 @@ nav ul li a {
     color: var(--eggshell);
 }
 
-nav ul li a:hover {
+nav ul li:hover {
     background-color: var(--beetle-green);
     text-decoration: underline;
     color: var(--eggshell);
     border-radius: 3px;
+}
+
+.notification{
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+}
+.notification::after{
+    content:'';
+    background-color: var(--eggshell);
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.notification-list{
+
 }
 
 .navbar-option {
