@@ -5,6 +5,9 @@ main{
     justify-content: center;
     align-items: center;
 }
+img{
+    height: 40px;
+}
 .div-empleos-container{
     align-items: center;
     display: flex;
@@ -27,7 +30,7 @@ main{
     gap: 20px;
     height: 90%;
     padding: 30px 30px;
-    width: 90%;
+    width: 95%;
 }
 .div-empleos-filter{
     background-color: var(--white);
@@ -36,7 +39,13 @@ main{
     flex-direction: column;
     padding: 30px 30px;
 }
-
+.div-empleos-tabla{
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+}
 
 .div-empleos h1{
     
