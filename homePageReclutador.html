@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page usuario</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/estiloHomePageUsuario.css">
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/">
+            <img id="logo" src="./media/TalenTicoNavBar.svg" height="60" alt="">
+        </a>
+        <nav>
+            <ul>
+                <li class="navbar-option">
+                    <a href="./filtrarEmpleos.html">Empleos</a>
+                    <div class="navbar-submenu">
+                        <ul>
+                            <li class="navbar-option">
+                                <a href="./empleosPlantillaReclutador.html">Invitar Candidatos</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./filtrarCandidatos.html">Buscar Candidatos</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./inicioSesionGeneral.html">Cerrar Sesión</a>
+                            </li>
+                        </ul>   
+                    </div>
+                </li>
+                <li class="navbar-option">
+                    <a href="./homePageUsuario.html">Mi Perfil</a>
+                    <div class="navbar-submenu">
+                        <ul>
+                            <li class="navbar-option">
+                                <a href="./misAplicaciones.html">Mis Aplicaciones</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./modificarUsuario.html">Modificar perfil</a>
+                            </li>
+
+                        </ul>   
+                    </div>
+                </li>
+                <li class="navbar-option">
+                    <a href="#"> 0 Notificaciones</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="informacionPerfil">
+            <div id="introPerfil">
+                <div id="fotoPerfilContainer">
+                    <img id="fotoPerfil" src="/media/foto-icon.png" alt="FotoPerfil">
+                </div>
+                
+                <div id="descripcionUsuario">
+                    <h2 class="informacionPerfil">Bienvenido, Maikol Carballo</h2>
+                    <h4 id="descripcionGral" class="informacionPerfil">Reclutador de Coca-cola</h2>
+                </div>
+            </div>
+            <div class="contenedor-detalle-usuario">
+                <div class="description-container">
+                    <div class="description">
+                        <h4>Descripción profesional</h4>
+                    </div>
+                    <div>
+                        <h3 class="contenido-descripcion-profesional">
+                            Mechanical Engineer || Software Engineer Student || Back-End Developer (C++, Java, Python) || Machine learning enthusiast
+                        </h3>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div class="description">
+                        <h4>Candidatos vistos recientemente</h4>
+                    </div>
+                    <div>
+                        <h3 class="contenido-descripcion-profesional">
+                            Fulanito Pérez - Sr Developer
+                        </h3>
+                        <h3 class="contenido-descripcion-profesional">
+                            Pedro Pablo - Finance Expert
+                        </h3>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <section action="" id="modificarEstudiosLaboralPersonal">
+ 
+                <div id="seccionEstudios">
+                    <h1>Empleos agregados recientemente:</h1>
+                    <table id="informacionEstudios" class="talentico-table">
+                        <tr id="talentico-table">
+                            <th class="talentico-th"> Puesto</th>
+                            <th class="talentico-th">Área profesional</th>
+                            <th class="talentico-th"> Grado academico </th class="talentico-th">
+                        </tr>
+                        <tr class="talentico-tr">
+                            <td class="talentico-td">Ingeniero mecánico</td>
+                            <td class="talentico-td">Ingenieria mecanica</td>
+                            <td class="talentico-td">Bachillerato</td>
+                        </tr>
+                        <tr class="talentico-tr">
+                            <td class="talentico-td"> Asistente de recurso humano</td>
+                            <td class="talentico-td"> Bachiller educación media</td>
+                            <td class="talentico-td"> Bachiller</td>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="seccionExperiencia">
+                    <h1>Invitaciones enviadas recientemente</h1>
+                    <table id="informacionLaboral" class="tablaDeInformacion">
+                        <tr> <!--tr: table row-->
+                            <th class="talentico-th"> <!--th: table head-->
+                                Candidato
+                            </th>
+                            <th class="talentico-th">
+                                Puesto
+                            </th>
+                            <th class="talentico-th">
+                                Área profesional
+                            </th>
+                            <th class="talentico-th">
+                                Grado academico
+                            </th>
+                        </tr>
+                        <tr class="talentico-tr">
+                            <td class="talentico-td">Juanito Pérez</td>
+                            <td class="talentico-td"> Profesor </td>
+                            <td class="talentico-td">Educación</td>
+                            <td class="talentico-td">Licenciado</td>
+                        </tr>
+                        <tr class="talentico-tr">
+                            <td class="talentico-td">Julio Sánchez</td>
+                            <td class="talentico-td">Sr Software Developer</td>
+                            <td class="talentico-td">Tecnología</td>
+                            <td class="talentico-td"> Asistente administrativo </td>
+                        </tr>
+                    </table>
+                </div>
+
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/controlador.js"></script>
+</body>
+
+<footer>
+    <ul >
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
+    <ul >
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Products</a></li>
+    </ul>
+</footer>
+
+</html>
