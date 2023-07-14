@@ -1,89 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtrar Candidatos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/estiloNavBar.css">
-    <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./css/table.css">
-    <link rel="stylesheet" href="./css/estiloAdministrarEmpleos.css">
-    
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Filtrar Candidatos</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/general.css">
+		<link rel="stylesheet" href="./css/estiloNavBar.css">
+		<link rel="stylesheet" href="./css/button.css">
+		<link rel="stylesheet" href="./css/table.css">
+		<link rel="stylesheet" href="./css/estiloFiltrarCandidatos.css">
 </head>
-<header>
-    <a class="header-logo" href="/">
-    <img id="logo" src="./Imagenes/Logo.jpeg" height="60" alt="">
-    </a>
-    <nav>
-        <ul>
-            <li class="navbar-option">
-                <a href="#">Empleos</a>
-            </li>
-            <li class="navbar-option">
-                <a href="#">Mi Perfil</a>
-                <div class="navbar-submenu">
-                    <ul>
-                        <li class="navbar-option">
-                            <a href="#">Mis Aplicaciones</a>
-                        </li>
-                        <li class="navbar-option">
-                            <a href="#">Modificar Perfil</a>
-                        </li>
-                        <li class="navbar-option">
-                            <a href="#">Cerrar Sesión</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="navbar-option">
-                <a href="#">Notificaciones</a>
-
-            </li>
-    </ul>
-    </nav>
-</header>
 <body>
-    <form action="formulario">
-        <h1>Busqueda de candidatos</h1>
-        <ul>
-             <label for="Profesion">Profesión:</label>
-             <input type="Profesion" id="Profesion" placeholder="Ingrese la profesión"required> 
-        </ul>
-        
-        <ul>
-            <label for="gradoAcademico">Grado Academico:</label>
-            <input type="gradoAcademico" id="gradoAcademico" placeholder="Ingrese el grado academico"required>
-        </ul>
+		<header>
+				<a class="header-logo" href="/">
+						<img id="logo" src="./media/TalenTicoNavBar.svg" height="60" alt="">
+				</a>
+		<nav>
+				<ul>
+						<li class="navbar-option">
+								<a href="#">Empleos</a>
+						</li>
+						<li class="navbar-option">
+								<a href="#">Mi Perfil</a>
+								<div class="navbar-submenu">
+										<ul>
+												<li class="navbar-option">
+														<a href="#">Mis Aplicaciones</a>
+												</li>
+												<li class="navbar-option">
+														<a href="#">Modificar Perfil</a>
+												</li>
+												<li class="navbar-option">
+														<a href="#">Cerrar Sesión</a>
+												</li>
+										</ul>
+								</div>
+						</li>
+						<li class="navbar-option">
+								<a href="#">Notificaciones</a>
 
-        <ul>
-            <label for="añosExperiencia">Años de experiencia:</label>
-            <input type="añosExperiencia" id="añosExperiencia" placeholder="Ingrese los años de experiencia"required>
-        </ul>
-           
-        <ul>
-            <label for="bandaSalarial">Banda salarial:</label>
-            <input type="bandaSalarial" id="bandaSalarial" placeholder="Ingrese el salario"required>
-        </ul>
+						</li>
+		</ul>
+		</nav>
+		</header>
 
-        <button id="btn-submit" type="button">Enviar</button>
-        <button id="btn-cancelar" type="cancelar">Cancelar</button>
-    </form>
-    
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Sobre el producto</a></li>
-                <li><a href="#">Empleos</a></li>
-                <li><a href="#">Registrarse</a></li>
-            </ul> 
-        </nav>
-        <p>Creado por ByteOps</p>
-    </footer>
-    
+		<main>
+				<div class="div-candidatos-container">
+						<div class="div-candidatos">
+								<div class="div-candidatos-filter">
+										<h1>Buscar Candidatos</h1>
+										<form>
+												<label for="experiencia">Experiencia Laboral:</label>
+												<input type="text" id="inp-experiencia" placeholder="Ingrese la Experiencia requerida..."> 
+												<label for="puesto">Estudios Formales:</label>
+												<input type="text" id="inp-estudios" placeholder="Ingrese el Estudio deseado..."> 
+												<button class="talentico-button" id="btn-submit" type="button">Buscar</button>
+												<button class="talentico-button" id="btn-cancelar" type="button">Borrar</button>
+										</form>
+								</div>
+
+								<div class="div-candidatos-tabla">
+										<table class="talentico-table">
+												<tr>
+														<th class="talentico-th">Nombre</th>
+														<th class="talentico-th">Correo</th>
+														<th class="talentico-th">Genero</th>
+														<th class="talentico-th">Experiencia Laboral</th>
+														<th class="talentico-th">Estudios Formales</th>
+														<th class="talentico-th">Acciones</th>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Jose Antonio</td>
+														<td class="talentico-td">jchaverric@ucenfotec.ac.cr</a></td>
+														<td class="talentico-td">Masculino</td>
+														<td class="talentico-td">
+																<ul>
+																		<li>Multifrio (2016-2023)</li>
+																		<li>Universidad de Costa Rica (2010-2016)</li>
+																</ul>
+														</td>
+														<td class="talentico-td">
+																<ul>
+																		<li>Ingenieria Mecanica</li>
+																		<li>Bachiller Educacion Media</li>
+																</ul>
+														</td>
+														<td class="talentico-td">
+																<a href="./administrarEmpleosReclutador.html"><button class="talentico-button" type="button">Enviar Invitacion</button></a>
+														</td>
+												</tr>
+
+												<tr class="talentico-tr">
+														<td class="talentico-td">Juan Perez</td>
+														<td class="talentico-td">jperez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Masculino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingenieria Mecanica</li>
+																<li>Bachiller Educacion Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitacion</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Ana Rodriguez</td>
+														<td class="talentico-td">arodriguez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Femenino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingenieria Mecanica</li>
+																<li>Bachiller Educacion Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitacion</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Carlos Mendez</td>
+														<td class="talentico-td">cmendez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Masculino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingenieria Mecanica</li>
+																<li>Bachiller Educacion Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitacion</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Laura Fernandez</td>
+														<td class="talentico-td">lfernandez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Femenino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingenieria Mecanica</li>
+																<li>Bachiller Educacion Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitacion</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Ricardo Gomez</td>
+														<td class="talentico-td">rgomez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Masculino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingenieria Mecanica</li>
+																<li>Bachiller Educacion Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitacion</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">María López</td>
+														<td class="talentico-td">mlopez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Femenino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingeniería Mecánica</li>
+																<li>Bachiller Educación Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitación</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Andrés Fernández</td>
+														<td class="talentico-td">afernandez@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Masculino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingeniería Mecánica</li>
+																<li>Bachiller Educación Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitación</button>
+															</a>
+														</td>
+												</tr>
+												<tr class="talentico-tr">
+														<td class="talentico-td">Gabriela Torres</td>
+														<td class="talentico-td">gtorres@ucenfotec.ac.cr</td>
+														<td class="talentico-td">Femenino</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Multifrio (2016-2023)</li>
+																<li>Universidad de Costa Rica (2010-2016)</li>
+																</ul>
+														</td>
+														<td class="talentico-td">
+															<ul>
+																<li>Ingeniería Mecánica</li>
+																<li>Bachiller Educación Media</li>
+															</ul>
+														</td>
+														<td class="talentico-td">
+															<a href="./administrarEmpleosReclutador.html">
+																<button class="talentico-button" type="button">Enviar Invitación</button>
+															</a>
+														</td>
+												</tr>
+													
+													
+
+										</table>
+								</div>
+
+						</div>
+				</div>
+		</main>
+		
+		<footer>
+				<ul >
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Instagram</a></li>
+				</ul>
+				<ul >
+						<li><a href="#">Empleos</a></li>
+						<li><a href="#">Contáctenos</a></li>
+						<li><a href="./byteOps.html">Creado por ByteOps</a></li>
+				</ul>
+		</footer>
+		
 </body>
 </html>
