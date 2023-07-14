@@ -128,6 +128,13 @@
     box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
 }
 
+.login-information select:focus{
+    border: 2px solid var(--elf-green);
+    outline: none;
+    box-shadow: 0 0 0 0 white, 0 0 0 1px var(--gable-green), 0 10px 15px -3px rgba(26, 60, 64, .1), 0 4px 6px -4px rgba(26, 60, 64, .1);
+
+}
+
 .login-information input:focus{
     border: 2px solid var(--elf-green);
     outline: none;
