@@ -9,7 +9,7 @@ img{
     height: 70px;
 }
 
-.div-empleos-container{
+.div-candidatos-container{
     align-items: center;
     background-color: var(--beetle-green);
     border-radius: 15px;
@@ -24,7 +24,7 @@ img{
     
 }
 
-.div-empleos{
+.div-candidatos{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ img{
     height: 90%;
     max-height: 800px;
 }
-.div-empleos-filter{
+.div-candidatos-filter{
     background-color: var(--white);
     border-radius: 15px;
     display: flex;
@@ -43,7 +43,7 @@ img{
     padding: 30px 30px;
     height: 10;
 }
-.div-empleos-tabla{
+.div-candidatos-tabla{
     background-color: var(--white);
     border-radius: 15px;
     display: flex;
@@ -53,7 +53,7 @@ img{
     overflow: auto;
 }
 
-.div-empleos h1{
+.div-candidatos h1{
     margin-left: 40px;
     padding-bottom: 5px;
     width: fit-content;
@@ -72,9 +72,9 @@ img{
 }
 
 .talentico-th:last-child {
-    width: 20%;
+    width: 15%;
 }
-.talentico-td:nth-child(4){
+.talentico-td:nth-child(4),.talentico-td:nth-child(5){
     justify-content: center;
     text-align: left;
     vertical-align: middle;
@@ -95,5 +95,6 @@ input{
     vertical-align: middle;
     height: 20px;
     font-family: 'Quicksand', sans-serif;
+    width: 300px;
     
 }
