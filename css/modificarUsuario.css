@@ -30,18 +30,28 @@ main {
 
 #introPerfil{  
   display: flex;
-  
+  flex-direction: column;
   width: 100%;
-  height: 25%;
-  margin-top: 0%;
+  padding: 10px 20px;
 }
 
 #fotoPerfil{
+  height: 100%;
+  width: auto;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+#fotoPerfilContainer{
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
   border-radius: 50%;
-  height: 175px;
-  margin-top: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  border: 5px solid var(--beetle-green);
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .informacionPerfil{
@@ -52,24 +62,25 @@ main {
 }
 
 #descripcionGral{
-  font-size: 14px;
-  width: 75%;
+  font-size: 16px;
+  width: 100%;
+  text-align: justify;
+  padding-top: 20px;
 }
 
 #descripcionUsuario{
-  
+  box-sizing: border-box;
+  padding: 30px;
   font-size: 10px;
   position: relative;
-  margin-top: 10px;
 }
 
 .iconoLapiz {
-  color: var(--gable-green); /* Cambia el color a tu preferencia */
-  font-size: 16px; /* Cambia el tamaño a tu preferencia */
+  color: var(--gable-green);
+  font-size: 16px; 
   cursor: pointer;
   position: absolute;
-  bottom: 10px;
-  left: 0%;
+  padding: 10px;
 }
 
 .iconoLapiz{
