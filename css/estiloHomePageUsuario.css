@@ -64,14 +64,13 @@ main {
 
 
 .contenedor-detalle-usuario{
-  flex-direction: row;
-  background-color: var;
-
-}
-
-.descripcionUsuario{
+  display: flex;
   flex-direction: column;
+  gap: 16px;
+  padding: 0 12px;
 }
+
+
 
 .informacionPerfil{
   text-align: center;
@@ -80,20 +79,25 @@ main {
 }
 
 .description-container{
-  background-color: var(--eggshell);
+  background-color: var(--gable-green);
   border-radius: 15px;
   width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .contenido-descripcion-profesional{
   padding: 20px;
-  font-size: 18px;
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 500;
+  
 }
 .description{
-  color: var(--beetle-green);
+  color: var(--eggshell);
   font-weight: 600;
   font-size: 24px;
-  padding: 20px;
+  text-decoration: underline;
 
 }
 
