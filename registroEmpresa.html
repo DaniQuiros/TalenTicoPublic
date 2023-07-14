@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/estiloNavBar.css">
     <link rel="stylesheet" href="./css/estiloRegistro.css">
     <link rel="stylesheet" href="./css/general.css">
-    <script src="./js/controladorRegistro.js"></script>
+    <script src="./js/controladorRegistroEmpresa.js"></script>
 </head>
 <body>
     <header>
@@ -41,16 +41,16 @@
 
     <div class="marquee">
         <div class="marquee-description-container">
-            <h1 class="marquee-heading">Empieza tu camino con TalenTico</h1>
+            <h1 class="marquee-heading">Registro Empresa</h1>
             <div class="login-container">
                 <div class="login-information">
                     <form action="submit">
-                        <label for="nombreUsuario">Nombres:</label>
-                        <input type="text" id="nombreUsuario" placeholder="Ejemplo: Pedro Pablo" name="nombreUsuario" required>
-                        <label for="apellidoUsuario">Apellidos: </label>
-                        <input type="text" id="apellidoUsuario" name="apellidoUsuario" id="apellidoUsuario" placeholder="Ejemplo: Pérez Ortiz" required>
-                        <label for="email">Correo electrónico: </label>
-                        <input type="email" id="email" placeholder="ex: johndoe@email.com" name="nombre" required>
+                        <label for="nombreUsuario">Nombre Empresa</label>
+                        <input type="text" id="nombreUsuario" placeholder="Ejemplo: Coca Cola co" name="nombreUsuario" required>
+                        <label for="apellidoUsuario">Cedula Juridica</label>
+                        <input type="text" id="apellidoUsuario" name="apellidoUsuario" id="cedulaUsuario" placeholder="Ejemplo: 3-101-00000" required>
+                        <label for="email">Correo electrónico institucional: </label>
+                        <input type="email" id="email" placeholder="ex: johndoe@cocacola.com" name="nombre" required>
                         <label for="password">Contraseña: </label>
                         <input type="password" id="password" placeholder="*****" required>
                         <label for="confirmPassword">Confirme su contraseña: </label>
