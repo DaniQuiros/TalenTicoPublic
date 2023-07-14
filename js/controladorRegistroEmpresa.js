@@ -91,11 +91,11 @@ function validarConfirmacionContrasena(passwordElement, confirmationElement){
 
 
 document.addEventListener('DOMContentLoaded', function(){
-    const element = document.querySelector('.login-information form');
+    const element = document.querySelector('.login-information button[type="submit"]');
     if(!element){
         throw new Error('No login button');
     }
-    element.addEventListener('submit', (event) => {
+    element.addEventListener('click', (event) => {
         if (validarCamposVacios('.login-information')){
             event.preventDefault();
             Swal.fire({
