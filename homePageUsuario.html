@@ -45,10 +45,15 @@
                 <li class="navbar-option">
                     <a href="#">Notificaciones</a>
                     <div class="navbar-submenu">
-                        <ul>
-                            <li class="navbar-option">
-                                <a href="./ModificarUsuario.html">No tiene Notificaciones</a>
-                            </li>
+                        <ul class="notification-list">
+                            <li class="notification"> <a href="">Una aplicación ha sido aceptada</a></li>
+                            <li class="notification"> <a href="">Una aplicación ha sido acepta</a></li>
+                            <li class="notification"><a href="#">Una aplicación ha sido aceptada</a></li>
+                            <li class="notification"><a href="#">Actualización de correo exitosa</a></li>
+                            <li class="notification"><a href="#">Descubre los nuevos empleos de esta semana</a></li>
+                            <li class="notification"><a href="#">Actualiza tu información</a></li>
+                            <li class="notification"><a href="#">Coca-cola company ha visto tu perfil</a></li>
+                        </ul>
                 </li>
             </ul>
         </nav>
@@ -67,67 +72,52 @@
                     <h4 id="descripcionGral" class="informacionPerfil">Mechanical Engineer</h2>
                 </div>
             </div>
-            <form action="" id="datosUsuario">
-                <div>
-                    <label for="txtNombre">Nombre:</label>
-                    <input type="text" class="input_frm " id="txtNombre" required>
+            <div class="contenedor-detalle-usuario">
+                <div class="description-container">
+                    <div class="description">
+                        <h4>Descripción profesional</h4>
+                    </div>
+                    <div>
+                        <h3 class="contenido-descripcion-profesional">
+                            Mechanical Engineer || Software Engineer Student || Back-End Developer (C++, Java, Python) || Machine learning enthusiast
+                        </h3>
+                        <div class="teammate-description">
+                            Ingeniería en Software
+                        </div>
                 </div>
-
-                <div>
-                    <label for="txtApellido">Apellido:</label>
-                    <input type="text" class="input_frm" id="txtApellido" required>
-                </div>
-
-                <div>
-                    <label for="txtIdentificacion">Identificación:</label>
-                    <input type="text" class="input_frm" id="txtIdentificacion" required>
-                </div>
-
-                <label for="slctGenero">Genero:</label>
-                <select name="Genero" id="slctGenero" required>
-                    <option value="null">----</option>
-                    <option value="Alajuela">Hombre</option>
-                    <option value="San_Jose">Mujer</option>
-                    <option value="Heredia">Prefiero no decir</option>
-                </select>
-
-                <div>
-                    <label for="txtCorreo">Correo Electrónico:</label>
-                    <input type="email" class="input_frm" id="txtCorreo" required>
-                </div>
-
-                <div>
-                    <label for="txtPasswor">Contraseña:</label>
-                    <input type="password" class="input_frm" id="txtPasswor" required>
-                </div>
-
-            </form>
-            <div id="botones">
-                <button class="talentico-button" type="button">Guardar</button>
-                <button class="talentico-button talentico-button--red" type="button">Cancelar</button>
-            </div>        
+                <div class="recommendation-container">
+                    <div class="recommendation">
+                        <h4>Recomendación de empresas</h4>
+                    </div>
+                    <div>
+                        <h3 class="teammate-name">
+                            Victor Vargas - Coordinador
+                        </h3>
+                        <div class="teammate-description">
+                            Ingeniería en Software
+                        </div>
+                </div>  
+            </div>
         </section>
 
         <section action="" id="modificarEstudiosLaboralPersonal">
  
                 <div id="seccionEstudios">
-                    <h1>Estudios formales:</h1>
+                    <h1>Empleos agregados recientemente:</h1>
                     <table id="informacionEstudios" class="talentico-table">
                         <tr id="talentico-table">
-                            <th class="talentico-th"> Fecha titulacion </th>
-                            <th class="talentico-th"> Institucion </th>
-                            <th class="talentico-th"> Carrera </th>
+                            <th class="talentico-th"> Empresa </th>
+                            <th class="talentico-th"> Puesto</th>
+                            <th class="talentico-th">Área profesional</th>
                             <th class="talentico-th"> Grado academico </th class="talentico-th">
-                            <th class="talentico-th"> Opciones </th>
+                            <th class="talentico-th"> Tipo de Jornada </th>
                         </tr>
                         <tr class="talentico-tr">
-                            <td class="talentico-td">2016</td>
                             <td class="talentico-td">Universidad de Costa Rica</td>
+                            <td class="talentico-td">Ingeniero mecánico</td>
                             <td class="talentico-td">Ingenieria mecanica</td>
                             <td class="talentico-td">Bachillerato</td>
                             <td class="talentico-td"> 
-                                <button type="button" class="talentico-button">Editar</button>
-                                <button class="talentico-button talentico-button--red" type="button">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="talentico-tr">
@@ -136,8 +126,6 @@
                             <td class="talentico-td"> Bachiller educación media</td>
                             <td class="talentico-td"> Bachiller</td>
                             <td class="talentico-td"> 
-                                <button type="button" class="talentico-button">Editar</button>
-                                <button class="talentico-button talentico-button--red" type="button">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="talentico-tr">
@@ -146,29 +134,28 @@
                             <td class="talentico-td"></td>
                             <td class="talentico-td"></td>
                             <td class="talentico-td">
-                                <button type="button" class="talentico-button">Agregar</button>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div id="seccionExperiencia">
-                    <h1>Experiencia laboral:</h1>
+                    <h1>Empresas vistas recientemente</h1>
                     <table id="informacionLaboral" class="tablaDeInformacion">
                         <tr> <!--tr: table row-->
                             <th class="talentico-th"> <!--th: table head-->
-                                Año ingreso
-                            </th>
-                            <th class="talentico-th">
-                                Año salida
-                            </th>
-                            <th class="talentico-th">
                                 Empresa
                             </th>
                             <th class="talentico-th">
-                                Puesto trabajo
+                                Puesto
                             </th>
                             <th class="talentico-th">
-                                Opciones
+                                Área profesional
+                            </th>
+                            <th class="talentico-th">
+                                Grado academico
+                            </th>
+                            <th class="talentico-th">
+                                Tipo de jornada
                             </th>
                         </tr>
                         <tr class="talentico-tr">
@@ -177,8 +164,6 @@
                             <td class="talentico-td"> Multifrio </td>
                             <td class="talentico-td"> Ingeniero de diseño </td>
                             <td class="talentico-td">
-                                <button type="button" class="talentico-button">Editar</button>
-                                <button type="button" class="talentico-button talentico-button--red">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="talentico-tr">
@@ -187,8 +172,6 @@
                             <td class="talentico-td"> Universidad de Costa Rica </td>
                             <td class="talentico-td"> Asistente administrativo </td>
                             <td class="talentico-td">
-                                <button type="button" class="talentico-button">Editar</button>
-                                <button type="button" class="talentico-button talentico-button--red">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="talentico-tr">
@@ -205,7 +188,6 @@
                                 
                             </td>
                             <td class="talentico-td"> <!--td: table data-->
-                                <button type="button" class="talentico-button">Agregar</button>
                             </td>
                         </tr>
                     </table>
