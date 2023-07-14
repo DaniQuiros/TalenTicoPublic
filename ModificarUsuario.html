@@ -24,21 +24,37 @@
         <nav>
             <ul>
                 <li class="navbar-option">
-                    <a href="#">Empleos</a>
+                    <a href="./filtrarEmpleos.html">Empleos</a>
                 </li>
                 <li class="navbar-option">
-                    <a href="#">Mi Perfil</a>
+                    <a href="./homePageUsuario.html">Mi Perfil</a>
                     <div class="navbar-submenu">
                         <ul>
                             <li class="navbar-option">
-                                <a href="#">Cerrar Sesión</a>
+                                <a href="./misAplicaciones.html">Mis Aplicaciones</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./modificarUsuario.html">Modificar perfil</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./inicioSesionGeneral.html">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="navbar-option">
                     <a href="#">Notificaciones</a>
-
+                    <div class="navbar-submenu">
+                        <ul class="notification-list">
+                            <li class="notification"> <a href="">Una aplicación ha sido aceptada</a></li>
+                            <li class="notification"> <a href="">Una aplicación ha sido acepta</a></li>
+                            <li class="notification"><a href="#">Una aplicación ha sido aceptada</a></li>
+                            <li class="notification"><a href="#">Actualización de correo exitosa</a></li>
+                            <li class="notification"><a href="#">Descubre los nuevos empleos de esta semana</a></li>
+                            <li class="notification"><a href="#">Actualiza tu información</a></li>
+                            <li class="notification"><a href="#">Coca-cola company ha visto tu perfil</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -84,7 +100,7 @@
 
                 <div>
                     <label for="txtCorreo">Correo Electrónico:</label>
-                    <input type="email" class="input_frm" id="txtCorreo" required>
+                    <input type="email" class="input_frm" id="txtCorreo" required disabled>
                 </div>
 
                 <div>
