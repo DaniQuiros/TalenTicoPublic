@@ -15,8 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/estiloNavBar.css">
-    <link rel="stylesheet" href="./css/estiloCrearEmpleo.css">
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/estiloCrearEmpleo.css">
 </head>
 <body>
     <header>
@@ -60,28 +61,36 @@
             </ul>
         </nav>
     </header>
+    <main>
 
-    <div class="marquee">
-        <div class="marquee-description-container">
-            <h1 class="marquee-heading">Crear empleo</h1>
-            <div class="login-container">
-                <div class="login-information">
+
+        <div class="div-anadir-empleo-container">
+            <div class="div-anadir-empleo">
+                <div class="div-anadir">
+
+                    <h1>Añadir Empleo</h1>
                     <form action="submit">
-                        <label for="nombreUsuario">Nombre puesto:</label>
-                        <input type="text" id="nombreUsuario" name="nombreUsuario" required>
-                        <label for="descripcionPuesto">Descripcion puesto: </label>
-                        <textarea type="text" name="descripcionPuesto" id="txtArea"  required></textarea>
-                        <label for="rolUsuario">Requisitos: </label>
-                        <textarea type="text" name="descripcionPuesto" id="txtArea"  required></textarea>
-                        <label for="email">Rango salarial: </label>
-                        <input type="text" id="rangoSalarial" name="nombre" required>
-                        <button type="submit" id="enviarInvitacion">Crear empleo</button>
+                        <label for="nombrePuesto">Nombre del puesto:</label>
+                        <input type="text" id="inp-nombrePuesto" name="nombrePuesto" required>
+                        <label for="Rango">Rango salarial: </label>
+                        <input type="text" id="inp-rango" name="rango" required>
+                        <label for="requisitos">Requisitos: </label>
+                        <textarea type="text" name="requisitos" id="txtArea" required></textarea>
+                        <label for="descripcionPuesto">Atributos Deseables: </label>
+                        <textarea type="text" name="descripcionPuesto"id="txtArea" required></textarea>
+                        <label for="descripcionPuesto" >Descripcion puesto: </label>
+                        <textarea type="text" name="descripcionPuesto" id="txtArea"></textarea>
                     </form>
                 </div>
-            </div>
+    
+                <div class="div-button">
+                    <button class="talentico-button" type="submit" id="enviarInvitacion">Crear empleo</button>
+                </div>
+            </div>    
         </div>
+        
 
-    </div>
+    </main>
 
     <footer>
         <ul >
@@ -95,7 +104,5 @@
             <li><a href="./byteOps.html">Creado por ByteOps</a></li>
         </ul>
     </footer>
-        </body>
-        </html>
 </body>
 </html>
