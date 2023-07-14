@@ -1,0 +1,68 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-aplicaciones-container{
+    align-items: center;
+    background-color: var(--beetle-green);
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px 1px var(--beetle-green);
+    color: var(--gable-green);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 95%;
+    justify-content: space-evenly;
+    width: 95%; 
+    
+}
+
+.div-aplicaciones{
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 30px;
+    width: 90%;
+    height: 85%;
+    
+}
+.div-aplicaciones-content{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    height: 80%;
+    overflow: auto;
+}
+
+.div-aplicaciones h1{
+    margin-left: 40px;
+    padding-bottom: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+    margin-bottom: 10px;
+}
+
+.talentico-th:first-child {
+    width: 50%;
+}
+
+.talentico-th:last-child {
+    width: 50%;
+}
+.div-button-siguiente{
+    
+    background-color: var(--white);
+}
+
+.div-button-siguiente button{
+    float: right;
+}
