@@ -17,7 +17,7 @@ function validarCorreo(element){
     }
     let error = false;
     let texto = element.value;
-    let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+    let regex = /^[a-zA-Z0-9\_\-\.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
     if(regex.test(texto)===false){
         element.classList.add("error");
         error = true;
@@ -60,9 +60,9 @@ function validarCedula(element){
     return error;
 }
 
-function validarPassword(element){
+function validarContrasena(element){
     let error = false;
-    let texto = txtPasswor.value;
+    let texto = element.value;
     let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     if(regex.test(texto)===false){
         element.classList.add("error");
@@ -91,11 +91,11 @@ function validarConfirmacionContrasena(passwordElement, confirmationElement){
 
 
 document.addEventListener('DOMContentLoaded', function(){
-    const element = document.querySelector('.login-information button[type="submit"]');
+    const element = document.querySelector('.login-information form');
     if(!element){
         throw new Error('No login button');
     }
-    element.addEventListener('click', (event) => {
+    element.addEventListener('submit', (event) => {
         if (validarCamposVacios('.login-information')){
             event.preventDefault();
             Swal.fire({

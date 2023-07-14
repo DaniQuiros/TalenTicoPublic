@@ -17,7 +17,7 @@ function validarCorreo(element){
     }
     let error = false;
     let texto = element.value;
-    let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+    let regex = /^[a-zA-Z0-9\_\-\.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
     if(regex.test(texto)===false){
         element.classList.add("error");
         error = true;
@@ -60,9 +60,9 @@ function validarApellido(element){
     return error;
 }
 
-function validarPassword(element){
+function validarContrasena(element){
     let error = false;
-    let texto = txtPasswor.value;
+    let texto = element.value;
     let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     if(regex.test(texto)===false){
         element.classList.add("error");

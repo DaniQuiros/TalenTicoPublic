@@ -17,7 +17,7 @@ function validarCorreo(element){
     }
     let error = false;
     let texto = element.value;
-    let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+    let regex = /^[a-zA-Z0-9\_\-\.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
     if(regex.test(texto)===false){
         element.classList.add("error");
         error = true;

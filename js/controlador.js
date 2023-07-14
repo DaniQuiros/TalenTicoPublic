@@ -71,7 +71,7 @@ function validarIdentificacion(){
 function validarCorreo(){
     let error = false;
     let texto = txtCorreo.value;
-    let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+    let regex = /^[a-zA-Z0-9\_\-\.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
     if(regex.test(texto)===false){
         txtCorreo.classList.add("error");
         error = true;
