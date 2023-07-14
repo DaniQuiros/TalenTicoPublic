@@ -69,10 +69,32 @@ main {
 
 }
 
+.descripcionUsuario{
+  flex-direction: column;
+}
+
+.informacionPerfil{
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
 
 .description-container{
   background-color: var(--eggshell);
   border-radius: 15px;
+  width: 100%;
+}
+
+.contenido-descripcion-profesional{
+  padding: 20px;
+  font-size: 18px;
+}
+.description{
+  color: var(--beetle-green);
+  font-weight: 600;
+  font-size: 24px;
+  padding: 20px;
+
 }
 
 .recomendation-container{
