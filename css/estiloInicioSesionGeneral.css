@@ -102,6 +102,10 @@
     box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
 }
 
+.login-information .error {
+    border: 2px solid var(--chili-pepper);
+}
+
 .login-information input:focus{
     border: 2px solid var(--elf-green);
     outline: none;
