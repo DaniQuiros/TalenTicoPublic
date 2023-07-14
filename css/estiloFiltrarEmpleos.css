@@ -6,7 +6,7 @@ main{
     align-items: center;
 }
 img{
-    height: 40px;
+    height: 70px;
 }
 .div-empleos-container{
     align-items: center;
@@ -57,4 +57,34 @@ img{
     font-weight: bold;
     border-bottom: 3px solid var(--gable-green);
     margin-bottom: 30px;
+}
+.talentico-td ul{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.talentico-th:first-child {
+    width: 15%;
+}
+
+.talentico-th:last-child {
+    width: 20%;
+}
+.talentico-td:nth-child(4){
+    justify-content: center;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.talentico-th:nth-child(2){
+    width: 25%;
+}
+
+label{
+    font-size: var(--font-size-h3);
+    height: 20px;
+}
+input{
+    font-size: var(--font-size-h6);
+    vertical-align: middle;
+    height: 15px;
 }
