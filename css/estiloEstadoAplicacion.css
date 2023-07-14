@@ -12,12 +12,102 @@ header{
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-h1{
-    height: 100%;
+.div-estado-aplicacion{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    background-color: var(--beetle-green);
+    width: 30%;  
+    height: 90%;  
+    color: var(--gable-green);
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 20px 1px var(--beetle-green);
+    
+}
+
+.div-aplicacion{
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 90%;
+    padding: 0 30px;
+}
+
+
+.div-candidatos-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.div-aplicacion h1{
+    margin:30px 0;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+}
+.div-aplicacion h2{
+    margin: 40px 0;
+    text-align: center;
+    padding-bottom: 3px;
+    width: fit-content;
+    font-size: var(--font-size-h2);
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
+}
+.div-aplicacion input{
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--font-size-h3);
+    font-weight: 500;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--eggshell);
+}
+.div-aplicacion select{
+    background-color: var(--gable-green);
+    border-radius: 5px;
+    color: var(--eggshell);
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-size-h3);
+    font-weight: bolder;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+}
+.div-aplicacion option{
+    color: var(--eggshell);
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-size-h3);
+    font-weight: 500;
+}
+
+
+.div-button{
+    height: 10%;
+}
+
+.div-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

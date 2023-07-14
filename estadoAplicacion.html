@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estado - Aplicacion</title>
+    <title>Candidatos</title>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/button.css">
     <link rel="stylesheet" href="./css/estiloEstadoAplicacion.css">
+
 </head>
 <body>
     <header>
@@ -41,28 +44,33 @@
         </nav>
     </header>
 
+    <main>
+        <div class="div-estado-aplicacion">
 
+            <div class="div-aplicacion">
+                <div class="div-aplicacion-content">
+                        <h1>Detalles de Aplicacion</h1>    
+                        <h2>Candidato:</h2>
+                        <input type="text" disabled placeholder="Maikol Carballo">
+                        <h2>Puesto:</h2>
+                        <input type="text" disabled placeholder="Data Analyst">
+                        <h2>Estado:</h2>
+                        <select name="estado" id="slc-estado">
+                            <option value="">Enviada</option>
+                            <option value="">En revisión</option>
+                            <option value="">Aceptada</option>
+                            <option value="">Denegada</option>     
+                        </select>
+                </div>
 
-
-
-
-
-
-
-<h1>Estado aplicacion</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <div class="div-button">
+                    <a href="./administrarEmpleosManager.html"><button class="talentico-button" type="button">Guardar</button></a>
+                    <a href="./administrarEmpleosManager.html"><button class="talentico-button--red talentico-button" type="button">Cancelar</button></a>
+                </div>
+                
+            </div>
+        </div>
+    </main>
 
 
     <footer>
