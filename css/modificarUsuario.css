@@ -26,6 +26,7 @@ main {
   justify-content: space-around;
   margin: 1% 0;
   width: 40%;
+  padding: 10px;
 }
 
 #introPerfil{  
@@ -92,7 +93,6 @@ main {
 }
 
 #datosUsuario {
-  
   width: 100%;
   height: 500px;
   display: flex;
