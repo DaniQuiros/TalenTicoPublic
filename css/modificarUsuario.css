@@ -25,7 +25,7 @@ main {
   height: 900px;
   justify-content: space-around;
   margin: 1% 0;
-  width: 30%;
+  width: 40%;
 }
 
 #introPerfil{  
@@ -95,24 +95,30 @@ main {
 }
 
 label {
-  display: block;
-  color: var(--gable-green);
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px 10px 10px 10px;
+    
+    font-size: var(--font-size-h3);
+    font-weight: bold;
+    width: fit-content;
+    color: var(--gable-green);
+    display: block;
+    font-weight: bold;
+    margin: 5px 0px 10px 30px;
+    padding-bottom: 3px;
 }
 
 input, select{
-  width: 50%;
+  width: 80%;
   height: 22px;
   margin: 0px 0px 15px 30px;
   border: none;
   border: solid 1px var(--gable-green);;
   border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  
 }
 
 #slctGenero{
-  width: 50%;
+  
   height: 30px;
   margin: 0px 0px 15px 30px;
   border: none;
@@ -120,24 +126,6 @@ input, select{
   border-radius: 5px;
 }
 
-#btnGuardar, #btnCancelar{
-  width: 120px;
-  height: 50px;
-  font-size: 18px;
-  background-color: var(--gable-green);
-  color: #EDE6DB;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-}
-
-#btnGuardar:hover{
-  color: #54a39f;
-}
-
-#btnCancelar:hover{
-  color: #54a39f;
-}
 
 /*-------------------Seccion Estudios/Experiencia--------------------------*/
 
@@ -157,34 +145,17 @@ input, select{
   width: 100%;
 }
 
-#tableBorderLeft{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
 
-#tableBorderRigth{
-  background-color: var(--gable-green);
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 5px 10px;
-  font-weight: bold;
-  width: 40%;
+h1{
+    margin:30px 0;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    border-bottom: 3px solid var(--gable-green);
 }
-
-.tableHead{
-  background-color: var(--gable-green);
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  padding: 5px 10px;
-  font-weight: bold;
-}
-
 
 #seccionExperiencia{
   box-sizing: border-box;
@@ -193,28 +164,4 @@ input, select{
   width: 100%;
 }
 
-.tablaDeInformacion{
-  border-spacing: 0;
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-}
-
-.tablaDeInformacion th{
-  
-  text-align: center;
-  font-weight: bold;
-  background-color: var(--gable-green);
-  height: 20px;
-  padding-top: 5px;
-  color:#DDE6ED;
-}
-
-.tablaDeInformacion td{
-  text-align: center;
-  color: var(--gable-green);
-}
-
-.tablaDeInformacion tr:hover{
-  background-color: #DDE6ED;
-}
 
