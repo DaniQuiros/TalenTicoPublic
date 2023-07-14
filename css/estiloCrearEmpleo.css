@@ -1,38 +1,146 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+
+
+.redirect-login{
+    font-weight: 500;
 }
 
-h1 {
-    color: #333;
+.marquee{
+    display: grid;    
+    gap: 20px;
+    min-height: calc(100vh - 80px);
 }
 
-form {
-    margin-top: 20px;
+.marquee--project {
+    background-color: var(--deep-Sea-green);
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input[type="text"],
-textarea {
+.marquee-img-container{
     width: 100%;
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+.marquee-description-container{
+    padding: 150px;
+    padding-left: 750PX;
+    box-sizing: border-box;
+
+    
 }
+
+.marquee-heading{
+    font-size: 55px;
+    color: var(--deep-Sea-green);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.marquee-heading--project{
+    color: var(--eggshell);
+}
+
+#txtArea{
+    font-size: 18px;
+    height: 100px;
+    border-radius: 5px;
+    border-color: var(--eggshell);
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
+
+  }
+  
+
+.login-container{
+    background-color: white;
+    min-height: 300px;
+    width: 50%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    padding: 20px 20px 30px 30px;
+    flex-wrap: wrap;
+}
+
+.login-information{
+    align-items: start;
+    padding: 40px;
+}
+
+.login-information label{ 
+    margin-bottom: 10px;
+    
+}
+.login-information input, .login-information a{ 
+    margin-bottom: 20px;
+    
+}
+.login-information button{
+    -webkit-appearance: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid var(--deep-Sea-green);
+    background-color: var(--deep-Sea-green);
+    color: var(--eggshell);
+    font-weight: 700;
+    font-size: 18px;
+    font-family: Quicksand, arial
+}
+
+.login-information button:hover{
+    background-color: var(--beetle-green);
+    border-color: var(--beetle-green);
+    color: white;
+}
+
+
+
+.login-information form{
+    font-size: 20px;
+    color: var(--deep-Sea-green);
+    font-weight: 500;
+}
+
+.login-information input{
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: var(--eggshell);
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
+}
+
+.login-information input:focus{
+    border: 2px solid var(--elf-green);
+    outline: none;
+    box-shadow: 0 0 0 0 white, 0 0 0 1px var(--gable-green), 0 10px 15px -3px rgba(26, 60, 64, .1), 0 4px 6px -4px rgba(26, 60, 64, .1);
+
+}
+
+#txtArea:focus{
+    border: 2px solid var(--elf-green);
+    outline: none;
+    box-shadow: 0 0 0 0 white, 0 0 0 1px var(--gable-green), 0 10px 15px -3px rgba(26, 60, 64, .1), 0 4px 6px -4px rgba(26, 60, 64, .1);
+
+}
+
+.project-info-container{
+    background-color: var(--eggshell);
+    min-height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    padding: 40px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
