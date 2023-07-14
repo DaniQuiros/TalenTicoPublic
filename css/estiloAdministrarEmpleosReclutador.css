@@ -82,3 +82,6 @@ main{
 .div-button-siguiente button{
     float: right;
 }
+.talentico-th:last-child {
+    width: 30%;
+}
