@@ -70,3 +70,8 @@ footer a:hover {
     text-decoration: underline;
     color: var(--eggshell);
 }
+
+/*-------------------Validaciones--------------------------*/
+.error {
+    border: 2px solid var(--chili-pepper);
+}
