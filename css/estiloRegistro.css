@@ -116,6 +116,18 @@
     box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
 }
 
+.login-information select{
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: var(--eggshell);
+    transition-property: box-shadow;
+    margin-bottom: 20px;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 1px 2px 0 rgba(26, 60, 64, .5);
+}
+
 .login-information input:focus{
     border: 2px solid var(--elf-green);
     outline: none;
