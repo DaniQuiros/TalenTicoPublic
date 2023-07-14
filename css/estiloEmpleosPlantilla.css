@@ -89,7 +89,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /*margin: 25px 80px 50px 25px;*/
     margin: 0 0 2% 0%;
     padding: 1.5%;
     border-radius: 15px;
@@ -100,7 +99,7 @@ main {
 .div-empleo-buttons{
     height: 10%;
     background-color: white;
-    /*margin:  80px 50px 25px;*/
+
     border-radius: 15px;
     width: 15%;
     display: flex;
@@ -114,7 +113,6 @@ main {
 .div-empleo-buttons-Reclutador{
     height: 10%;
     background-color: white;
-    /*margin:  80px 50px 25px;*/
     border-radius: 15px;
     width: 55%;
     display: flex;
