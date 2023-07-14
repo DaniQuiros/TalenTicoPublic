@@ -10,16 +10,16 @@ img{
 }
 .div-empleos-container{
     align-items: center;
+    background-color: var(--beetle-green);
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px 1px var(--beetle-green);
+    color: var(--gable-green);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border-radius: 15px;
-    background-color: var(--beetle-green);
-    width: 90%;   
-    color: var(--gable-green);
     flex-wrap: wrap;
-    box-shadow: 5px 5px 20px 1px var(--beetle-green);
     height: 90%;
+    justify-content: space-evenly;
+    width: 90%;   
 }
 
 .div-empleos{
@@ -48,7 +48,6 @@ img{
 }
 
 .div-empleos h1{
-    
     margin-left: 40px;
     padding-bottom: 5px;
     width: fit-content;
