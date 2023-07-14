@@ -136,7 +136,7 @@ function enviarDatos(){
         Swal.fire({
             icon:"warning",
             title:"Contraseña insegura",
-            text:"La contraseña debe tener al menos una mayuscula, una minuscula y un numero, con al menos 8 caracteres, no puede tener caracteres especiales"
+            text:"La contraseña debe tener al menos una mayúscula, una minúscula y un numero, con al menos 8 caracteres, no puede tener caracteres especiales"
         })
     }else{
         Swal.fire({
