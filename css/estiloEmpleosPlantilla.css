@@ -161,40 +161,6 @@ main {
     font-weight: 500;
 }
 
-
-.btn-Empleo{
-    background-color: var(--gable-green);
-    color: var(--eggshell);
-    padding: 5% 10%;
-    border-radius: 15px;
-    
-    margin: 2% 3% 2% 3%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn-Empleo-Reclutador{
-    background-color: var(--gable-green);
-    color: var(--eggshell);
-    padding: 1.5% 4%;
-    border-radius: 15px;
-    
-    margin: 2% 3% 2% 3%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn-Empleo:hover{
-    background-color: var(--buttonHover);
-}
-.btn-Empleo-Reclutador:hover{
-    background-color: var(--buttonHover);
-}
-
 #email{
     font-size: 18px;
     height: 30px;
