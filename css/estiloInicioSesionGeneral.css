@@ -228,7 +228,7 @@
     flex-direction: column;
     color: var(--white);
     background-color: var(--beetle-green);
-    width: 100%;
+    width: 97.9%;
     justify-content: center;
     align-items: center;
     padding: 80px 20px;
@@ -237,6 +237,8 @@
 }
 .logo-footer{
     margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
