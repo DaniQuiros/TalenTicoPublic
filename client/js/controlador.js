@@ -149,3 +149,36 @@ function enviarDatos(){
 
 // Asociar evento a boton
 btnGuardar.addEventListener('click',enviarDatos);
+
+function procesarRespuesta(response) {
+  if (!response.data) {
+    return;
+  }
+
+  const section = document.createElement("section");
+
+  response.data.forEach((empresa) => {
+    const div = document.createElement("div");
+    div.classList.add("empresa");
+    div.innerHTML = `
+      <h2>${empresa.nombre}</h2>
+      <span>Cedula Juridica: ${empresa.cedula}</span>
+      <span>Correo: ${empresa.correo}</span>
+      <span>Descripcion: ${empresa.descripcion}</span>
+    `;
+    section.appendChild(div);
+  });
+
+  document.querySelector("main").appendChild(section);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  axios
+    .get("http://localhost:3000/api/empresa")
+    .then((res) => {
+      procesarRespuesta(res.data);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+});
