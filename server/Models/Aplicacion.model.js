@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+/*
 const SchemaAplicacion = new Schema({
   candidato: {
     type: String,
@@ -21,6 +21,25 @@ const SchemaAplicacion = new Schema({
   ]
 
 });
+*/
+
+
+const SchemaAplicacion = new Schema({
+  candidato: {
+    type: String,
+    required: true,
+  },
+  puesto: {
+    type: String,
+    required: false,
+  },
+  estado:{
+    type: String,
+    required: false
+  }
+});
+
+
 
 const Aplicacion = mongoose.model("Aplicacion", SchemaAplicacion, "aplicaciones");
 module.exports = Aplicacion;

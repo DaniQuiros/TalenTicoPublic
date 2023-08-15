@@ -4,6 +4,10 @@ const router = express.Router();
 
 
 
+
+
+
+/*
 router.post('/crear-notificacion-usuario',function(req,res){
     let body = req.body;
 
@@ -70,6 +74,43 @@ router.post('/crear-notificacion-usuario',function(req,res){
 })
 
 
+*/
+
+
+
+
+router.post('/crear-notificacion-usuario',function(req,res){
+    let body = req.body;
+
+
+    let nuevaNotificacion = new Notificacion({
+        usuario:body.usuario,
+        descripcion:body.descripcion,
+        href:body.href
+       })
+    
+       //guardar en la BD
+       nuevaNotificacion.save()
+       .then((notificacionDB)=>{
+        //codigo cuando se resuelve la promesa
+        res.status(201).json({
+            msg:"Notificacion registrada",
+            resultado:true,
+            notificacionDB
+        })
+    
+       })
+       .catch((error)=>{
+        res.status(501).json({
+            resultado:false,
+            msg:"No se registro la notificacion, ocurrio el siguiente error: ",
+            error
+            
+        })
+       })
+    
+        
+ });
 
 
  // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
@@ -99,6 +140,10 @@ router.get("/listar-notificaciones", (req, res) => {
             });
         });
 });
+
+
+
+
 
 
  module.exports = router
