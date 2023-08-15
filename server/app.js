@@ -19,11 +19,13 @@ mongoose.connect(process.env.MONGO_URI)
 const RutaEmpresa = require("./Routes/Empresa.route");
 const RutaNotificacion = require("./Routes/Notificacion.route")
 const RutaAplicacion = require ("./Routes/Aplicacion.route")
+const RutaInvitacionEmpleo = require ("./Routes/InvitacionEmpleo.route")
 
 
 app.use("/api/empresa", RutaEmpresa);
 app.use("/api", RutaNotificacion);
 app.use("/api", RutaAplicacion)
+app.use("/api", RutaInvitacionEmpleo)
 
 
 
