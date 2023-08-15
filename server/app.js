@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const mongoose = require('mongoose')
 require("dotenv").config();
 
 const app = express();
@@ -11,12 +12,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Iniciando la conexión con la base de datos
-require("./init-db")();
+require("dotenv").config();
+mongoose.connect(process.env.MONGO_URI)
 
 // Rutas
 const RutaEmpresa = require("./Routes/Empresa.route");
+const RutaNotificacion = require("./Routes/Notificacion.route")
+const RutaAplicacion = require ("./Routes/Aplicacion.route")
+
 
 app.use("/api/empresa", RutaEmpresa);
+app.use("/api", RutaNotificacion);
+app.use("/api", RutaAplicacion)
+
+
+
 
 // Manejar rutas no encontradas devolviendo error 404
 app.use((req, res) => {
