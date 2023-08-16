@@ -3,29 +3,28 @@ const mongoose = db.mongoose;
 const Rol = db.rol;
 const ROLES = db.ROLES;
 
-function initRoles() {
-  Rol.estimatedDocumentCount((err, count) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
+async function initRoles() {
+  try {
+    const count = await Rol.estimatedDocumentCount();
 
     if (count > 0) {
       return;
     }
 
-    ROLES.forEach((rol) => {
-      new Rol({
-        nombre: rol,
-      }).save((err) => {
-        if (err) {
-          console.log(err);
-          return;
-        }
+    ROLES.forEach(async (rol) => {
+      try {
+        await new Rol({ nombre: rol }).save();
+
         console.log(`Añadido el rol de ${rol} a la colección de roles`);
-      });
+      } catch (err) {
+        console.log(err);
+        return;
+      }
     });
-  });
+  } catch (err) {
+    console.log(err);
+    return;
+  }
 }
 
 module.exports = (app) => {
