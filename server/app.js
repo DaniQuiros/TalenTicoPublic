@@ -15,9 +15,9 @@ require("./init-db")();
 
 // Rutas
 const RutaEmpresa = require("./routes/empresa.route");
-const RutaNotificacion = require("./Routes/Notificacion.route");
-const RutaAplicacion = require ("./Routes/Aplicacion.route");
-const RutaInvitacionEmpleo = require ("./Routes/InvitacionEmpleo.route");
+const RutaNotificacion = require("./routes/notificacion.route");
+const RutaAplicacion = require ("./routes/aplicacion.route");
+const RutaInvitacionEmpleo = require ("./routes/invitacionEmpleo.route");
 
 require("./routes/auth.route")(app);
 require("./routes/usuario.route")(app);
