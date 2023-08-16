@@ -11,7 +11,7 @@ const listar_aplicaciones = async(candidato)=>{
     })
     .then((res)=>{
         //console.log(res.data.resultado[0])
-        lista_aplicaciones = res.data.AplicacionDB;
+        lista_aplicaciones = res.body.AplicacionDB;
     })
     .catch((error)=>{
         console.log(error)
