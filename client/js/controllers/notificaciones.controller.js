@@ -1,4 +1,4 @@
-const notificaciones = document.querySelector("#notificaciones ");
+/*const notificaciones = document.querySelector("#notificaciones ");
 
 //let candidato = sessionStorageStorage.getItem("cedula")
 
@@ -32,3 +32,29 @@ const mostrar_datos_en_tabla = async() => {
 }
 
 mostrar_datos_en_tabla()
+
+*/
+
+
+
+const notificationList = document.querySelector(".notification-list");
+
+const mostrar_notificaciones = async () => {
+    let usuario = localStorage.getItem("usuario");
+    listado_de_notificaciones = await listar_notificaciones(usuario);
+    console.log(listado_de_notificaciones);
+
+    notificationList.innerHTML = "";
+
+    for (let i = 0; i < listado_de_notificaciones.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("notification");
+        const a = document.createElement("a");
+        a.textContent = listado_de_notificaciones[i]["descripcion"]; // Ajusta esto según tu estructura de datos
+        a.href = listado_de_notificaciones[i]["href"]; // Ajusta esto según tu estructura de datos
+        li.appendChild(a);
+        notificationList.appendChild(li);
+    }
+};
+
+mostrar_notificaciones();

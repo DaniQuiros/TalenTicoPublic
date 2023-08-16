@@ -115,7 +115,7 @@ router.post('/crear-notificacion-usuario',function(req,res){
 
  // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
 router.get("/listar-notificaciones", (req, res) => {
-    let usuario = req.body.usuario;
+    let usuario = req.query.usuario;
     
     Notificacion.find({usuario:usuario})
         .then(notificacionDB => {

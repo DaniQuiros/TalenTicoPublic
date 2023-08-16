@@ -25,7 +25,7 @@ const mostrar_datos_en_tabla = async() => {
         celda_puesto.classList.add("talentico-td");
     
         let celda_estado = fila.insertCell();
-        celda_estado.innerHTML = listado_de_invitaciones[i]["empleoid"];
+        celda_estado.innerHTML = listado_de_invitaciones[i]["puesto"];
         celda_estado.classList.add("talentico-td");
     }
 
