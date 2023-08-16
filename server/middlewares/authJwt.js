@@ -24,39 +24,35 @@ const verificarToken = (req, res, next) => {
   });
 };
 
-const verificarRol = (rol, req, res, next) => {
-  Usuario.findById(req.userId).exec((err, usuario) => {
-    if (err) {
-      return res.status(500).send({
-        message: err,
+const verificarRol = async (rol, req, res, next) => {
+  try {
+    const usuario = await Usuario.findById(req.userId);
+
+    if (!usuario) {
+      res.status(403).send({
+        message: "No se encontró el usuario.",
       });
+      return;
     }
 
-    Rol.find(
-      {
-        _id: { $in: usuario.roles },
-      },
-      (err, roles) => {
-        if (err) {
-          return res.status(500).send({
-            message: err,
-          });
-        }
+    const roles = await Rol.find({ _id: { $in: usuario.roles } });
 
-        for (let i = 0; i < roles.length; i++) {
-          if (roles[i].nombre === rol) {
-            next();
-            return;
-          }
-        }
-
-        res.status(403).send({
-          message: "No tiene permisos para acceder a esta ruta.",
-        });
+    for (let i = 0; i < roles.length; i++) {
+      if (roles[i].nombre === rol) {
+        next();
         return;
       }
-    );
-  });
+    }
+
+    res.status(403).send({
+      message: "No tiene permisos para acceder a esta ruta.",
+    });
+    return;
+  } catch (err) {
+    return res.status(500).send({
+      message: err.message,
+    });
+  }
 };
 
 const esAdmin = (req, res, next) => {
