@@ -1,31 +1,31 @@
-const tbody = document.querySelector("#table-misAplicaciones tbody");
+const tbody = document.querySelector("#table-invitaciones-enviadas tbody");
 
-//let candidato = sessionStorageStorage.getItem("cedula")
+//let empleoid = localStorage.getItem("_idmongo")
 
 const mostrar_datos_en_tabla = async() => {
-    let candidato = "Daniela@maikol.com"
-    listado_de_aplicaciones = await listar_aplicaciones(candidato);
-    console.log(listado_de_aplicaciones)
+    let empleoid= "1234578"
+    listado_de_invitaciones = await listar_invitaciones_empleo(empleoid);
+    console.log(listado_de_invitaciones)
 
     
     tbody.innerHTML = "";
     
     let head = tbody.insertRow()
     puesto = head.insertCell();
-    puesto.innerHTML = "Puesto";
+    puesto.innerHTML = "Correo";
     puesto.classList.add("talentico-th");
     estado = head.insertCell();
-    estado.innerHTML = "Estado";
+    estado.innerHTML = "Puesto";
     estado.classList.add("talentico-th");
-    for (let i = 0; i < listado_de_aplicaciones.length; i++) {
+    for (let i = 0; i < listado_de_invitaciones.length; i++) {
         let fila = tbody.insertRow()
         fila.classList.add("talentico-tr");
         let celda_puesto = fila.insertCell();
-        celda_puesto.innerHTML = listado_de_aplicaciones[i]["puesto"];
+        celda_puesto.innerHTML = listado_de_invitaciones[i]["candidato"];
         celda_puesto.classList.add("talentico-td");
     
         let celda_estado = fila.insertCell();
-        celda_estado.innerHTML = listado_de_aplicaciones[i]["estado"];
+        celda_estado.innerHTML = listado_de_invitaciones[i]["empleoid"];
         celda_estado.classList.add("talentico-td");
     }
 

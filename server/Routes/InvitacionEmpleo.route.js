@@ -79,7 +79,8 @@ router.post('/crear-InvitacionEmpleo-usuario',function(req,res){
         candidato:body.candidato,
         puesto:body.puesto,    
         remisor:body.remisor,
-        href:body.href
+        href:body.href,
+        empleoid:body.empleoid
        })
     
        //guardar en la BD
@@ -106,8 +107,8 @@ router.post('/crear-InvitacionEmpleo-usuario',function(req,res){
  });
 
  // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
-router.get("/listar-InvitacionEmpleos", (req, res) => {
-    let candidato = req.body.candidato;
+router.get("/listar-InvitacionEmpleos-candidato", (req, res) => {
+    let candidato = req.query.candidato;
     
     InvitacionEmpleo.find({candidato:candidato})
         .then(InvitacionEmpleoDB => {
@@ -132,6 +133,37 @@ router.get("/listar-InvitacionEmpleos", (req, res) => {
             });
         });
 });
+
+
+
+router.get("/listar-InvitacionEmpleos-empleo", (req, res) => {
+    let empleoid = req.query.empleoid;
+    
+    InvitacionEmpleo.find({empleoid:empleoid})
+        .then(InvitacionEmpleoDB => {
+            if (InvitacionEmpleoDB.length === 0) {
+                res.status(200).json({
+                    resultado: false,
+                    msj: "No hay invitaciones"
+                });
+            } else {
+                res.status(200).json({
+                    resultado: true,
+                    msj: "Tiene invitaciones",
+                    InvitacionEmpleoDB
+                });
+            }
+        })
+        .catch(error => {
+            res.status(500).json({
+                resultado: false,
+                msj: "Ocurrió el siguiente error",
+                error
+            });
+        });
+});
+
+
 
 
 module.exports = router

@@ -48,6 +48,10 @@ const schemaInvitacionEmpleo= new mongoose.Schema({
     href:{
       type: String,
       required: false,
+    },
+    empleoid:{
+      type: String,
+      required: false
     }
   
 })

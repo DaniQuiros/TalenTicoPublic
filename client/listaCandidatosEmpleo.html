@@ -156,7 +156,8 @@
                     </div>
 
                     <div class="div-Invitaciones-actuales-tabla">
-                        <table class="talentico-table">
+                        <table id="table-invitaciones-enviadas" class="talentico-table">
+                            <!-- #region 
                             <tr class="talentico-tr">
                                 <th class="talentico-th">Correo</th>
                                 <th class="talentico-th">Puesto</th>
@@ -197,7 +198,8 @@
                             <tr class="talentico-tr">
                                 <td class="talentico-td">luisrodriguez@ucenfotec.ac.cr</td>
                                 <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                            </tr>
+                            </tr>-->
+                            <tbody></tbody>
                         </table>    
                     </div>
                 </div>
@@ -223,5 +225,9 @@
             <li><a href="./byteOps.html">Creado por ByteOps</a></li>
         </ul>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/services/listaCandidatosEmpleo.service.js"></script>
+    <script src="./js/controllers/listaCandidatosEmpleo.controller.js"></script>
+    
 </body>
 </html>

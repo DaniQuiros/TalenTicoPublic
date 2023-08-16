@@ -130,4 +130,32 @@ router.get("/buscarEmpleo", (req, res) => {
 });
 
 
+router.get("/buscarEmpleo", (req, res) => {
+    let nombrePuesto = req.query.nombrePuesto;
+    
+    Empleo.findOne({ nombrePuesto: nombrePuesto })
+        .then(empleoDB => {
+            if (empleoDB.length === 0) {
+                res.status(200).json({
+                    resultado: true,
+                    msj: "Empleo no encontrado"
+                });
+            } else {
+                res.status(200).json({
+                    resultado: true,
+                    msj: "Empleo encontrado",
+                    empleo: empleoDB
+                });
+            }
+        })
+        .catch(error => {
+            res.status(500).json({
+                resultado: false,
+                msj: "Ocurrió el siguiente error",
+                error
+            });
+        });
+});
+
+
 module.exports = router
