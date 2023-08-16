@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require("./init-db")();
 
 // Rutas
-const RutaEmpresa = require("./Routes/Empresa.route");
+const RutaEmpresa = require("./routes/empresa.route");
 
 app.use("/api/empresa", RutaEmpresa);
 
