@@ -8,7 +8,7 @@ const listar_notificaciones = async(usuario)=>{
     })
     .then((res) => {
         lista_notificaciones = res.data.notificacionDB;
-        console.log(lista_notificaciones);
+        //console.log(lista_notificaciones);
     })
     .catch((error) => {
         console.log(error);

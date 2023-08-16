@@ -42,7 +42,7 @@ const notificationList = document.querySelector(".notification-list");
 const mostrar_notificaciones = async () => {
     let usuario = localStorage.getItem("usuario");
     listado_de_notificaciones = await listar_notificaciones(usuario);
-    console.log(listado_de_notificaciones);
+    //console.log(listado_de_notificaciones);
 
     notificationList.innerHTML = "";
 
