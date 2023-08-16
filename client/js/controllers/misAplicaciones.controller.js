@@ -1,5 +1,5 @@
 const tbody = document.querySelector("#table-misAplicaciones tbody");
-const button_test = document.querySelector("#test-button")
+
 
 
 const mostrar_datos_en_tabla = async() => {
@@ -10,9 +10,13 @@ const mostrar_datos_en_tabla = async() => {
     
     tbody.innerHTML = "";
     
-    let celda_puesto_th =""
-    celda_puesto_th.classList.add("talentico-th");
-
+    let head = tbody.insertRow()
+    puesto = head.insertCell();
+    puesto.innerHTML = "Puesto";
+    puesto.classList.add("talentico-th");
+    estado = head.insertCell();
+    estado.innerHTML = "Estado";
+    estado.classList.add("talentico-th");
     for (let i = 0; i < listado_de_aplicaciones.length; i++) {
         let fila = tbody.insertRow();
         let celda_puesto = fila.insertCell();
