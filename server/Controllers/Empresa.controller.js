@@ -89,4 +89,21 @@ module.exports = {
       });
     }
   },
+  obtenerInformacion: async (req, res) => {
+    try {
+      const correo = req.body.correo
+      const empresa = Empresa.findOne({correo:correo});
+      res.status(200).json({
+        status: 200,
+        message: "Empresas obtenidas exitosamente",
+        data: empresa
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(501).json({
+        status: 501,
+        message: `Error al listar las empresas: ${err.message}`,
+      });
+    }
+  }
 };

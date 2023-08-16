@@ -15,10 +15,16 @@ require("./init-db")();
 
 // Rutas
 const RutaEmpresa = require("./routes/empresa.route");
+const RutaNotificacion = require("./Routes/Notificacion.route");
+const RutaAplicacion = require ("./Routes/Aplicacion.route");
+const RutaInvitacionEmpleo = require ("./Routes/InvitacionEmpleo.route");
 
-app.use("/api/empresa", RutaEmpresa);
 require("./routes/auth.route")(app);
 require("./routes/usuario.route")(app);
+app.use("/api/empresa", RutaEmpresa);
+app.use("/api", RutaNotificacion);
+app.use("/api", RutaAplicacion)
+app.use("/api", RutaInvitacionEmpleo)
 
 // Manejar rutas no encontradas devolviendo error 404
 app.use((req, res) => {

@@ -56,8 +56,7 @@
                     <a href="#"> 2 Notificaciones</a>
                     <div class="navbar-submenu">
                         <ul class="notification-list">
-                            <li class="notification"> <a href="">Una aplicación ha sido aceptada</a></li>
-                            <li class="notification"> <a href="">La aplicacion de Maikol Carballo ha sido Denegada</a></li>
+                            
                         </ul>
                     </div>
                 </li>
@@ -90,7 +89,7 @@
 
                 <div id="seccionDescripcion">
                     <label for="txtDescripcion">Descripción General:</label>                    
-                    <textarea id="txtArea" rows="4" cols="50" maxlength="100"></textarea>
+                    <textarea class="txtArea" id="txtAreaDescripcion" rows="4" cols="50" maxlength="100"></textarea>
                 </div>
 
                 <div>
@@ -113,16 +112,16 @@
         <section action="" id="modificarMisionVision">
             <div>
                <div id="seccionMision">
-                    <label for="txtMisino">Mision:</label>                    
-                    <textarea id="txtArea" rows="4" cols="50" maxlength="100"></textarea>
+                    <label for="txtMision">Mision:</label>                    
+                    <textarea class="txtArea" id="txtAreaMision" rows="4" cols="50" maxlength="100"></textarea>
                 </div>
                 <div id="seccionVision">
-                    <label for="txtVisino">Vision:</label>                    
-                    <textarea id="txtArea" rows="4" cols="50" maxlength="100"></textarea>
+                    <label for="txtVision">Vision:</label>                    
+                    <textarea class="txtArea" id="txtAreaVision" rows="4" cols="50" maxlength="100"></textarea>
                 </div>
-                <div id="seccionVision">
-                    <label for="txtVisino">Beneficios:</label>                    
-                    <textarea id="txtArea" rows="4" cols="50" maxlength="100"></textarea>
+                <div id="seccionBeneficios">
+                    <label for="txtVision">Beneficios:</label>                    
+                    <textarea class="txtArea" id="txtAreaBeneficios" rows="4" cols="50" maxlength="100"></textarea>
                 </div>
             </div>
             <div id="botonesSeccionDerecha">
@@ -150,5 +149,7 @@
         <li><a href="./byteOps.html">Creado por ByteOps</a></li>
     </ul>
 </footer>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/services/notificaciones.service.js"></script>
+<script src="./js/controllers/notificaciones.controller.js"></script>
 </html>

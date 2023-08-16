@@ -24,6 +24,19 @@ const SchemaEmpresa = new Schema({
     type: String,
     required: true,
   },
+  mision:{
+    type: String,
+    required: false,
+  },
+  vision:{
+    type: String,
+    required: false,
+  },
+  beneficios:{
+    type: String,
+    required: false,
+  }
+
 });
 
 const Empresa = mongoose.model("Empresa", SchemaEmpresa);
