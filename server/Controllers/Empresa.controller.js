@@ -1,4 +1,5 @@
-const Empresa = require("../Models/Empresa.model");
+const db = require("../models");
+const Empresa = db.empresa;
 
 module.exports = {
   crearEmpresa: async (req, res) => {
