@@ -1,5 +1,6 @@
 const express = require('express')
 const Aplicacion = require('../Models/Aplicacion.model')//molde para hacer personas
+const mailer = require('../templates/cambio-estado-aplicacion')
 const router = express.Router();
 
 
@@ -103,6 +104,9 @@ router.post('/crear-aplicacion-usuario',function(req,res){
     
         
  });
+
+ 
+ router.put()
 
 
  // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
