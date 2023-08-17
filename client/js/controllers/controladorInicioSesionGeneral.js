@@ -1,15 +1,4 @@
-function validarCamposVacios(parentSelector){
-    let error = false; // asumimos que no hay errores
-    document.querySelectorAll(`${parentSelector} [required]`).forEach((element) => {
-        if(!element.value) {
-            element.classList.add('error');
-            error = true;
-        } else {
-            element.classList.remove('error');
-        }
-    });
-    return error;
-}
+import { validarCamposVacios } from "./validarCamposVacios.controlador.js";
 
 function validarCorreo(element){
     if(!element){
