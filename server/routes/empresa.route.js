@@ -4,17 +4,19 @@ const router = express.Router();
 const controller = require("../controllers/empresa.controller");
 
 // Crear Empresa
-router.post("/", controller.crearEmpresa);
+router.post("/empresa", controller.crearEmpresa);
 
 // Listar Empresas
-router.get("/", controller.listarEmpresas);
-router.get("/get-info", controller.obtenerInformacion);
+router.get("/empresa", controller.listarEmpresas);
+
+// Obtener Información de Empresa
+router.get("/empresa/get-info", controller.obtenerInformacion);
 
 // Modificar Empresa
-router.put("/", controller.modificarEmpresa);
+router.put("/empresa", controller.modificarEmpresa);
 
 // Eliminar Empresa
-router.delete("/", controller.eliminarEmpresa);
+router.delete("/empresa", controller.eliminarEmpresa);
 
 
 module.exports = router;
