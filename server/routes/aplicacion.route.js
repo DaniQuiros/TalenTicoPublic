@@ -33,8 +33,6 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
     });
 });
 
-router.put();
-
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
 router.get("/listar-aplicaciones", (req, res) => {
   let candidato = req.query.candidato;
