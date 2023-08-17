@@ -2,6 +2,7 @@ const express = require("express");
 const db = require("../models");
 const Aplicacion = db.aplicacion; //molde para hacer personas
 const router = express.Router();
+const mailer = require("../templates/cambio-estado-aplicacion");
 
 router.post("/crear-aplicacion-usuario", function (req, res) {
   let body = req.body;
@@ -27,6 +28,36 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
       res.status(501).json({
         resultado: false,
         msg: "No se registro la Aplicacion, ocurrio el siguiente error: ",
+        error,
+      });
+    });
+});
+
+router.put();
+
+// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
+router.get("/listar-aplicaciones", (req, res) => {
+  let candidato = req.query.candidato;
+
+  Aplicacion.find({ candidato: candidato })
+    .then((AplicacionDB) => {
+      if (AplicacionDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Aplicaciones",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Aplicaciones",
+          AplicacionDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
         error,
       });
     });

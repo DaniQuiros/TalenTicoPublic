@@ -110,7 +110,7 @@ main {
     transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 100%;
-    min-height: 100px;
+    min-height: 70px;
 }
 .div-anadir textarea:focus{
     border: 2px solid var(--elf-green);
@@ -127,4 +127,18 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+select{
+    background-color: var(--gable-green);
+    border-radius: 5px;
+    color: var(--eggshell);
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-size-h3);
+    font-weight: bolder;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
 }
