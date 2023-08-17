@@ -1,20 +1,20 @@
 const express = require("express");
 const router = express.Router();
 
-const ControllerEmpresa = require("../controllers/empresa.controller");
+const controller = require("../controllers/empresa.controller");
 
 // Crear Empresa
-router.post("/", ControllerEmpresa.crearEmpresa);
+router.post("/", controller.crearEmpresa);
 
 // Listar Empresas
-router.get("/", ControllerEmpresa.listarEmpresas);
-router.get("/get-info", ControllerEmpresa.obtenerInformacion);
+router.get("/", controller.listarEmpresas);
+router.get("/get-info", controller.obtenerInformacion);
 
 // Modificar Empresa
-router.put("/", ControllerEmpresa.modificarEmpresa);
+router.put("/", controller.modificarEmpresa);
 
 // Eliminar Empresa
-router.delete("/", ControllerEmpresa.eliminarEmpresa);
+router.delete("/", controller.eliminarEmpresa);
 
 
 module.exports = router;
