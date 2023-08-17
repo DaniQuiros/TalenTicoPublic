@@ -1,14 +1,14 @@
 import { validarTodosVacios, limpiarDatos } from "./validarCamposVacios.controlador.js";
 document.addEventListener('DOMContentLoaded', function(){
-    const $submitBtn = document.querySelector('.div-empleos-filter #btn-submit');
-    const $cancelBtn = document.querySelector('.div-empleos-filter #btn-cancelar');
+    const $submitBtn = document.querySelector('.div-candidatos-filter #btn-submit');
+    const $cancelBtn = document.querySelector('.div-candidatos-filter #btn-cancelar');
     console.log($submitBtn);
     if(!$submitBtn){
         throw new Error('No login button');
     }
     $submitBtn.addEventListener('click', (event) => {
         console.log('click ');
-        if (validarTodosVacios('.div-empleos-filter')){
+        if (validarTodosVacios('.div-candidatos-filter')){
             event.preventDefault();
             Swal.fire({
                 icon: "warning",
@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', function(){
     $cancelBtn.addEventListener('click', (event) => {
         event.preventDefault();
         console.log('click ');
-        limpiarDatos('.div-empleos-filter');
+        limpiarDatos('.div-candidatos-filter');
     });
 }) 

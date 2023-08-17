@@ -29,3 +29,9 @@ export function validarTodosVacios(parentSelector){
     }
     return error;
 }
+
+export function limpiarDatos(parentSelector){
+    document.querySelectorAll(`${parentSelector} input`).forEach((element) => {
+        element.value = "";
+    });
+}
