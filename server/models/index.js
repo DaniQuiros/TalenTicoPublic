@@ -5,7 +5,7 @@ const db = {};
 
 db.mongoose = mongoose;
 
-db.aplicacion = require("./aplicacion.modelo");
+db.aplicacion = require("./aplicacion.model");
 db.empleo = require("./empleo.model");
 db.empresa = require("./empresa.model");
 db.genero = require("./genero.model");
