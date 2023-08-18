@@ -90,6 +90,7 @@ const mostrar_datos_en_tabla_invitaciones = async() => {
 
 
 const mostrar_datos_en_tabla_candidatos = async() => {
+    
     listado_de_candidatos = await listar_candidatos_empleo(empleoid);
     console.log(listado_de_candidatos)
     
