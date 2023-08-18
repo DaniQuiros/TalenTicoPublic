@@ -56,7 +56,7 @@ const eliminar_empleo = async(pid) => {
         });
     }).then(() => {
         setTimeout(()=>{
-            window.location.href = "listado-personas.html"
+            window.location.href = "#"
         },1000)
         
     }).catch((err) => {

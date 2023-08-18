@@ -123,29 +123,29 @@ function crear_botones_empleos(fila,i){
     
 
 
-    boton_eliminar.addEventListener("hover", () => {
+    boton_eliminar.addEventListener("click", () => {
         //console.log(listado_de_usuarios[i]._id);
         //localStorage.setItem("id_mongo", listado_de_usuarios[i]._id)
         localStorage.setItem("_id", listado_de_empleos[i]._id);
         let id = localStorage.getItem('_id');
-        console.log(_id)
+        console.log(id)
         Swal.fire({
-            title: 'Estas seguro de eliminar esto?',
+            title: 'Estas seguro de eliminar este empleo?',
             text: "NO podras revertir esta accion!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Confirmar!'
+            confirmButtonText: 'Confirmar'
         }).then((result) => {
             //console.log(id)
-            eliminar_empleo(id)
             if (result.isConfirmed) {
-            Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
+                eliminar_empleo(id)
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
             }
         }) 
         setTimeout(() => {
