@@ -106,15 +106,19 @@ const mostrar_datos_en_tabla_candidatos = async() => {
     estado = head.insertCell();
     estado.innerHTML = "Puesto";
     estado.classList.add("talentico-th");
-    for (let i = 0; i < listado_de_invitaciones.length; i++) {
+    acciones = head.insertCell();
+    acciones.innerHTML = "Acciones";
+    acciones.classList.add("talentico-th");
+
+    for (let i = 0; i < listado_de_candidatos.length; i++) {
         let fila = tbody_candidatos.insertRow()
         fila.classList.add("talentico-tr");
         let celda_puesto = fila.insertCell();
-        celda_puesto.innerHTML = listado_de_invitaciones[i]["candidato"];
+        celda_puesto.innerHTML = listado_de_candidatos[i]["candidato"];
         celda_puesto.classList.add("talentico-td");
     
         let celda_estado = fila.insertCell();
-        celda_estado.innerHTML = listado_de_invitaciones[i]["puesto"];
+        celda_estado.innerHTML = listado_de_candidatos[i]["puesto"];
         celda_estado.classList.add("talentico-td");
     }
 }
