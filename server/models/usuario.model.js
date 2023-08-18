@@ -26,14 +26,18 @@ const SchemaUsuario = new Schema({
   foto: { type: String },
   estudios: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "Estudio",
+      annoTitulo: { type: Number, require: true },
+      institucion: { type: String, require: true },
+      carrera: { type: String, require: true },
+      gradoAcademico: { type: String, require: true },
     },
   ],
   experiencia: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "Experiencia",
+      annoIngreso: { type: Number, require: true },
+      annoSalida: { type: Number, require: true },
+      empresa: { type: String, require: true },
+      puesto: { type: String, require: true },
     },
   ],
   roles: [

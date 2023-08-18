@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const db = require("../models");
+const Genero = db.genero;
 const Usuario = db.usuario;
 const Rol = db.rol;
 
@@ -56,7 +57,6 @@ const signin = async (req, res) => {
   try {
     const usuario = await Usuario.findOne({ correo: req.body.correo }).populate(
       "roles",
-      "generos",
       "-__v"
     );
 
