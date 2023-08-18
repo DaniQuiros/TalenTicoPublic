@@ -18,5 +18,4 @@ router.put("/empresa", controller.modificarEmpresa);
 // Eliminar Empresa
 router.delete("/empresa", controller.eliminarEmpresa);
 
-
 module.exports = router;
