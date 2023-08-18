@@ -124,8 +124,8 @@ function crear_botones_empleos(fila,i){
     boton_eliminar.addEventListener("click", () => {
         //console.log(listado_de_usuarios[i]._id);
         //localStorage.setItem("id_mongo", listado_de_usuarios[i]._id)
-        localStorage.setItem("_id", listado_de_empleos[i]._id);
-        let id = localStorage.getItem('_id');
+        localStorage.setItem("id_mongo", listado_de_empleos[i]._id);
+        let id = localStorage.getItem('id_mongo');
         console.log(id)
         Swal.fire({
             title: 'Estas seguro de eliminar este empleo?',

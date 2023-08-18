@@ -47,7 +47,7 @@
                     </div>
                 </li>
                 <li class="navbar-option">
-                    <a href="#"> 2 Notificaciones</a>
+                    <a href="#">Notificaciones</a>
                     <div class="navbar-submenu">
                         <ul class="notification-list">
                             
@@ -64,21 +64,21 @@
             <div class="div-aplicacion">
                 <div class="div-aplicacion-content">
                         <h1>Detalles de Aplicacion</h1>    
-                        <h2>Candidato:</h2>
-                        <input type="text" disabled placeholder="Maikol Carballo">
+                        <h2>Candidato:</h2> 
+                        <input id="candidato" type="text" disabled >
                         <h2>Puesto:</h2>
-                        <input type="text" disabled placeholder="Data Analyst">
+                        <input id="puesto" type="text" disabled >
                         <h2>Estado:</h2>
-                        <select name="estado" id="slc-estado">
-                            <option value="">Enviada</option>
-                            <option value="">En revisión</option>
-                            <option value="">Aceptada</option>
-                            <option value="">Denegada</option>     
+                        <select name="estado" id="estado">
+                            <option value="Enviada">Enviada</option>
+                            <option value="En revisión">En revisión</option>
+                            <option value="Aceptada">Aceptada</option>
+                            <option value="Denegada">Denegada</option>     
                         </select>
                 </div>
 
                 <div class="div-button">
-                    <a href="./administrarEmpleosManager.html"><button class="talentico-button" type="button">Guardar</button></a>
+                    <a ><button id="guardar" class="talentico-button" type="button">Guardar</button></a>
                     <a href="./administrarEmpleosManager.html"><button class="talentico-button--red talentico-button" type="button">Cancelar</button></a>
                 </div>
                 
@@ -101,6 +101,9 @@
     </footer>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="./js/services/notificaciones.service.js"></script>
 <script src="./js/controllers/notificaciones.controller.js"></script>
+<script src="./js/services/estadoAplicacion.service.js" ></script>
+<script src="./js/controllers/estadoAplicacion.controller.js" ></script>
 </html>

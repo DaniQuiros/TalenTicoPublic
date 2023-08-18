@@ -6,6 +6,11 @@ const SchemaAplicacion = new Schema({
     type: String,
     required: true,
   },
+  correo:{
+    type:String,
+    required: false
+  }
+  ,
   puesto: {
     type: String,
     required: false,
