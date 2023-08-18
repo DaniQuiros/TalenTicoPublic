@@ -23,6 +23,12 @@ const SchemaUsuario = new Schema({
     type: String,
     required: true,
   },
+  foto: 
+  { type: String, 
+    required: false, 
+    unique: false 
+  },
+
   roles: [
     {
       type: Schema.Types.ObjectId,
