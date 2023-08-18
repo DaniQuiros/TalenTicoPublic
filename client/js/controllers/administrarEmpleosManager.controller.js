@@ -49,13 +49,13 @@ const mostrar_datos_en_tabla_candidatos = async() => {
     
     let head = tbody_candidatos.insertRow()
     candidato = head.insertCell();
-    candidato.innerHTML = "candidato";
+    candidato.innerHTML = "Candidato";
     candidato.classList.add("talentico-th");
     puesto = head.insertCell();
     puesto.innerHTML = "Puesto";
     puesto.classList.add("talentico-th");
     estado = head.insertCell();
-    estado.innerHTML = "Puesto";
+    estado.innerHTML = "Estado";
     estado.classList.add("talentico-th");
     acciones = head.insertCell();
     acciones.innerHTML = "Acciones";
