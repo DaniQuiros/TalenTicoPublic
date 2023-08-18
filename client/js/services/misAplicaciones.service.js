@@ -10,7 +10,7 @@ const listar_aplicaciones = async(candidato)=>{
     })
     .then((res) => {
         lista_aplicaciones = res.data.AplicacionDB;
-        //console.log(lista_aplicaciones);
+        console.log(lista_aplicaciones);
     })
     .catch((error) => {
         console.log(error);

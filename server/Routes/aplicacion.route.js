@@ -6,6 +6,16 @@ const mailer = require("../templates/cambio-estado-aplicacion");
 
 router.post("/crear-aplicacion-usuario", function (req, res) {
   let body = req.body;
+  let testUsuario = "Maikol";
+  let testPuesto = "Data Analyst";
+  let testEstado = "Denegado";
+  let testCorreo = "mcarballol@ucenfotec.ac.cr";
+  mailer.mail_aplicacion_estado(
+    testUsuario,
+    testPuesto,
+    testEstado,
+    testCorreo
+  );
 
   let nuevaAplicacion = new Aplicacion({
     candidato: body.candidato,
@@ -17,7 +27,8 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
   nuevaAplicacion
     .save()
     .then((AplicacionDB) => {
-      //codigo cuando se resuelve la promesa
+      //codigo cuando se resuelve la promesa}
+
       res.status(201).json({
         msg: "Aplicacion registrada",
         resultado: true,
@@ -28,6 +39,36 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
       res.status(501).json({
         resultado: false,
         msg: "No se registro la Aplicacion, ocurrio el siguiente error: ",
+        error,
+      });
+    });
+});
+
+// router.put()
+
+// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
+router.get("/listar-aplicaciones", (req, res) => {
+  let candidato = req.query.candidato;
+
+  Aplicacion.find({ candidato: candidato })
+    .then((AplicacionDB) => {
+      if (AplicacionDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Aplicaciones",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Aplicaciones",
+          AplicacionDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
         error,
       });
     });

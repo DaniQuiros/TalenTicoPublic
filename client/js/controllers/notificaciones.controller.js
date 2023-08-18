@@ -38,7 +38,7 @@ mostrar_datos_en_tabla()
 
 
 const notificationList = document.querySelector(".notification-list");
-
+localStorage.setItem("usuario","jose@maikol.com");
 const mostrar_notificaciones = async () => {
     let usuario = localStorage.getItem("usuario");
     listado_de_notificaciones = await listar_notificaciones(usuario);
