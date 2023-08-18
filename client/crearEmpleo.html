@@ -68,27 +68,27 @@
                 <div class="div-anadir">
 
                     <h1>Añadir Empleo</h1>
-                    <form action="submit">
+                    <form id="empleo" action="submit">
                         <label for="nombrePuesto">Nombre del puesto:</label>
                         <input type="text" id="inp-nombrePuesto" name="nombrePuesto" required>
                         <label for="Rango">Rango salarial: </label>
                         <input type="text" id="inp-rango" name="rango" required>
                         <label for="requisitos">Requisitos: </label>
-                        <textarea type="text" name="requisitos" id="txtArea" required></textarea>
+                        <textarea type="text" name="requisitos" id="txtArea-requisitos" required></textarea>
                         <label for="descripcionPuesto">Atributos Deseables: </label>
-                        <textarea type="text" name="descripcionPuesto"id="txtArea" required></textarea>
+                        <textarea type="text" name="descripcionPuesto"id="txtArea-atributos" required></textarea>
                         <label for="descripcionPuesto" >Descripcion puesto: </label>
-                        <textarea type="text" name="descripcionPuesto" id="txtArea"></textarea>
+                        <textarea type="text" name="descripcionPuesto" id="txtArea-descripcion"></textarea>
                         <label for="tipo">Tipo</label>
-                        <select name="" id="">
-                            <option value="publico">Publico</option>
-                            <option value="privado">Privado</option>
-                        </select>
+                        <select name="" id="tipo">
+                            <option value="Publico">Publico</option>
+                            <option value="Privado">Privado</option>
+                        </select> 
                     </form>
                 </div>
     
                 <div class="div-button">
-                    <button class="talentico-button" type="submit" id="enviarInvitacion">Crear empleo</button>
+                    <button id="guardar" class="talentico-button" type="submit" id="enviarInvitacion">Crear empleo</button>
                 </div>
             </div>    
         </div>
@@ -110,6 +110,9 @@
     </footer>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="./js/services/notificaciones.service.js"></script>
 <script src="./js/controllers/notificaciones.controller.js"></script>
+<script src="./js/services/crearEmpleo.service.js" ></script>
+<script src="./js/controllers/crearEmpleo.controller.js" ></script>
 </html>
