@@ -10,7 +10,7 @@ const tbody = document.querySelector("#table-invitaciones-enviadas tbody")
 
 
 
-function crear_botones(lista,fila,i){
+function crear_botones(fila,i){
     
     //crear un boton de editar para cada registro
     let celda_acciones = fila.insertCell();
@@ -26,7 +26,7 @@ function crear_botones(lista,fila,i){
     boton_editar.addEventListener("click", () => {
         //console.log(listado_de_usuarios[i]._id);
         //localStorage.setItem("id_mongo", listado_de_usuarios[i]._id)
-        localStorage.setItem("id_mongo", lista[i]._id);
+        localStorage.setItem("id_mongo", listado_de_candidatos[i]._id);
         window.location.href = "editar-persona.html";
 
     })
@@ -132,7 +132,7 @@ const mostrar_datos_en_tabla_candidatos = async() => {
         celda_estado.innerHTML = listado_de_candidatos[i]["puesto"];
         celda_estado.classList.add("talentico-td");
 
-        crear_botones(listado_de_candidatos, fila, i)
+        crear_botones(fila, i)
     }
 }
 
@@ -142,9 +142,9 @@ const mostrar_datos_en_tabla_candidatos = async() => {
 
 
 
-
-mostrar_datos_en_tabla_invitaciones()
 mostrar_datos_en_tabla_candidatos()
+mostrar_datos_en_tabla_invitaciones()
+
 
 
  
