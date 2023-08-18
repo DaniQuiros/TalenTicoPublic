@@ -8,10 +8,10 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
 
 
   let nuevaAplicacion = new Aplicacion({
-    candidato: body.candidato,
-    puesto: body.puesto,
-    estado: body.estado,
-    empleoid: body.empleoid
+    candidato: req.body.candidato,
+    puesto: req.body.puesto,
+    estado: req.body.estado,
+    empleoid: req.body.empleoid
   });
 
   //guardar en la BD
