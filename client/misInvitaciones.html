@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Aplicaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/estiloNavBar.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/estiloMisAplicaciones.css">
+    
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="./homePageUsuario.html">
+            <img id="logo" src="./media/TalenTicoNavBar.svg" height="60" alt="">
+        </a>
+        <nav>
+            <ul>
+                <li class="navbar-option">
+                    <a href="./filtrarEmpleos.html">Empleos</a>
+                </li>
+                <li class="navbar-option">
+                    <a href="./homePageUsuario.html">Mi Perfil</a>
+                    <div class="navbar-submenu">
+                        <ul>
+                            <li class="navbar-option">
+                                <a href="./misAplicaciones.html">Mis Aplicaciones</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./modificarUsuario.html">Modificar perfil</a>
+                            </li>
+                            <li class="navbar-option">
+                                <a href="./inicioSesionGeneral.html">Cerrar Sesión</a>
+                            </li>
+                        </ul>   
+                    </div>
+                </li>
+                <li class="navbar-option">
+                    <a href="#">Notificaciones</a>
+                    <div class="navbar-submenu">
+                        <ul class="notification-list">
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="div-aplicaciones-container">
+            <div class="div-aplicaciones">
+                <h1>Mis Invitaciones</h1>  
+                <div class="div-aplicaciones-content">
+                    <table id="table-misInvitaciones" class="talentico-table">
+
+
+                        
+                        <tbody>
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>    
+                <div class="div-button-siguiente">
+                    <button class="talentico-button">Siguiente</button>
+                </div>
+            </div>            
+        </div>
+
+
+        <button type="submit" id="test-button"></button>
+
+    </main>
+
+
+
+</body>
+<footer>
+    <ul >
+        <li><a href="https://www.facebook.com/TrabajoCR/?locale=es_LA">Facebook</a></li>
+        <li><a href="https://twitter.com/mtss_cr?lang=es">Twitter</a></li>
+        <li><a href="https://www.instagram.com/ministeriodetrabajocr/?hl=es">Instagram</a></li>
+    </ul>
+    <ul >
+        <li><a href="./filtrarEmpleos.html">Empleos</a></li>
+        <li><a href="https://www.mtss.go.cr/contactenos/">Contáctenos</a></li>
+        <li><a href="./byteOps.html">Creado por ByteOps</a></li>
+    </ul>
+</footer>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/services/misInvitaciones.service.js"></script>
+<script src="./js/controllers/misInvitaciones.controller.js"></script>
+
+<script src="./js/services/notificaciones.service.js"></script>
+<script src="./js/controllers/notificaciones.controller.js"></script>
+
+</html>

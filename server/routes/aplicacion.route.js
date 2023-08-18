@@ -11,7 +11,8 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
     candidato: req.body.candidato,
     puesto: req.body.puesto,
     estado: req.body.estado,
-    empleoid: req.body.empleoid
+    empleoid: req.body.empleoid,
+    empresaid: req.body.empresaid
   });
 
   //guardar en la BD
@@ -91,6 +92,35 @@ router.get("/listar-candidatos-tabla", (req, res) => {
       });
     });
 });
+
+
+router.get("/listar-candidaturas-empresa", (req, res) => {
+  let empresaid = req.query.empresaid;
+
+  Aplicacion.find({ empresaid: empresaid })
+    .then((AplicacionDB) => {
+      if (AplicacionDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Aplicaciones",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Aplicaciones",
+          AplicacionDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
+        error,
+      });
+    });
+});
+
 
 
 module.exports = router;

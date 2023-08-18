@@ -18,6 +18,10 @@ const SchemaAplicacion = new Schema({
     type: String,
     required: true,
     default:"test"
+  },
+  empresaid:{
+    type:String,
+    require: false
   }
 });
 

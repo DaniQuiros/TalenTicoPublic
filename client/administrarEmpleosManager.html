@@ -49,7 +49,7 @@
                     </div>
                 </li>
                 <li class="navbar-option">
-                    <a href="#"> 2 Notificaciones</a>
+                    <a href="#"> Notificaciones</a>
                     <div class="navbar-submenu">
                         <ul class="notification-list">
                             
@@ -128,9 +128,7 @@
                     </div>
                 </div>
 
-                <div class="div-button-siguiente">
-                    <button class="talentico-button" id="btn-siguiente-empleos">Siguiente</button>
-                </div>
+               
             </div>
 
             <div class="div-candidatos">
@@ -138,79 +136,12 @@
                     
                     <h1>Candidatos actuales</h1>    
                     <div class="div-candidatos-actuales-tabla">
-                        <table class="talentico-table">
-                            <tr>
-                                <th class="talentico-th">Candidatos</th>
-                                <th class="talentico-th">Puesto</th>
-                                <th class="talentico-th">Estado</th>
-                                <th class="talentico-th">Acciones</th>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Maikol Carballo</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Enviada</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Daniela Quiros</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="talentico-td">En revisión</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Victor Vargas</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="talentico-td">Aceptada</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Jose Chaverri</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                                <td class="talentico-td">Denegada</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Jovan Brenes</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Denegada</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Limberth Vasquez</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Aceptada</td>
-                                <td class="talentico-td">
-                                    <a href="./estadoAplicacion.html">
-                                        <button class="talentico-button" type="button">Editar</button>
-                                    </a>
-                                </td>
-                            </tr>
+                        <table id="table-candidatos" class="talentico-table">
+                            <tbody></tbody>
                         </table>    
                     </div>
                 </div>    
-                <div class="div-button-siguiente">
-                    <button class="talentico-button">Siguiente</button>
-                </div>
+                
             </div>
         </div>
     </main>
@@ -230,6 +161,9 @@
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="./js/services/administrarEmpleosManager.service.js"></script>
+<script src="./js/controllers/administrarEmpleosManager.controller.js"></script>
 <script src="./js/services/notificaciones.service.js"></script>
 <script src="./js/controllers/notificaciones.controller.js"></script>
 </html>

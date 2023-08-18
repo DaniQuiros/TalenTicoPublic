@@ -10,29 +10,7 @@ const tbody = document.querySelector("#table-invitaciones-enviadas tbody")
 
 
 
-function crear_botones(fila,i){
-    
-    //crear un boton de editar para cada registro
-    let celda_acciones = fila.insertCell();
-    celda_acciones.classList.add('talentico-td')
-    //crear un boton
-    let boton_editar = document.createElement("button");
-    //afectar el contenido del botón
-    boton_editar.innerText = "Editar";
-    boton_editar.classList.add('talentico-button')
-    
 
-    //agregamos un evento al botón
-    boton_editar.addEventListener("click", () => {
-        //console.log(listado_de_usuarios[i]._id);
-        //localStorage.setItem("id_mongo", listado_de_usuarios[i]._id)
-        localStorage.setItem("id_mongo", listado_de_candidatos[i]._id);
-        window.location.href = "editar-persona.html";
-
-    })
-    celda_acciones.appendChild(boton_editar)
-
-}
 
 
 
@@ -55,10 +33,6 @@ let empleoid= "1234578"
 
 
 const mostrar_datos_en_tabla_invitaciones = async() => {
-
-
-    
-
 
     listado_de_invitaciones = await listar_invitaciones_empleo(empleoid);
     console.log(listado_de_invitaciones)
@@ -112,9 +86,7 @@ const mostrar_datos_en_tabla_candidatos = async() => {
     estado = head.insertCell();
     estado.innerHTML = "Estado";
     estado.classList.add("talentico-th");
-    acciones = head.insertCell();
-    acciones.innerHTML = "Acciones";
-    acciones.classList.add("talentico-th");
+
 
     for (let i = 0; i < listado_de_candidatos.length; i++) {
         let fila = tbody_candidatos.insertRow()
@@ -131,8 +103,6 @@ const mostrar_datos_en_tabla_candidatos = async() => {
         let celda_estado = fila.insertCell();
         celda_estado.innerHTML = listado_de_candidatos[i]["estado"];
         celda_estado.classList.add("talentico-td");
-
-        crear_botones(fila, i)
     }
 }
 

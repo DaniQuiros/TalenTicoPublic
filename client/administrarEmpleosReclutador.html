@@ -136,48 +136,12 @@
                     
                     <h1>Candidatos actuales</h1>    
                     <div class="div-candidatos-actuales-tabla">
-                        <table class="talentico-table">
-                            <tr>
-                                <th class="talentico-th">Candidatos</th>
-                                <th class="talentico-th">Puesto</th>
-                                <th class="talentico-th">Estado</th>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Maikol Carballo</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Enviada</td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Daniela Quiros</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="talentico-td">En revisión</td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Victor Vargas</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="talentico-td">Aceptada</td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Jose Chaverri</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                                <td class="talentico-td">Denegada</td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Jovan Brenes</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Denegada</td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td">Limberth Vasquez</td>
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Aceptada</td>
-                            </tr>
+                        <table id="table-candidatos" class="talentico-table">
+                            <tbody></tbody>
                         </table>    
                     </div>
                 </div>    
-                <div class="div-button-siguiente">
-                    <button class="talentico-button">Siguiente</button>
-                </div>
+
             </div>
         </div>
     </main>
@@ -200,4 +164,6 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./js/services/notificaciones.service.js"></script>
 <script src="./js/controllers/notificaciones.controller.js"></script>
+<script src="./js/services/administrarEmpleosReclutador.service.js" ></script>
+<script src="./js/controllers/administrarEmpleosReclutador.controller.js" ></script>
 </html>
