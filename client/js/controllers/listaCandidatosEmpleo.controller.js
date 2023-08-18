@@ -65,9 +65,9 @@ const mostrar_datos_en_tabla_invitaciones = async() => {
     tbody.innerHTML = "";
     
     let head = tbody.insertRow()
-    puesto = head.insertCell();
-    puesto.innerHTML = "Correo";
-    puesto.classList.add("talentico-th");
+    correo = head.insertCell();
+    correo.innerHTML = "Correo";
+    correo.classList.add("talentico-th");
     estado = head.insertCell();
     estado.innerHTML = "Puesto";
     estado.classList.add("talentico-th");
@@ -96,9 +96,12 @@ const mostrar_datos_en_tabla_candidatos = async() => {
     
     tbody.innerHTML = "";
     
-    let head_cand = tbody_candidatos.insertRow()
+    let head = tbody_candidatos.insertRow()
+    candidato = head.insertCell();
+    candidato.innerHTML = "candidato";
+    candidato.classList.add("talentico-th");
     puesto = head.insertCell();
-    puesto.innerHTML = "Correo";
+    puesto.innerHTML = "Puesto";
     puesto.classList.add("talentico-th");
     estado = head.insertCell();
     estado.innerHTML = "Puesto";
@@ -124,7 +127,7 @@ const mostrar_datos_en_tabla_candidatos = async() => {
 
 
 mostrar_datos_en_tabla_invitaciones()
-
+mostrar_datos_en_tabla_candidatos()
 
 
  

@@ -16,7 +16,7 @@ const SchemaAplicacion = new Schema({
   },
   empleoid: {
     type: String,
-    require: true,
+    required: true,
     default:"test"
   }
 });

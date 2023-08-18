@@ -5,7 +5,7 @@ const router = express.Router();
 const mailer = require("../templates/cambio-estado-aplicacion");
 
 router.post("/crear-aplicacion-usuario", function (req, res) {
-  
+
 
   let nuevaAplicacion = new Aplicacion({
     candidato: body.candidato,
@@ -79,12 +79,12 @@ router.get("/listar-aplicaciones", (req, res) => {
       });
     });
 });
-/*
-// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
-router.get("/listar-aplicaciones", (req, res) => {
-  let candidato = req.query.candidato;
 
-  Aplicacion.find({ candidato: candidato })
+// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
+router.get("/listar-aplicaciones-empleoid", (req, res) => {
+  let empleoid = req.query.empleoid;
+
+  Aplicacion.find({ empleoid: empleoid })
     .then((AplicacionDB) => {
       if (AplicacionDB.length === 0) {
         res.status(200).json({
@@ -108,6 +108,8 @@ router.get("/listar-aplicaciones", (req, res) => {
     });
 });
 
+
+/*
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
 router.get("/listar-aplicaciones", (req, res) => {
   let candidato = req.query.candidato;
