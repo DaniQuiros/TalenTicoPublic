@@ -5,22 +5,13 @@ const router = express.Router();
 const mailer = require("../templates/cambio-estado-aplicacion");
 
 router.post("/crear-aplicacion-usuario", function (req, res) {
-  let body = req.body;
-  let testUsuario = "Maikol";
-  let testPuesto = "Data Analyst";
-  let testEstado = "Denegado";
-  let testCorreo = "mcarballol@ucenfotec.ac.cr";
-  mailer.mail_aplicacion_estado(
-    testUsuario,
-    testPuesto,
-    testEstado,
-    testCorreo
-  );
+  
 
   let nuevaAplicacion = new Aplicacion({
     candidato: body.candidato,
     puesto: body.puesto,
     estado: body.estado,
+    empleoid:body.empleoid
   });
 
   //guardar en la BD
@@ -44,8 +35,51 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
     });
 });
 
-// router.put()
+/* router.put()
 
+
+let body = req.body;
+  let testUsuario = "Maikol";
+  let testPuesto = "Data Analyst";
+  let testEstado = "Denegado";
+  let testCorreo = "mcarballol@ucenfotec.ac.cr";
+  mailer.mail_aplicacion_estado(
+    testUsuario,
+    testPuesto,
+    testEstado,
+    testCorreo
+  );
+
+*/
+
+// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
+router.get("/listar-aplicaciones", (req, res) => {
+  let candidato = req.query.candidato;
+
+  Aplicacion.find({ candidato: candidato })
+    .then((AplicacionDB) => {
+      if (AplicacionDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Aplicaciones",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Aplicaciones",
+          AplicacionDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
+        error,
+      });
+    });
+});
+/*
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
 router.get("/listar-aplicaciones", (req, res) => {
   let candidato = req.query.candidato;
@@ -101,33 +135,5 @@ router.get("/listar-aplicaciones", (req, res) => {
       });
     });
 });
-
-// Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
-router.get("/listar-aplicaciones", (req, res) => {
-  let candidato = req.query.candidato;
-
-  Aplicacion.find({ candidato: candidato })
-    .then((AplicacionDB) => {
-      if (AplicacionDB.length === 0) {
-        res.status(200).json({
-          resultado: false,
-          msj: "No hay Aplicaciones",
-        });
-      } else {
-        res.status(200).json({
-          resultado: true,
-          msj: "Tiene Aplicaciones",
-          AplicacionDB,
-        });
-      }
-    })
-    .catch((error) => {
-      res.status(500).json({
-        resultado: false,
-        msj: "Ocurrió el siguiente error",
-        error,
-      });
-    });
-});
-
+*/
 module.exports = router;

@@ -1,28 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-/*
-const SchemaAplicacion = new Schema({
-  candidato: {
-    type: String,
-    required: true,
-  },
-  detalles:[
-    {
-      puesto: {
-        type: String,
-        required: false,
-      },
-      estado:{
-        type: String,
-        required: false
-      }
-    }
-    
-  ]
-
-});
-*/
-
 
 const SchemaAplicacion = new Schema({
   candidato: {
@@ -33,13 +10,20 @@ const SchemaAplicacion = new Schema({
     type: String,
     required: false,
   },
-  estado:{
+  estado: {
     type: String,
-    required: false
+    required: false,
+  },
+  empleoid: {
+    type: String,
+    require: true,
+    default:"test"
   }
 });
 
-
-
-const Aplicacion = mongoose.model("Aplicacion", SchemaAplicacion, "aplicaciones");
+const Aplicacion = mongoose.model(
+  "Aplicacion",
+  SchemaAplicacion,
+  "aplicaciones"
+);
 module.exports = Aplicacion;
