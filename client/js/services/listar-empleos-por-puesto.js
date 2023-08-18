@@ -33,7 +33,7 @@ const mostrar_datos_en_tabla = async() => {
     for (let i = 0; i < listado_empleos.length; i++) {
         let fila = tbody.insertRow();
 
-        let celda_empresa = (fila.insertCell().innerHTML = listado_empleos[i]["empresaId"]);
+        let celda_empresa = (fila.insertCell().innerHTML = listado_empleos[i]["empresaNombre"]);
         let celda_puesto = (fila.insertCell().innerHTML = listado_empleos[i]["nombrePuesto"]);
         let celda_rangoSalario = (fila.insertCell().innerHTML = listado_empleos[i]["rangoSalario"]);
         let celda_requisitos = (fila.insertCell().innerHTML = listado_empleos[i]["requisitos"]);
@@ -54,7 +54,7 @@ function filtrar_datos() {
     let coincidencias = false;
 
     for (let i = 0; i < listado_empleos.length; i++) {
-        let empresa = listado_empleos[i]["empresaId"];
+        let empresa = listado_empleos[i]["empresaNombre"];
         let puesto = listado_empleos[i]["nombrePuesto"].toLowerCase();
         let rangoSalario = listado_empleos[i]["rangoSalario"];
         let requisitos = listado_empleos[i]["requisitos"].toLowerCase();
@@ -63,7 +63,7 @@ function filtrar_datos() {
             let fila = tbody.insertRow();
 
             let celdaEmpresa = fila.insertCell();
-            celdaEmpresa.innerHTML = listado_empleos[i]["empresaId"];
+            celdaEmpresa.innerHTML = listado_empleos[i]["empresaNombre"];
 
             let celdaNombre = fila.insertCell();
             celdaNombre.innerHTML = listado_empleos[i]["nombrePuesto"];

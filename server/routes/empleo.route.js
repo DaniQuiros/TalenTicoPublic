@@ -15,6 +15,7 @@ router.post("/empleo", function (req, res) {
     requisitos: peticionBody.requisitos,
     atributosCandidato: peticionBody.atributosCandidato,
     descripcionPuesto: peticionBody.descripcionPuesto,
+    empresaNombre:peticionBody.empresaNombre,
   });
 
   // guardar en BD mediante promesa
@@ -68,6 +69,8 @@ router.put("/empleo", function (req, res) {
     requisitos,
     atributosCandidato,
     descripcionPuesto,
+    tipo,
+    empresaNombre
   } = peticionBody;
 
   Empleo.updateOne(
@@ -79,6 +82,8 @@ router.put("/empleo", function (req, res) {
         requisitos,
         atributosCandidato,
         descripcionPuesto,
+        tipo,
+        empresaNombre
       },
     }
   )

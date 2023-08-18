@@ -9,6 +9,7 @@ const SchemaEmpleo = new mongoose.Schema({
   atributosCandidato: { type: String, required: true, unique: true },
   descripcionPuesto: { type: String, required: true, unique: true },
   estado: { type: String, default: "Activo" },
+  empresaNombre: { type: String, required: false, unique: false },
 });
 
 module.exports = mongoose.model('Empleo', schema_empleo, 'empleo')
