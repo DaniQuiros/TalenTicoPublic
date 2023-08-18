@@ -3,6 +3,8 @@ const txtPuesto = document.querySelector("#puesto")
 const txtEstado = document.querySelector("#estado")
 const btn_guardar = document.querySelector("#guardar")
 
+const aplicacion = await obtener_aplicacion(id);
+
 const llenar_campos = async() => {
     let id = localStorage.getItem("id_mongo")
     let aplicacion = await obtener_aplicacion(id);
@@ -17,9 +19,11 @@ const llenar_campos = async() => {
 
 }
 
+
 function editar_estado_aplicacion(){
     let id = localStorage.getItem("id_mongo")
     let estado = txtEstado.value
+    
     modificar_aplicacion(id,estado)
 }
 

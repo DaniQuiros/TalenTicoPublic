@@ -125,7 +125,7 @@ router.get("/listar-candidaturas-empresa", (req, res) => {
 
 router.put('/editar-aplicacion',function(req,res){
 
-  let body = req.body;
+  let body = req.query;
   /*
   usuario =req.query.candidato
   puesto =req.query.puesto
