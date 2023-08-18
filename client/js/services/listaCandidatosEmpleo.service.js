@@ -28,12 +28,12 @@ const listar_candidatos_empleo = async(empleoid)=>{
 
     await axios({
         method: 'get',
-        url: `http://localhost:3000/api/listar-aplicaciones-empleoid?empleoid=${empleoid}`,
+        url: `http://localhost:3000/api/listar-candidatos-tabla?empleoid=${empleoid}`,
         responseType: 'json'
     })
     .then((res) => {
-        listar_candidatos = res.data.InvitacionEmpleoDB;
-        console.log(res.data.InvitacionEmpleoDB);
+        listar_candidatos = res.data.AplicacionDB;
+        console.log(res.data.AplicacionDB);
     })
     .catch((error) => {
         console.log(error);

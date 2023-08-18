@@ -14,11 +14,13 @@ function crear_botones(lista,fila,i){
     
     //crear un boton de editar para cada registro
     let celda_acciones = fila.insertCell();
+    celda_acciones.classList.add('talentico-td')
     //crear un boton
     let boton_editar = document.createElement("button");
     //afectar el contenido del botón
     boton_editar.innerText = "Editar";
     boton_editar.classList.add('talentico-button')
+    
 
     //agregamos un evento al botón
     boton_editar.addEventListener("click", () => {
@@ -61,6 +63,7 @@ const mostrar_datos_en_tabla_invitaciones = async() => {
     listado_de_invitaciones = await listar_invitaciones_empleo(empleoid);
     console.log(listado_de_invitaciones)
 
+
     
     tbody.innerHTML = "";
     
@@ -90,8 +93,10 @@ const mostrar_datos_en_tabla_invitaciones = async() => {
 
 
 const mostrar_datos_en_tabla_candidatos = async() => {
-    empleoid= "Daniela"
-    listado_de_candidatos = await listar_candidatos_empleo(empleoid);
+
+    
+    let Daniela = "1584763"
+    listado_de_candidatos = await listar_candidatos_empleo(Daniela);
     console.log(listado_de_candidatos)
     
     
@@ -114,13 +119,20 @@ const mostrar_datos_en_tabla_candidatos = async() => {
     for (let i = 0; i < listado_de_candidatos.length; i++) {
         let fila = tbody_candidatos.insertRow()
         fila.classList.add("talentico-tr");
-        let celda_puesto = fila.insertCell();
-        celda_puesto.innerHTML = listado_de_candidatos[i]["candidato"];
-        celda_puesto.classList.add("talentico-td");
+
+        let celda_candidato = fila.insertCell();
+        celda_candidato.innerHTML = listado_de_candidatos[i]["candidato"];
+        celda_candidato.classList.add("talentico-td");
     
+        let celda_puesto = fila.insertCell();
+        celda_puesto.innerHTML = listado_de_candidatos[i]["puesto"];
+        celda_puesto.classList.add("talentico-td");
+        
         let celda_estado = fila.insertCell();
         celda_estado.innerHTML = listado_de_candidatos[i]["puesto"];
         celda_estado.classList.add("talentico-td");
+
+        crear_botones(listado_de_candidatos, fila, i)
     }
 }
 

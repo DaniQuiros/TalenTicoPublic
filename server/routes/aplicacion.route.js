@@ -65,7 +65,7 @@ router.get("/listar-aplicaciones", (req, res) => {
 });
 
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
-router.get("/listar-aplicaciones-empleoid", (req, res) => {
+router.get("/listar-candidatos-tabla", (req, res) => {
   let empleoid = req.query.empleoid;
 
   Aplicacion.find({ empleoid: empleoid })
