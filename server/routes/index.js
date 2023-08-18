@@ -1,4 +1,5 @@
 const RutaAuth = require("./auth.route");
+const RutaEmpleo = require("./empleo.route");
 const RutaEmpresa = require("./empresa.route");
 const RutaNotificacion = require("./notificacion.route");
 const RutaAplicacion = require("./aplicacion.route");
@@ -7,6 +8,7 @@ const RutaUsuario = require("./usuario.route");
 
 module.exports = function (app) {
   app.use("/api", RutaAuth);
+  app.use("/api", RutaEmpleo);
   app.use("/api", RutaEmpresa);
   app.use("/api", RutaNotificacion);
   app.use("/api", RutaAplicacion);
