@@ -72,58 +72,8 @@
                     </div>
     
                     <div class="div-empleos-creados-tabla">
-                        <table class="talentico-table">
-                            <tr>
-                                <th class="talentico-th">Puesto</th>
-                                <th class="talentico-th">Tipo</th>
-                                <th class="talentico-th">Invitaciones</th>
-                                <th class="talentico-th">Candidatos actuales</th>
-                                <th class="talentico-th">Acciones</th>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Data Analyst</a></td>
-                                <td class="talentico-td">Público</td>
-                                <td class="talentico-td">20</td>
-                                <td class="talentico-td">4</td>
-                                <td class="talentico-td">
-                                    <a href="./listaCandidatosEmpleo.html"><button class="talentico-button" type="button">Candidatos</button></a>
-                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
-                                    <button class="talentico-button--red talentico-button" type="button">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Engineer</a></td>
-                                <td class="talentico-td">Privado</td>
-                                <td class="talentico-td">15</td>
-                                <td class="talentico-td">6</td>
-                                <td class="talentico-td" >
-                                    <a href="./listaCandidatosEmpleo.html"><button class="talentico-button" type="button">Candidatos</button></a>
-                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
-                                    <button class="talentico-button--red talentico-button" type="button">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td"><a href="./empleosPlantillaReclutador.html">Software Arquitect</a></td>
-                                <td class="talentico-td">Privado</td>
-                                <td class="talentico-td">10</td>
-                                <td class="talentico-td">8</td>
-                                <td class="talentico-td">
-                                    <a href="./listaCandidatosEmpleo.html"><button class="talentico-button" type="button">Candidatos</button></a>
-                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
-                                    <button class="talentico-button--red talentico-button" type="button">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr class="talentico-tr">
-                                <td class="talentico-td" ><a href="./empleosPlantillaReclutador.html">Cyber Security Analyst</a></td>
-                                <td class="talentico-td">Público</td>
-                                <td class="talentico-td">5</td>
-                                <td class="talentico-td">2</td>
-                                <td class="talentico-td" id="td-esquina-inferior-derecha">
-                                    <a href="./listaCandidatosEmpleo.html"><button class="talentico-button" type="button">Candidatos</button></a>
-                                    <a href="./empleosPlantillaReclutador.html#email"><button class="talentico-button" type="button">Invitar</button></a>
-                                    <button class="talentico-button--red talentico-button" type="button">Eliminar</button>
-                                </td>
-                            </tr>
+                        <table id="table-empleos" class="talentico-table">
+                           <tbody></tbody>
                         </table>
                     </div>
                 </div>
@@ -162,8 +112,12 @@
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+<script src="./js/services/listaCandidatosEmpleo.service.js"></script>
+
+
 <script src="./js/services/administrarEmpleosManager.service.js"></script>
 <script src="./js/controllers/administrarEmpleosManager.controller.js"></script>
+
 <script src="./js/services/notificaciones.service.js"></script>
 <script src="./js/controllers/notificaciones.controller.js"></script>
 </html>

@@ -15,7 +15,10 @@ router.post("/empleo", function (req, res) {
     requisitos: peticionBody.requisitos,
     atributosCandidato: peticionBody.atributosCandidato,
     descripcionPuesto: peticionBody.descripcionPuesto,
-    empresaNombre:peticionBody.empresaNombre,
+    tipo: peticionBody.tipo,
+    empresaNombre: peticionBody.empresaNombre,
+    empresaid: peticionBody.empresaid
+
   });
 
   // guardar en BD mediante promesa
@@ -70,7 +73,7 @@ router.put("/empleo", function (req, res) {
     atributosCandidato,
     descripcionPuesto,
     tipo,
-    empresaNombre
+    empresaNombre,
   } = peticionBody;
 
   Empleo.updateOne(
@@ -83,7 +86,7 @@ router.put("/empleo", function (req, res) {
         atributosCandidato,
         descripcionPuesto,
         tipo,
-        empresaNombre
+        empresaNombre,
       },
     }
   )
@@ -107,7 +110,7 @@ router.put("/empleo", function (req, res) {
 router.delete("/empleo", function (req, res) {
   let cuerpoPeticion = req.body;
 
-  Empleo.deleteOne({ _id: cuerpoPeticion._id })
+  Empleo.deleteOne({ _id:cuerpoPeticion._id })
     .then((result) => {
       res.status(200).json({
         resultado: true,
@@ -123,6 +126,38 @@ router.delete("/empleo", function (req, res) {
       });
     });
 });
+
+
+
+router.get("/listar-empleos-empresa", (req, res) => {
+  let empresaid = req.query.empresaid;
+
+  Empleo.find({empresaid:empresaid})
+    .then((EmpleoDB) => {
+      if (EmpleoDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Empleos",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Empleos",
+          EmpleoDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
+        error,
+      });
+    });
+});
+
+
+
 
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del empleo
 router.get("/buscarEmpleo", (req, res) => {
