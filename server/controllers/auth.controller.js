@@ -10,7 +10,6 @@ const signup = async (req, res) => {
       nombre: req.body.nombre,
       apellido: req.body.apellido,
       correo: req.body.correo,
-      genero: req.body.genero,
       contrasena: bcrypt.hashSync(req.body.contrasena),
     });
 
@@ -25,7 +24,21 @@ const signup = async (req, res) => {
       const rol = await Rol.findOne({ nombre: "usuario" });
 
       usuario.roles = [rol._id];
-      usuario.save();
+      await usuario.save();
+    }
+
+    if (req.body.genero) {
+      const genero = await Genero.findOne({
+        nombre: req.body.genero.toLowerCase(),
+      });
+
+      usuario.genero = genero._id;
+      await usuario.save();
+    } else {
+      const genero = await Genero.findOne({ nombre: "prefiero no decir" });
+
+      usuario.genero = genero._id;
+      await usuario.save();
     }
 
     res.status(201).json({
@@ -43,6 +56,7 @@ const signin = async (req, res) => {
   try {
     const usuario = await Usuario.findOne({ correo: req.body.correo }).populate(
       "roles",
+      "generos",
       "-__v"
     );
 

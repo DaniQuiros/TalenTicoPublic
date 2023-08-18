@@ -11,8 +11,8 @@ const SchemaUsuario = new Schema({
     required: true,
   },
   genero: {
-    type: String,
-    required: true,
+    type: Schema.Types.ObjectId,
+    ref: "Genero",
   },
   correo: {
     type: String,
@@ -23,12 +23,19 @@ const SchemaUsuario = new Schema({
     type: String,
     required: true,
   },
-  foto: 
-  { type: String, 
-    required: false, 
-    unique: false 
-  },
-
+  foto: { type: String },
+  estudios: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Estudio",
+    },
+  ],
+  experiencia: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Experiencia",
+    },
+  ],
   roles: [
     {
       type: Schema.Types.ObjectId,

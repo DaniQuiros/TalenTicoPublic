@@ -1,7 +1,9 @@
 const db = require("./models");
 const mongoose = db.mongoose;
+const Genero = db.genero;
 const Rol = db.rol;
 const ROLES = db.ROLES;
+const GENEROS = db.GENEROS;
 
 async function initRoles() {
   try {
@@ -27,6 +29,30 @@ async function initRoles() {
   }
 }
 
+async function initGeneros() {
+  try {
+    const count = await Genero.estimatedDocumentCount();
+
+    if (count > 0) {
+      return;
+    }
+
+    GENEROS.forEach(async (genero) => {
+      try {
+        await new Genero({ nombre: genero }).save();
+
+        console.log(`Añadido el genero de ${genero} a la colección de generos`);
+      } catch (err) {
+        console.log(err);
+        return;
+      }
+    });
+  } catch (err) {
+    console.log(err);
+    return;
+  }
+}
+
 module.exports = (app) => {
   mongoose
     .connect(process.env.MONGODB_URI, {
@@ -39,6 +65,7 @@ module.exports = (app) => {
     .then(() => {
       console.log("Conectado a MongoDB");
       initRoles();
+      initGeneros();
     })
     .catch((err) => {
       console.log(err.message);
