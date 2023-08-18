@@ -75,11 +75,11 @@ const buscarUsuario = async (req, res) => {
   }
 };
 
-const listarUsuarios = async (req, res) => {
+const listarCandidatos = async (req, res) => {
   try {
     const usuarios = await Usuario.find()
       .select({ contrasena: 0, roles: 0, __v: 0 })
-      .populate("genero", "-__v");
+      .populate("genero", { _id: 0, nombre: 1 });
 
     return res.status(200).send(usuarios);
   } catch (error) {
@@ -127,5 +127,5 @@ module.exports = {
   accesoAdmin,
   actualizarUsuario,
   buscarUsuario,
-  listarUsuarios,
+  listarCandidatos,
 };

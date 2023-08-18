@@ -17,18 +17,26 @@ const actualizarTabla = () => {
   tbody.appendChild(thead);
 
   datosPagina.empleosFiltrados.forEach((empleo) => {
-    tbody.innerHTML += `
-      <tr class="talentico-tr">
-          <td class="talentico-td"><img src="./media/company-logo-example.png" alt=""></td>
-          <td class="talentico-td"><a href="./empleosPlantillaReclutador.html?id=${empleo._id}">${empleo.nombrePuesto}</a></td>
-          <td class="talentico-td">$${empleo.rangoSalario}</td>
-          <td class="talentico-td">${empleo.requisitos}</td>
-          <td class="talentico-td">
-              <a href="./empleosPlantilla.html?id=${empleo._id}">
-                  <button class="talentico-button" type="button">Ver Detalles</button>
-              </a>
-          </td>
-      </tr>`;
+    const fila = document.createElement("tr");
+
+    fila.classList.add("talentico-tr");
+
+    fila.innerHTML += `
+      <td class="talentico-td"><img src="./media/company-logo-example.png" alt=""></td>
+      <td class="talentico-td">
+        <a href="./empleosPlantillaReclutador.html?id=${empleo._id}">
+          ${empleo.nombrePuesto}
+        </a>
+      </td>
+      <td class="talentico-td">$${empleo.rangoSalario}</td>
+      <td class="talentico-td">${empleo.requisitos}</td>
+      <td class="talentico-td">
+          <a href="./empleosPlantilla.html?id=${empleo._id}">
+              <button class="talentico-button" type="button">Ver Detalles</button>
+          </a>
+      </td>`;
+
+    tbody.appendChild(fila);
   });
 };
 

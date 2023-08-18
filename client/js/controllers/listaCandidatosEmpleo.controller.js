@@ -1,15 +1,6 @@
 const tbody_candidatos = document.querySelector("#table-candidatos tbody")
 const tbody = document.querySelector("#table-invitaciones-enviadas tbody")
 
-//let empleoid = localStorage.getItem("_idmongo")
-
-
-
-
-
-
-
-
 function crear_botones(fila,i){
     
     //crear un boton de editar para cada registro

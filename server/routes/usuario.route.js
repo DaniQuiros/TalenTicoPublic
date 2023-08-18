@@ -13,7 +13,12 @@ router.use(function (req, res, next) {
 
 router.get("/usuario", [authJwt.verificarToken], controller.buscarUsuario);
 router.put("/usuario", [authJwt.verificarToken], controller.actualizarUsuario);
-router.get("/usuarios", [authJwt.verificarToken], controller.listarUsuarios);
+
+router.get(
+  "/candidatos",
+  [authJwt.verificarToken],
+  controller.listarCandidatos
+);
 
 router.get("/test/todos", controller.accesoTotal);
 router.get("/test/usuario", [authJwt.verificarToken], controller.accesoUsuario);
