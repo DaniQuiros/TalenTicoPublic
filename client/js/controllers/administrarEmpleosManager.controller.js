@@ -78,9 +78,7 @@ const mostrar_datos_en_tabla_candidatos = async() => {
 }
 
 ////////////////////////
-function eliminar(){
-    eliminar_empleo(_id);
-}
+
 
 function crear_botones_empleos(fila,i){
     
