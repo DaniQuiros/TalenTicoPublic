@@ -50,11 +50,12 @@ function obtener_datos(){
         let descripcion = txtDescripcion.value
 
         let tipo = txtTipo.value;
-        let empresaid = sessionStorage.getItem("empresaid")
-        console.log(empresaid)
+        //let empresaid = sessionStorage.getItem("empresaid")
+        let empresaid = "123456789"
+        let empresa= "64dc8e2b2d6423c5e58631a6"
         let empresaNombre = sessionStorage.getItem("nombreEmpresa")
 
-        crear_empleo(nombrePuesto, rangoSalarial, requisitos, atributosDeseables, descripcion, tipo, empresaNombre, empresaid );
+        crear_empleo(nombrePuesto, rangoSalarial, requisitos, atributosDeseables, descripcion, tipo, empresaNombre, empresaid,empresa);
         
         limpiar_campos();
     }

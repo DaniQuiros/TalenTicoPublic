@@ -158,7 +158,7 @@ function crear_botones_empleos(fila,i){
 
 const mostrar_datos_en_tabla_empleos = async() => {
 
-    let empresaid = sessionStorage.getItem("empresaid")
+    let empresaid = "123456789"
     
     listado_de_empleos = await listar_empleo_empresa(empresaid);
     
