@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const mail_aplicacion_estado = (pusuario, ppuesto, pestado, pcorreo) =>{
+const mail_aplicacion_estado = (pusuario, ppuesto, pcorreo) =>{
     let transporter = nodemailer.createTransport({
         service: "Gmail",
         auth:{
@@ -21,8 +21,7 @@ const mail_aplicacion_estado = (pusuario, ppuesto, pestado, pcorreo) =>{
         to: pcorreo,
         subject:"Su aplicacion ha sido actualizada",
         html:`<h1>Estimado ${pusuario}</h1>
-        <p>La aplicacion de ${pusuario} al puesto ${ppuesto} ha sido cambiada a: ${pestado}</p>
-    `
+        <p>La aplicacion de ${pusuario} al puesto ${ppuesto} ha sido cambiada</p>`
     };
 
     transporter.sendMail(mail_options, (error, info)=>{

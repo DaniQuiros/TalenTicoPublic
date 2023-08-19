@@ -125,18 +125,17 @@ router.get("/listar-candidaturas-empresa", (req, res) => {
 
 router.put('/editar-aplicacion',function(req,res){
 
-  let body = req.query;
-  /*
-  usuario =req.query.candidato
-  puesto =req.query.puesto
-  estado = req.query.estado
-  correo = req.query.correo
-*/
+  let body = req.body;
+  
+  let candidato = body.candidato
+  let puesto = body.puesto
+  let correo = body.correo  
+
   const {_id,estado} = body
 
   Aplicacion.updateOne({_id},{$set:{_id,estado}})
   .then((AplicacionActualizada)=>{
-      //mailer.mail_aplicacion_estado(AplicacionActualizada.usuario, AplicacionActualizada.puesto, AplicacionActualizada.estado, AplicacionActualizada.correo) 
+      mailer.mail_aplicacion_estado(candidato, puesto, correo) 
       res.status(200).json({
           resultado:true,
           msg:"Información actualizada",
