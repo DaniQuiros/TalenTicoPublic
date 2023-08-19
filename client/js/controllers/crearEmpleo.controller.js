@@ -1,4 +1,5 @@
 sessionStorage.setItem("nombreEmpresa","Coca Cola")
+sessionStorage.setItem("empresaid","123456789")
 
 const txtNombrePuesto= document.querySelector("#inp-nombrePuesto");
 const txtRangoSalarial = document.querySelector("#inp-rango")
@@ -50,6 +51,7 @@ function obtener_datos(){
 
         let tipo = txtTipo.value;
         let empresaid = sessionStorage.getItem("empresaid")
+        console.log(empresaid)
         let empresaNombre = sessionStorage.getItem("nombreEmpresa")
 
         crear_empleo(nombrePuesto, rangoSalarial, requisitos, atributosDeseables, descripcion, tipo, empresaNombre, empresaid );

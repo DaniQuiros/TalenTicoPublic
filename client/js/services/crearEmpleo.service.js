@@ -12,7 +12,6 @@ const crear_empleo= async(nombrePuesto, rangoSalario, requisitos, atributosCandi
             tipo: tipo,
             empresaNombre: empresaNombre,
             empresaid: empresaid
-        
         }
     })
     .then((res)=>{

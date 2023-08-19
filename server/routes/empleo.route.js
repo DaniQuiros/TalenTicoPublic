@@ -18,7 +18,6 @@ router.post("/empleo", function (req, res) {
     tipo: peticionBody.tipo,
     empresaNombre: peticionBody.empresaNombre,
     empresaid: peticionBody.empresaid
-
   });
 
   // guardar en BD mediante promesa
