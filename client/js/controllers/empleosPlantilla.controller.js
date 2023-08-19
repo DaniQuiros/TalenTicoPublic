@@ -1,4 +1,5 @@
 import { obtenerEmpleo } from "../services/empleos.service.js";
+import { aplicarEmpleo } from "../services/aplicaciones.services.js";
 
 const actualizarDatos = (datos) => {
   console.log(datos);
@@ -36,6 +37,35 @@ const actualizarDatos = (datos) => {
   `;
 };
 
+const initAplicarBtn = () => {
+  const aplicarBtn = document.querySelector("#btn-Empleo-Aplicar");
+
+  if (!aplicarBtn) {
+    console.log("No se encontró el boton de aplicar");
+    return;
+  }
+
+  aplicarBtn.addEventListener("click", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    console.log(id);
+    const response = await aplicarEmpleo(id);
+
+    if (response.status === 201) {
+      Swal.fire({
+        title: "Aplicacion registrada exitosamente",
+        icon: "success",
+      });
+    } else {
+      Swal.fire({
+        title: "Error al registrar la aplicacion",
+        icon: "error",
+      });
+    }
+  });
+};
+
 document.addEventListener("DOMContentLoaded", async function () {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
@@ -47,5 +77,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   obtenerEmpleo(id).then((response) => {
     actualizarDatos(response.data);
+    initAplicarBtn();
   });
 });

@@ -6,11 +6,10 @@ const SchemaAplicacion = new Schema({
     type: String,
     required: true,
   },
-  correo:{
-    type:String,
-    required: false
-  }
-  ,
+  correo: {
+    type: String,
+    required: false,
+  },
   puesto: {
     type: String,
     required: false,
@@ -22,12 +21,12 @@ const SchemaAplicacion = new Schema({
   empleoid: {
     type: String,
     required: true,
-    default:"test"
+    default: "test",
   },
-  empresaid:{
-    type:String,
-    require: false
-  }
+  empresaid: {
+    type: String,
+    require: false,
+  },
 });
 
 const Aplicacion = mongoose.model(
