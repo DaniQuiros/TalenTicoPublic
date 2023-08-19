@@ -22,21 +22,20 @@ const SchemaEmpresa = new Schema({
   },
   contrasena: {
     type: String,
-    required: true,
+    required: false,
   },
-  mision:{
+  mision: {
     type: String,
     required: false,
   },
-  vision:{
+  vision: {
     type: String,
     required: false,
   },
-  beneficios:{
+  beneficios: {
     type: String,
     required: false,
-  }
-
+  },
 });
 
 const Empresa = mongoose.model("Empresa", SchemaEmpresa);

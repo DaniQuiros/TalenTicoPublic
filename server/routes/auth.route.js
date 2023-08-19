@@ -12,6 +12,7 @@ router.use(function (req, res, next) {
   next();
 });
 router.post("/auth/signup", checkRolesExisted, controller.signup);
+router.post("/auth/signupEmpresa", checkRolesExisted, controller.signupEmpresa);
 router.post("/auth/signin", controller.signin);
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const db = require("../models");
+const Empresa = db.empresa;
 const Genero = db.genero;
 const Usuario = db.usuario;
 const Rol = db.rol;
@@ -107,4 +108,42 @@ const signin = async (req, res) => {
   }
 };
 
-module.exports = { signin, signup };
+const signupEmpresa = async (req, res) => {
+  try {
+    const empresa = new Empresa({
+      nombre: req.body.nombre,
+      correo: req.body.correo,
+      cedula: req.body.cedula,
+      contrasena: bcrypt.hashSync(req.body.contrasena),
+    });
+
+    await empresa.save();
+
+    const genero = await Genero.findOne({ nombre: "prefiero no decir" });
+    const rolUsuario = await Rol.findOne({ nombre: "usuario" });
+    const rolAdmin = await Rol.findOne({ nombre: "admin" });
+
+    const usuario = new Usuario({
+      nombre: "Admin",
+      apellido: req.body.nombre,
+      correo: req.body.correo,
+      contrasena: bcrypt.hashSync(req.body.contrasena),
+      genero: genero._id,
+      empresa: empresa._id,
+      roles: [rolUsuario._id, rolAdmin._id],
+    });
+
+    await usuario.save();
+
+    res.status(201).json({
+      message: "Empresa creada correctamente",
+    });
+  } catch (err) {
+    res.status(500).send({
+      message: "Error al crear usuario",
+    });
+    return;
+  }
+};
+
+module.exports = { signin, signup, signupEmpresa };
