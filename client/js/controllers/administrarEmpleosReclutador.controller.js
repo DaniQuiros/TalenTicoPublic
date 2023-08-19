@@ -75,7 +75,7 @@ function crear_botones_empleos(fila,i){
         //console.log(listado_de_usuarios[i]._id);
         //localStorage.setItem("id_mongo", listado_de_usuarios[i]._id)
         localStorage.setItem("id_mongo", listado_de_empleos[i]._id);
-        window.location.href = "listaCandidatosEmpleo.html";
+        window.location.href = "listaCandidatosEmpleoReclutador.html";
 
     })
 

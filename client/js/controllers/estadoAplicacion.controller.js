@@ -8,7 +8,7 @@ const llenar_campos = async() => {
     let id = localStorage.getItem("id_mongo")
     const aplicacion = await obtener_aplicacion(id);
     console.log(aplicacion);
- 
+
     //console.log(persona[0].foto);
     txtCandidato.value = aplicacion[0].candidato;
     txtPuesto.value = aplicacion[0].puesto;
@@ -54,6 +54,7 @@ const editar_estado_aplicacion = async ()=>{
     let correo = aplicacion[0].correo;
     console.log(aplicacion)
     modificar_aplicacion(id,estado, candidato, puesto, correo)
+    crear_notificacion(correo, `Su aplicacion a  ${puesto} ha sido actualizada`, "#")
 }
 
 -

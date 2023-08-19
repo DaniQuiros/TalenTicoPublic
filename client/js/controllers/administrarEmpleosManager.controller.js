@@ -1,6 +1,6 @@
 const tbody_candidatos = document.querySelector("#table-candidatos tbody")
 const tbody_empleos = document.querySelector("#table-empleos tbody")
-sessionStorage.setItem("empresaid","123456789")
+
 
 function crear_botones(fila,i){
     
@@ -25,12 +25,6 @@ function crear_botones(fila,i){
     celda_acciones.appendChild(boton_editar)
 
 }
-
-
-
-
-
-
 
 
 const mostrar_datos_en_tabla_candidatos = async() => {

@@ -1,35 +1,7 @@
 const tbody_candidatos = document.querySelector("#table-candidatos tbody")
 const tbody = document.querySelector("#table-invitaciones-enviadas tbody")
 
-//let empleoid = localStorage.getItem("_idmongo")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let empleoid= "1234578"
-
-
-
-
-
-
-
-
-
-
-
-
+let empleoid = localStorage.getItem("id_mongo")
 
 
 const mostrar_datos_en_tabla_invitaciones = async() => {
@@ -63,14 +35,10 @@ const mostrar_datos_en_tabla_invitaciones = async() => {
 }
 
 
-
-
-
 const mostrar_datos_en_tabla_candidatos = async() => {
 
-    
-    let Daniela = "1584763"
-    listado_de_candidatos = await listar_candidatos_empleo(Daniela);
+
+    listado_de_candidatos = await listar_candidatos_empleo(empleoid);
     console.log(listado_de_candidatos)
     
     
