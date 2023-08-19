@@ -1,11 +1,11 @@
 
 
-const listar_aplicaciones = async(candidato)=>{
+const listar_aplicaciones = async(correo)=>{
     let lista_aplicaciones = [];
 
     await axios({
         method: 'get',
-        url: `http://localhost:3000/api/listar-aplicaciones?candidato=${candidato}`,
+        url: `http://localhost:3000/api/listar-aplicaciones?correo=${correo}`,
         responseType: 'json'
     })
     .then((res) => {

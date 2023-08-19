@@ -1,12 +1,11 @@
 const tbody = document.querySelector("#table-misAplicaciones tbody");
 
-//let candidato = sessionStorageStorage.getItem("cedula")
+let candidato = sessionStorage.getItem("correo")
 
 const mostrar_datos_en_tabla = async() => {
-    let candidato = "maikol@maikol.com"
+    
     listado_de_aplicaciones = await listar_aplicaciones(candidato);
     console.log(listado_de_aplicaciones)
-
     
     tbody.innerHTML = "";
     

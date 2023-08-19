@@ -40,9 +40,9 @@ router.post("/crear-aplicacion-usuario", function (req, res) {
 
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del usuario
 router.get("/listar-aplicaciones", (req, res) => {
-  let candidato = req.query.candidato;
+  let correo = req.query.correo;
 
-  Aplicacion.find({ candidato: candidato })
+  Aplicacion.find({ correo: correo })
     .then((AplicacionDB) => {
       if (AplicacionDB.length === 0) {
         res.status(200).json({

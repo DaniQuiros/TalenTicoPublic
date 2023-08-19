@@ -11,6 +11,7 @@ export async function signin(data) {
 
     if (response.status === 200) {
       sessionStorage.setItem("accessToken", response.data.accessToken);
+      sessionStorage.setItem("correo", response.data.correo)
     }
   } catch (error) {
     console.log(error);

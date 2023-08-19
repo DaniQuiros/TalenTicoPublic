@@ -1,9 +1,9 @@
 const tbody = document.querySelector("#table-misInvitaciones tbody");
 
-//let candidato = sessionStorageStorage.getItem("cedula")
+let candidato = sessionStorage.getItem("correo")
 
 const mostrar_datos_en_tabla = async() => {
-    let candidato = "maikol@maikol.com"
+    
     listado_de_invitaciones = await listar_invitaciones(candidato);
     console.log(listado_de_invitaciones)
 
