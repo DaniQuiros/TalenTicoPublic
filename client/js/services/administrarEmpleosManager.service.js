@@ -25,7 +25,7 @@ const listar_empleo_empresa = async(empresaid)=>{
 
     await axios({
         method: 'get',
-        url: `http://localhost:3000/api/listar-empleos-empresa?empresaid=${empresaid}`,
+        url: `http://localhost:3000/api/listar-empleos-empresa?empresa=${empresaid}`,
         responseType: 'json'
     })
     .then((res) => {

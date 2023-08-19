@@ -18,7 +18,7 @@ router.post("/empleo", function (req, res) {
     tipo: peticionBody.tipo,
     empresaNombre: peticionBody.empresaNombre,
     empresaid: peticionBody.empresaid,
-    empresa:peticionBody.empresa
+    empresa: peticionBody.empresa
   });
 
   // guardar en BD mediante promesa
@@ -144,10 +144,38 @@ router.delete("/empleo", function (req, res) {
     });
 });
 
+/*
 router.get("/listar-empleos-empresa", (req, res) => {
   let empresaid = req.query.empresaid;
 
   Empleo.find({ empresaid: empresaid })
+    .then((EmpleoDB) => {
+      if (EmpleoDB.length === 0) {
+        res.status(200).json({
+          resultado: false,
+          msj: "No hay Empleos",
+        });
+      } else {
+        res.status(200).json({
+          resultado: true,
+          msj: "Tiene Empleos",
+          EmpleoDB,
+        });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msj: "Ocurrió el siguiente error",
+        error,
+      });
+    });
+});
+*/
+router.get("/listar-empleos-empresa", (req, res) => {
+  let empresa = req.query.empresa;
+
+  Empleo.find({ empresa: empresa})
     .then((EmpleoDB) => {
       if (EmpleoDB.length === 0) {
         res.status(200).json({

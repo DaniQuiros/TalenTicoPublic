@@ -158,9 +158,9 @@ function crear_botones_empleos(fila,i){
 
 const mostrar_datos_en_tabla_empleos = async() => {
 
-    let empresaid = "123456789"
+    let  empresa = "64dc8e2b2d6423c5e58631a6"
     
-    listado_de_empleos = await listar_empleo_empresa(empresaid);
+    listado_de_empleos = await listar_empleo_empresa(empresa);
     
     console.log(listado_de_empleos)
     
