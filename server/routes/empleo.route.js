@@ -65,6 +65,7 @@ router.get("/empleo/:id", function (req, res) {
   const { id } = req.params;
 
   Empleo.findById(id)
+    .populate("empresa", { __v: 0 })
     .then((empleo) => {
       res.status(200).json(empleo);
     })

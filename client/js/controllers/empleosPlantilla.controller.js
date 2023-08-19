@@ -7,6 +7,7 @@ const actualizarDatos = (datos) => {
   const requisitos = document.querySelector(".empleo-requisitos");
   const atributos = document.querySelector(".empleo-atributos");
   const descripcion = document.querySelector(".empleo-descripcion");
+  const empresa = document.querySelector(".div-empresa");
 
   if (!datos) {
     return;
@@ -22,6 +23,17 @@ const actualizarDatos = (datos) => {
   atributos.innerHTML = datos.atributosCandidato;
   requisitos.innerHTML = datos.requisitos;
   descripcion.innerHTML = datos.descripcionPuesto;
+
+  if (!datos.empresa) {
+    console.log("No hay empresa registrada");
+    return;
+  }
+
+  empresa.innerHTML = `
+  <img id="logo-empresa" src="./media/company-logo-example.png" alt="">
+  <h2>${datos.empresa.nombre}</h2>
+  <p>${datos.empresa.descripcion}</p>
+  `;
 };
 
 document.addEventListener("DOMContentLoaded", async function () {
