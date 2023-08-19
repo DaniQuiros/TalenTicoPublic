@@ -17,3 +17,21 @@ export async function listarEmpleos() {
 
   return response;
 }
+
+export async function obtenerEmpleo(id) {
+  let response = {};
+  const token = localStorage.getItem("accessToken");
+
+  try {
+    response = await axios.get(`http://localhost:3000/api/empleo/${id}`, {
+      headers: {
+        "x-access-token": token,
+      },
+      responseType: "json",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+
+  return response;
+}

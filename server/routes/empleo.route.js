@@ -61,6 +61,22 @@ router.get("/empleo", function (req, res) {
     });
 });
 
+router.get("/empleo/:id", function (req, res) {
+  const { id } = req.params;
+
+  Empleo.findById(id)
+    .then((empleo) => {
+      res.status(200).json(empleo);
+    })
+    .catch((error) => {
+      res.status(500).json({
+        resultado: false,
+        msg: "No se logró recuperar de la BD, ocurrió el siguiente error: ",
+        error,
+      });
+    });
+});
+
 // ModificarInformación basica - http://localhost:3000/api/empleo
 router.put("/empleo", function (req, res) {
   let peticionBody = req.body;
@@ -110,7 +126,7 @@ router.put("/empleo", function (req, res) {
 router.delete("/empleo", function (req, res) {
   let cuerpoPeticion = req.body;
 
-  Empleo.deleteOne({ _id:cuerpoPeticion._id })
+  Empleo.deleteOne({ _id: cuerpoPeticion._id })
     .then((result) => {
       res.status(200).json({
         resultado: true,
@@ -127,12 +143,10 @@ router.delete("/empleo", function (req, res) {
     });
 });
 
-
-
 router.get("/listar-empleos-empresa", (req, res) => {
   let empresaid = req.query.empresaid;
 
-  Empleo.find({empresaid:empresaid})
+  Empleo.find({ empresaid: empresaid })
     .then((EmpleoDB) => {
       if (EmpleoDB.length === 0) {
         res.status(200).json({
@@ -155,9 +169,6 @@ router.get("/listar-empleos-empresa", (req, res) => {
       });
     });
 });
-
-
-
 
 // Endpoint permite realizar una búsqueda a la base de datos por nombre del empleo
 router.get("/buscarEmpleo", (req, res) => {
